@@ -1,0 +1,43 @@
+{
+  "date": "",
+  "coffee": {
+    "origin": {
+      "country": "",
+      "region": ""
+    },
+    "roaster": "",
+    "roastDate": ""
+  },
+  "grind": 0,
+  "bloomTime": "",
+  "pourTime": "",
+  "aroma": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": ""
+  },
+  "acidity": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": ""
+  },
+  "sweetness": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": ""
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": ""
+  },
+  "finish": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": ""
+  },
+  "flavor": "",
+  "score": 1,
+  "notes": "",
+  "actionItem": ""
+}
