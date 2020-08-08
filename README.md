@@ -19,5 +19,5 @@ I was inspired to combine both the journal and tasting aspects into one idea. At
 git clone git@github.com:manuscriptmastr/coffee-journal.git
 cd coffee-journal
 ```
-3. Copy-paste contents `./template.json` into a new journal entry `./entries/{MM}-{DD}-{YYYY}.json`.
+3. Copy-paste contents of `./template.json` into a new journal entry `./entries/{MM}-{DD}-{YYYY}.json`.
 4. Begin your brew. Hover over any property names (such as `coffee.origin.region`) for a description of the field.
