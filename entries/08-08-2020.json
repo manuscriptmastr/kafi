@@ -1,0 +1,43 @@
+{
+  "date": "08/08/2020",
+  "coffee": {
+    "origin": {
+      "country": "Nano Challa",
+      "region": "Ethiopia"
+    },
+    "roaster": "Madcap Coffee Company",
+    "roastDate": "07/26/2020"
+  },
+  "grind": 9,
+  "bloomTime": "0:40",
+  "pourTime": "2:36",
+  "aroma": {
+    "quantity": 1,
+    "quality": 2,
+    "notes": "Thin, watery aroma, just a wisp of smell other than steam"
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 2,
+    "notes": "Puckery kind of lemon zing, but weak"
+  },
+  "sweetness": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Watery, almost no sweetness"
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "No real body or mouthfeel. Just watery."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 1,
+    "notes": "Lemon aftertaste lingers like after you have a piece of sour candy. Not very pleasant."
+  },
+  "flavor": "Definitely sour. Predominately the puckering lemon zing, then just watery.",
+  "score": 2,
+  "notes": "Did a long (40sec) but shallow bloom, then did a fairly quick pour. Drained remarkably fast. Thinking the quick pour forced too much water to bypass the grounds.",
+  "actionItem": "Slower pour"
+}

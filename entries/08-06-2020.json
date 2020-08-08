@@ -1,0 +1,42 @@
+{
+  "date": "08/06/2020",
+  "coffee": {
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Nano Challa"
+    },
+    "roaster": "Madcap Coffee Company",
+    "roastDate": "07/26/2020"
+  },
+  "grind": 9,
+  "bloomTime": "0:35",
+  "pourTime": "4:00",
+  "aroma": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Light, hint of berries?"
+  },
+  "acidity": {
+    "quantity": 3,
+    "quality": 1,
+    "notes": "More of a cooked than fresh fruit, but bland"
+  },
+  "sweetness": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "A bit like a golden delicious apple, honey-ish"
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Thin in spite of four minute pour time. Flat."
+  },
+  "finish": {
+    "quantity": 4,
+    "quality": 3,
+    "notes": "Loooooong finish. Distinct herb or grassy note, alternates between pleasant and not."
+  },
+  "flavor": "Usually distinct lemon — this time softer fruit, like a peach or apple. Rather flat yet sour (tongue is dry), possibly due to long extraction time. Pleasant, tea-like finish with a distinct “grass” note coming in and out.",
+  "score": 3,
+  "notes": "Swirl bloomed generously (high on walls) over 30 seconds, rested 5 seconds. Fines got caught really high. Slow drip throughout."
+}

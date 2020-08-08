@@ -1,0 +1,42 @@
+{
+  "date": "08/07/2020",
+  "coffee": {
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Nano Challa"
+    },
+    "roaster": "Madcap Coffee Company",
+    "roastDate": "07/26/2020"
+  },
+  "grind": 9,
+  "bloomTime": "0:35",
+  "pourTime": "3:02",
+  "aroma": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Deep, ruddy, juicy aroma. Literally smelling hot lemon juice."
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Plump but not overbearing lemon juice burst (like lemonade). I still get other things."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Low, rounded sweetness, washes over tongue after initial lemon burst"
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Thin, milky mouthfeel. Soft. But not watery."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 4,
+    "notes": "Left with just a slight alkaline feel in mouth, cools down on tongue pleasantly, almost like a mint?"
+  },
+  "flavor": "Instantly hit with a zingy lemon note, then I notice how milky the body is. Fairly neutral aftertaste (might be tea-ish) unlike previous pour. Overall quite good.",
+  "score": 7,
+  "notes": "Shallow, fast swirl with a little washing of the sides after bloom"
+}
