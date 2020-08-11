@@ -1,0 +1,43 @@
+{
+  "date": "08/11/2020",
+  "coffee": {
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Nano Challa"
+    },
+    "roaster": "Madcap Coffee Company",
+    "roastDate": "07/26/2020"
+  },
+  "grind": 25,
+  "bloomTime": "0:35",
+  "pourTime": "2:33",
+  "aroma": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Fruity but smooth aroma, with some substance."
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Wonderfully rounded lemon, perhaps just a tad sour? The note actually seems to 'bloom' in the mouth."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Definitely sweeter than other times, but could use more to balance the puckering lemon."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 4,
+    "notes" : "Like especially smooth water, almost a light syrup. Could potentially go further."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 5,
+    "notes": "Minty feeling on tip of tongue and teeth."
+  },
+  "flavor": "None of that especially pointed, puckering lemon zing. This is a very rounded cup, with the taste blooming and changing over time, then cooling into a minty aftertaste without any weird grassy notes.",
+  "score": 8,
+  "notes": "Used the Comandante C40 for the first time today. Noticed that the grind looked very coarse but unearthly consistent, like it carved out each tiny pebble. Water drained quickly in bloom phase. Sides of filter were significantly cleaner than with Hario Skerton Pro.",
+  "actionItem": "Lower grind to 24 to increase sweetness and body."
+}
