@@ -61,6 +61,10 @@
       "description": "The coffee beans used in your brew.",
       "required": ["origin", "roaster", "roastDate"]
     },
+    "ratio": {
+      "type": "string",
+      "description": "The ration of coffee to water, such as '1:16' or '22g:340g'"
+    },
     "grind": {
       "type": "integer",
       "description": "The number of clicks, with zero being when burrs are fully closed."
@@ -117,6 +121,7 @@
   "required": [
     "date",
     "coffee",
+    "ratio",
     "grind",
     "bloomTime",
     "pourTime",

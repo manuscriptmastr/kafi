@@ -8,6 +8,7 @@
     "roaster": "Madcap Coffee Company",
     "roastDate": "07/26/2020"
   },
+  "ratio": "25g:340g",
   "grind": 24,
   "bloomTime": "0:35",
   "pourTime": "2:24",
