@@ -8,6 +8,11 @@
     "roaster": "",
     "roastDate": ""
   },
+  "equipment": {
+    "method": "",
+    "grinder": ""
+  },
+  "ratio": "",
   "grind": 0,
   "bloomTime": "",
   "pourTime": "",

@@ -8,6 +8,10 @@
     "roaster": "Madcap Coffee Company",
     "roastDate": "07/26/2020"
   },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
   "ratio": "25g:340g",
   "grind": 25,
   "bloomTime": "0:35",

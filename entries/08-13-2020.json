@@ -1,0 +1,49 @@
+{
+  "date": "08/13/2020",
+  "coffee": {
+    "origin": {
+      "country": "Papua New Guinea",
+      "region": "Sigri"
+    },
+    "process": "Washed",
+    "roaster": "Lone Light Coffee Co",
+    "roastDate": "08/11/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "15g:250g",
+  "grind": 21,
+  "bloomTime": "0:30",
+  "pourTime": "2:19",
+  "aroma": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Dark, ruddy, chocolatey, earthy."
+  },
+  "acidity": {
+    "quantity": 1,
+    "quality": 2,
+    "notes": "Very slight tang (probably tastringency rather than acidicity). Not enough to make me think of a particular fruit."
+  },
+  "sweetness": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Not really getting anything."
+  },
+  "body": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Soft, light syrup quality."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 2,
+    "notes": "Took several sips, but I feel my tongue is slightly dried out like after having black tea. Mouthfeel is somewhat zincy."
+  },
+  "flavor": "Missing the fruit note that was there in another cup at grind 23. Pleasant body but rather flat and weak tastewise. Mouth still feels dry so definitely astringent.",
+  "score": 4,
+  "notes": "I used as little agitation as possible. Coffee bed was a little humpy after drawdown in spite (or because of?) large swirl.",
+  "actionItem": "Increase grind to 22. If astringent feeling goes away, then play with the ratio or slow down pour to increase perceived strength."
+}

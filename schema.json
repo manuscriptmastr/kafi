@@ -61,6 +61,21 @@
       "description": "The coffee beans used in your brew.",
       "required": ["origin", "roaster", "roastDate"]
     },
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "description": "The method used to brew your coffee, such as 'Chemex' or 'Hario V60'."
+        },
+        "grinder": {
+          "type": "string",
+          "description": "The grinder make and model you used, such as 'Hario Skerton' or 'Baratza Encore'."
+        }
+      },
+      "description": "The equipment used to make this brew.",
+      "required": ["method", "grinder"]
+    },
     "ratio": {
       "type": "string",
       "description": "The ration of coffee to water, such as '1:16' or '22g:340g'"
@@ -121,6 +136,7 @@
   "required": [
     "date",
     "coffee",
+    "equipment",
     "ratio",
     "grind",
     "bloomTime",
