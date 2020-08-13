@@ -14,10 +14,11 @@ I was inspired to combine both the journal and tasting aspects into one idea. At
 ## Setup
 
 1. Download [Visual Studio Code](https://code.visualstudio.com/) for static [JSON Schema](https://json-schema.org/) validation.
-2. Clone the repo:
+2. Fork or clone the repo:
 ```bash
 git clone git@github.com:manuscriptmastr/coffee-journal.git
 cd coffee-journal
 ```
-3. Copy-paste contents of `./template.json` into a new journal entry `./entries/{MM}-{DD}-{YYYY}.json`.
-4. Begin your brew. Hover over any property names (such as `coffee.origin.region`) for a description of the field.
+3. Empty the `./entries` folder.
+4. Copy-paste contents of `./template.json` into a new journal entry `./entries/{MM}-{DD}-{YYYY}.json`.
+5. Begin your brew. Hover over any property names (such as `coffee.origin.region`) for a description of the field.
