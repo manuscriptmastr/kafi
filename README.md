@@ -22,5 +22,10 @@ cd coffee-journal
 3. Empty the `./entries` folder.
 4. Copy-paste contents of `./template.json` into a new journal entry `./entries/{MM}-{DD}-{YYYY}.json`.
 5. Begin your brew. Hover over any property names (such as `coffee.origin.region`) for a description of the field. Write down any adjectives to capture noticeable aspects of the coffee, as well as your reaction to them. Was the body soupy like broth or thin like a cheap tea? Does your mouth feel like you've been sucking on a penny?
-6. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body, dryness of mouth, and a lack of tasting notes suggests an overextracted brew, so next time you would make your grind coarser or decrease the overall pour time.
+6. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall pour time.
 ![Coffee Compass](./coffee-compass.jpg)
+
+## Dictionary
+
+### Astringency
+Dryness in the mouth, where your tongue feels sandpapery. We're used to this sensation after drinking a cheap black tea. This is a dead giveaway that you've over-extracted the coffee, either by grinding too fine or brewing too long.
