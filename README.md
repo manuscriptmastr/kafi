@@ -29,3 +29,24 @@ cd coffee-journal
 
 ### Astringency
 Dryness in the mouth, where your tongue feels sandpapery. We're used to this sensation after drinking a cheap black tea. This is a dead giveaway that you've over-extracted the coffee, either by grinding too fine or brewing too long.
+
+### Bloom
+The process when just-wet coffee releases carbon dioxide and puffs up. Allowing the coffee grounds to bloom prior to pouring helps with even, fast extraction by removing pockets of gas that otherwise would have made channels in the slurry.
+
+### Bloom Time
+The time from when water first contacts the slurry to when the slurry stops puffing up.
+
+### Boulders
+The stone-like particles of ground coffee. These often float to the top of your brew.
+
+### Fines
+The chaff-like particles of ground coffee. There will always be some, but less depending on the quality of your grinder. Ethiopian beans in particular produce more fines than other origins.
+
+### Particle Distribution
+The consistency of your coffee grounds, which significantly affects the clarity of your cup because even grounds mean most of your coffee is extracted at the same rate. A grind with many boulders and lots of fines contributes to a very noticeable sharp but muddy flavor.
+
+### Pour Time
+The time from when water first contacts the slurry in the bloom phase to when the stream of water suddenly falters to single drips.
+
+### Slurry
+The coffee grounds in your pour over.
