@@ -27,6 +27,9 @@ cd coffee-journal
 
 ## Dictionary
 
+### Acidity
+The fruitiness of the coffee.
+
 ### Astringency
 Dryness in the mouth, where your tongue feels sandpapery. We're used to this sensation after drinking a cheap black tea. This is a dead giveaway that you've over-extracted the coffee, either by grinding too fine or brewing too long.
 
@@ -36,8 +39,17 @@ The process when just-wet coffee releases carbon dioxide and puffs up. Allowing 
 ### Bloom Time
 The time from when water first contacts the slurry to when the slurry stops puffing up.
 
+### Body
+The texture of the coffee, also known as mouthfeel. This may range anywhere from tea-like to soupy.
+
 ### Boulders
 The stone-like particles of ground coffee. These often float to the top of your brew.
+
+### Extraction
+Coffee is 30% soluble (dissolvable), but in practice only 20% is the tasty part. Extraction is the process (via pour over, drip, espresso, etc.) of temporarily contacting water with coffee to extract these parts of the coffee.
+
+### Finish
+The aftertaste of the coffee.
 
 ### Fines
 The chaff-like particles of ground coffee. There will always be some, but less depending on the quality of your grinder. Ethiopian beans in particular produce more fines than other origins.
@@ -50,3 +62,6 @@ The time from when water first contacts the slurry in the bloom phase to when th
 
 ### Slurry
 The coffee grounds in your pour over.
+
+### Sweetness
+Self explanatory, but sweetness is easy to perceive in relation to acidity (fruitiness). Is the lemon note tangy/puckery, or rounded/rich like lemonade?
