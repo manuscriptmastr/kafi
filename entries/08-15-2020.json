@@ -1,0 +1,48 @@
+{
+  "date": "08/15/2020",
+  "coffee": {
+    "origin": {
+      "country": "Papua New Guinea",
+      "region": "Sigri"
+    },
+    "roaster": "Lone Light Coffee Co",
+    "roastDate": "08/11/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "3:43",
+  "aroma": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Faint vanilla scent."
+  },
+  "acidity": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Slight tang at the beginning of the sip."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "It's there more than the last one (all body and nothing else)."
+  },
+  "body": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Milky, not quite soupy."
+  },
+  "finish": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Slight warm alkaline taste. Mouth is still really drying out."
+  },
+  "flavor": "Uninteresting. Good body, but tasting notes are still rather muted (though more present than last time) and tongue feels very sandpapery after drinking the full cup.",
+  "score": 4,
+  "notes": "Poured gently on to bloom but did try to clean the sides a bit. Did the generous swirl and tap but I could already tell this one was slower.",
+  "actionItem": "Pour strictly onto the slurry — don't clean the sides. Let the swirl at the end of brew clean them. Continue using the generous bloom swirl and drawdown swirl so that you're changing only one variable."
+}

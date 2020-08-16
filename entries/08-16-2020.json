@@ -1,0 +1,48 @@
+{
+  "date": "08/16/2020",
+  "coffee": {
+    "origin": {
+      "country": "Papua New Guinea",
+      "region": "Sigri"
+    },
+    "roaster": "Lone Light Coffee Co",
+    "roastDate": "08/11/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "3:33",
+  "aroma": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Ruddy, juicy."
+  },
+  "acidity": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Darker, more tart berry. A red punch/cherry flavor comes to mind. Almost too much fruitiness this time, especially as it cools."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "The fruitiness is better balanced in this cup."
+  },
+  "body": {
+    "quantity": 4,
+    "quality": 5,
+    "notes": "Substantial, but lets the tasting notes pop out."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Much better. Mouth is not feeling dry, I'm not getting the strong alkaline taste, and I don't feel the urge to wash out the taste with water."
+  },
+  "flavor": "The tasting notes are back! It's like the coffee went back to being '3D'. Still loads of body, but now I get the cherry zing. The characteristic herb or grass note is back as well — it's what reminds me this is a Papua New Guinea roast, and also the one 'off' taste I don't personally care for.",
+  "score": 7,
+  "notes": "Did not clean sides of filter this time. Kept 45 second bloom and generous swirls/taps/the whole shebang. Drained a little slower than 'normal' but was steady throughout. No stalling.",
+  "actionItem": "Back off the 24 just to see whether that improves the overall flavor-to-body ratio balance."
+}
