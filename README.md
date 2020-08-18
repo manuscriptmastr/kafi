@@ -25,6 +25,9 @@ cd coffee-journal
 6. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall pour time.
 ![Coffee Compass](./coffee-compass.jpg)
 
+## Troubleshooting
+- Is your drawdown suddenly taking 30–60 seconds longer for the same coffee/grind? If using a bloom swirl (aka "The Spin"), [you might be swirling too long and letting fines move to the bottom of the V60](https://www.scottrao.com/blog/2019/1/8/why-spin-the-slurry).
+
 ## Dictionary
 
 ### Acidity
