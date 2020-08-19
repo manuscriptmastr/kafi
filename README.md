@@ -79,7 +79,7 @@ Dryness in the mouth, where your tongue feels sandpapery. We're used to this sen
 The process when just-wet coffee releases carbon dioxide and puffs up. Allowing the coffee grounds to bloom prior to pouring helps with even, fast extraction by removing pockets of gas that otherwise would have made channels in the slurry.
 
 ### Bloom Time
-The time from when water first contacts the slurry to when the slurry stops puffing up.
+The time from when water first contacts the coffee bed to when the slurry stops puffing up.
 
 ### Body
 The texture of the coffee, also known as mouthfeel. This may range anywhere from tea-like to soupy.
@@ -106,7 +106,7 @@ The consistency of your coffee grounds, which significantly affects the clarity 
 The time from when water first contacts the slurry in the bloom phase to when the stream of water suddenly falters to single drips.
 
 ### Slurry
-The coffee grounds in your pour over.
+The wet coffee grounds in your pour over.
 
 ### Sweetness
 Self explanatory, but sweetness is easy to perceive in relation to acidity (fruitiness). Is the lemon note tangy/puckery, or rounded/rich like lemonade?
