@@ -26,9 +26,15 @@ cd coffee-journal
 ![Coffee Compass](./coffee-compass.jpg)
 
 ## Methods
-You can have a world-class grinder and the best single origin coffee beans and have wildly inconsistent brews. Inconsistent technique, all other variables equal, can add or subtract *minutes* to your drawdown. Try out some of these popular techniques to improve your mastery.
+You can have a world-class grinder and the best single origin coffee beans and have wildly inconsistent brews. Inconsistent technique, all other variables equal, can add or subtract *minutes* to your drawdown. Try out some of these popular techniques to improve your brews.
 
 **Note**: these methods are incredibly precise. If you are experiencing drastically inconsistent pour times for the same coffee/grind size/ratio/filter, double check your understanding of the method before troubleshooting other aspects of your brew.
+
+### Chemex
+- [The Chemex](https://youtu.be/ikt-X5x7yoc?t=427)
+
+### French Press
+- [The Ultimate French Press Technique](https://www.youtube.com/watch?v=st571DYYTR8)
 
 ### Hario V60
 - [The Ultimate V60 Technique](https://www.youtube.com/watch?v=AI4ynXzkSQo)
@@ -36,7 +42,30 @@ You can have a world-class grinder and the best single origin coffee beans and h
 - [4:6 Method](https://www.youtube.com/watch?v=wmCW8xSWGZY)
 
 ## Troubleshooting
-- Is your drawdown suddenly taking 30–60 seconds longer with the same variables? If so, was it already draining slower than usual early in the pour? If you use the bloom swirl James Hoffman suggests in his [Ultimate V60 Technique](https://www.youtube.com/watch?v=AI4ynXzkSQo), [you might be swirling too long and letting fines move to the bottom of the V60](https://www.scottrao.com/blog/2019/1/8/why-spin-the-slurry). In my own experience, swirling the bloom for too long added up to 1:15 extra time to the drawdown! Find a consistent time or indicator for when to stop swirling, then stick with it.
+
+### My coffee tastes sour, weak, and thin.
+
+The soluble parts of coffee dissolve in stages. TL;DR: acidic flavors (e.g. tangy, fruity) extract sooner than sweetness and body (e.g. syrupy). If your coffee both makes your mouth pucker *and* feels watery in texture, then it's probably underextracted. Keep in mind a lot of us confuse sour (underextracted) and bitter (overextracted), which is why the paying attention to the body, or thickness of the brew, helps which extreme we are at.
+
+### My coffee tastes overwhelming, tangy, and soupy.
+
+This is likely overextraction. The dead giveaway is that the body, or **mouthfeel**, is thick like a syrup (which comes later in the brew phase) but the actual tastes (other than strong acidity) seem to be gone.
+
+### As my coffee cools, the taste disappears.
+
+Probably overextraction.
+
+### My mouth feels dry after drinking.
+
+Some of the same components in black tea are present in coffee beans, and when you overextract coffee, you'll feel a similar sensation in the mouth. It's called **astringency** and it's not a great feeling for your morning coffee.
+
+### I've been using the Hoffman V60 method and the drawdown is suddenly taking 30–60 seconds longer, but I haven't changed my coffee, grind, or ratio.
+
+If you are using the swirl bloom, aka "The Spin", [you might be swirling too long and letting fines move to the bottom of the V60](https://www.scottrao.com/blog/2019/1/8/why-spin-the-slurry). In my own experience, swirling the bloom for too long added up to 1:15 extra time to the drawdown! You want to swirl just long and hard enough that the slurry is evenly soaked and hardly bubbling. Any longer or harder and physics begins to do its nasty work on the fines.
+
+### My Ethiopian roast takes longer than other roasts and sometimes stalls
+
+Interestingly, Ethiopian roasts produce more fines than others, so it's easier to accidentally over-agitate the slurry to the point where fines move toward the filter. If it tastes well-extracted, this is not a problem; if it is stalling and tasting harsh, try grinding one click coarser. If you find you have to go significantly coarser, it's probably the bloom or pour.
 
 ## Dictionary
 
