@@ -41,6 +41,16 @@ You can have a world-class grinder and the best single origin coffee beans and h
 - [Scott Rao's V60 Method](https://www.youtube.com/watch?v=c0Qe_ASxfNM)
 - [4:6 Method](https://www.youtube.com/watch?v=wmCW8xSWGZY)
 
+## FAQ
+
+### What temperature should I heat the water to?
+
+TL;DR: for light to medium roasts, right off the boil. For darker roasts, play around with slightly cooler temperatures.
+
+### What's the difference between a Chemex, V60, or Kalita Wave?
+
+Tasting is believing. Even though all three methods are cone-shaped and use paper filters, they taste noticeably different. The Chemex filter is much, much thicker for instance than a V60 or Kalita filter. The V60 has a large hole and drainage channels, while the Chemex has no channels and the Kalita has three small holes. All these variables add up to surprisingly different tastes. If your goal is a brew you can't mess up, go for Chemex or Kalita Wave. If your goal is to master the pour over and maximize the quality of the brew, many baristas stand by the V60, even if they use a Kalita Wave or Chemex at work to reduce the chances of bad brews.
+
 ## Troubleshooting
 
 ### My coffee tastes sour, weak, and thin.
