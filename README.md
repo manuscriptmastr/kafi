@@ -25,8 +25,18 @@ cd coffee-journal
 6. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall pour time.
 ![Coffee Compass](./coffee-compass.jpg)
 
+## Methods
+You can have a world-class grinder and the best single origin coffee beans and have wildly inconsistent brews. Inconsistent technique, all other variables equal, can add or subtract *minutes* to your drawdown. Try out some of these popular techniques to improve your mastery.
+
+**Note**: these methods are incredibly precise. If you are experiencing drastically inconsistent pour times for the same coffee/grind size/ratio/filter, double check your understanding of the method before troubleshooting other aspects of your brew.
+
+### Hario V60
+- [The Ultimate V60 Technique](https://www.youtube.com/watch?v=AI4ynXzkSQo)
+- [Scott Rao's V60 Method](https://www.youtube.com/watch?v=c0Qe_ASxfNM)
+- [4:6 Method](https://www.youtube.com/watch?v=wmCW8xSWGZY)
+
 ## Troubleshooting
-- Is your drawdown suddenly taking 30–60 seconds longer for the same coffee/grind? If using a bloom swirl (aka "The Spin"), [you might be swirling too long and letting fines move to the bottom of the V60](https://www.scottrao.com/blog/2019/1/8/why-spin-the-slurry).
+- Is your drawdown suddenly taking 30–60 seconds longer with the same variables? If so, was it already draining slower than usual early in the pour? If you use the bloom swirl James Hoffman suggests in his [Ultimate V60 Technique](https://www.youtube.com/watch?v=AI4ynXzkSQo), [you might be swirling too long and letting fines move to the bottom of the V60](https://www.scottrao.com/blog/2019/1/8/why-spin-the-slurry). In my own experience, swirling the bloom for too long added up to 1:15 extra time to the drawdown! Find a consistent time or indicator for when to stop swirling, then stick with it.
 
 ## Dictionary
 
@@ -47,6 +57,9 @@ The texture of the coffee, also known as mouthfeel. This may range anywhere from
 
 ### Boulders
 The stone-like particles of ground coffee. These often float to the top of your brew.
+
+### Drawdown
+The time from when all water is added to when the stream of water suddenly falters to single drips.
 
 ### Extraction
 Coffee is 30% soluble (dissolvable), but in practice only 20% is the tasty part. Extraction is the process (via pour over, drip, espresso, etc.) of temporarily contacting water with coffee to extract these parts of the coffee.
