@@ -1,0 +1,48 @@
+{
+  "date": "08/20/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "2:54",
+  "aroma": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Not really getting anything"
+  },
+  "acidity": {
+    "quantity": 5,
+    "quality": 3,
+    "notes": "Very tangy, like citrus."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 2,
+    "notes": "Needs a lot more sweetness to balance the strong tanginess."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Just under a light syrup. Thickens as it cools."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Warm, no strong alkaline sensations."
+  },
+  "flavor": "Overall, still sour but better than the last. Initially hit with a strong, tangy note like a very tart apple or strong citrus. There is a familiar 'cream' note accompanying it when I first take a sip — usually when I taste/feel that note, it means I'm getting closer to a more balanced cup.",
+  "score": 5,
+  "notes": "Bloom swirled with 60g water for 7 seconds. 45 seconds felt rather long as the the coffee was drying out a bit. Coffee drawdown was very moderate this time. Moderate swirl and tap.",
+  "actionItem": "Looks like swirling an extra 5 seconds added 17 seconds to drawdown. Either swirl bloom a little longer to see if that further impacts time, or change grind to 23 with same technique."
+}
