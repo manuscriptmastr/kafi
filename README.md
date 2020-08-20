@@ -43,6 +43,19 @@ You can have a world-class grinder and the best single origin coffee beans and h
 
 ## FAQ
 
+### MVP mindset: what factors most impact quality the brew?
+
+1. Coffee — light to medium, single origin roasts are about as close as you can get to what coffee truly tastes like. If possible, order a pour over of the coffee you're interested in recreating so that you have an idea of what your daily coffee *should* be tasting like.
+2. Method — most people are genuinely shocked when they first taste a pour over method like Chemex, V60, or Aeropress. Ironically, these kinds of methods are absurdly cheap compared to an expensive coffee machine, but are used by third wave coffee shops and in barista championships.
+3. Kitchen scale — they make your brews much more consistent, and your life will be better. Seriously. Buy a cheap $10 scale that can measure grams and you're set for at least a couple years of this journey.
+4. Grinder — the consistency, or **particle distribution**, of your coffee grind completely changes the taste. The best way I can describe it is the sensation of the cup getting more focused and clean vs. muddy with wacky 'off tastes'. Start with a cheaper burr grinder (less than $50) and you should be good for at least a year or two on your journey. The grinder is the single most expensive yet impactful part of coffee, so pick your battles carefully with this purchase.
+5. Gooseneck kettle — you can totally do amazing pour overs with a regular kettle, but the gooseneck spout really helps with consistency.
+6. Water — depending on where you live, this might be a small or huge improvement. Water is 98% of your coffee, and if your water tastes bad, your coffee will, too. There are many options for improving water for coffee, but avoid reverse osmosis if possible. It does strange things to the brew process.
+
+### How will I know what I'm aiming for taste-wise?
+
+If possible, buy coffee beans after you've had the coffee shop make you a pour over (try to avoid additives like sugar or milk). Take some notes on aspects like the aroma, acidity (fruitiness), sweetness, body (thickness), and finish (aftertaste), then use those as markers for your own brewing. Even better, try [cupping your coffee](https://www.youtube.com/watch?v=cSEgP4VNynQ) to get these markers.
+
 ### What temperature should I heat the water to?
 
 TL;DR: for light to medium roasts, right off the boil. For darker roasts, play around with slightly cooler temperatures.
