@@ -1,0 +1,35 @@
+{
+  "name": "coffee-journal",
+  "version": "1.0.0",
+  "description": "Statically-validated JSON coffee journal for percolation brews",
+  "main": "index.js",
+  "bin": {
+    "coffee-journal": "index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuscriptmastr/coffee-journal.git"
+  },
+  "keywords": [
+    "coffee",
+    "json-schema",
+    "journal",
+    "pourover",
+    "chemex",
+    "v60",
+    "kalita-wave",
+    "percolation"
+  ],
+  "author": "Joshua Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuscriptmastr/coffee-journal/issues"
+  },
+  "homepage": "https://github.com/manuscriptmastr/coffee-journal#readme",
+  "dependencies": {
+    "date-fns": "^2.15.0",
+    "ramda": "^0.27.1",
+    "yargs": "^15.4.1"
+  }
+}

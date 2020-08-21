@@ -2,10 +2,10 @@
   "json.schemas": [
     {
       "fileMatch": [
-        "/template.json",
+        "/src/template.json",
         "/entries/*.json"
       ],
-      "url": "/schema.json"
+      "url": "/src/schema.json"
     }
   ]
 }
