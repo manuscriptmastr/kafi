@@ -20,13 +20,12 @@ git clone git@github.com:manuscriptmastr/coffee-journal.git
 cd coffee-journal
 ```
 3. Empty the `./entries` folder.
-4. Copy-paste contents of `./src/template.json` into a new journal entry `./entries/{MM}-{DD}-{YYYY}.json` OR open a command line and run:
+4. Copy-paste contents of `./src/template.json` into a new journal entry `./entries/{MM}-{dd}-{yyyy}.json` OR if you are a Node.js developer and like to automate everything, open a command line and run:
 ```bash
 # install NPM dependencies
 npm install
 # add coffee-journal command
 npm link
-
 # create a new journal entry with sane defaults
 coffee-journal new
 ```
