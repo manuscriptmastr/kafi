@@ -147,6 +147,6 @@ Self explanatory, but sweetness is easy to perceive in relation to acidity (frui
 ```bash
 # Create a new journal entry
 coffee-journal journal create
-# Analyze which coffees had the highest scores
-coffee-journal analytics --fields coffee --by score
+# Analyze which coffee origins had the highest scores
+coffee-journal analytics score coffee.origin.country
 ```
