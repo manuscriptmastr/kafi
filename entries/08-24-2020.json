@@ -1,0 +1,48 @@
+{
+  "date": "08/24/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 22,
+  "bloomTime": "0:45",
+  "pourTime": "3:25",
+  "aroma": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Hot orange juice smell — like apple cider."
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 2,
+    "notes": "Hot, tangy, not as overwhelming as before. Just don't care for it. There's also that 'twangy' tang note that may be astringency."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "The acidity is slightly better balanced."
+  },
+  "body": {
+    "quantity": 5,
+    "quality": 4,
+    "notes": "Thick syrup."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 2,
+    "notes": "Slightly metallic aftertaste, like sucking on a spoon. Mouth feels sandpapery after several sips."
+  },
+  "flavor": "First sensation is of how thick the body is — soupy, syrupy. Then I get a tangy, orangy note also with a distinct 'twangy' tang note. Finish is slightly metallic and astringent.",
+  "score": 4,
+  "notes": "8 second swirl bloom. Drip was slow on initial pour, fast as I got to the top, then slowed significantly at about 1/3 left. Very different behavior from the Papua New Guinea",
+  "actionItem": "Try either a less aggressive bloom or grind 23 with a more aggressive bloom."
+}
