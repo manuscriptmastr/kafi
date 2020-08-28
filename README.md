@@ -72,6 +72,12 @@ TL;DR: for light to medium roasts, right off the boil. For darker roasts, play a
 
 Tasting is believing. Even though all three methods are cone-shaped and use paper filters, they taste noticeably different. The Chemex filter is much, much thicker for instance than a V60 or Kalita filter. The V60 has a large hole and drainage channels, while the Chemex has no channels and the Kalita has three small holes. All these variables add up to surprisingly different tastes. If your goal is a brew you can't mess up, go for Chemex or Kalita Wave. If your goal is to master the pour over and maximize the quality of the brew, many baristas stand by the V60, even if they use a Kalita Wave or Chemex at work to reduce the chances of bad brews.
 
+### What do you consider characteristics of good coffee?
+
+When I have had a particularly great cup of coffee, the parts I remember the most usually have to do with a certain storytelling component. Bad cups tend to scream one thing — "LEMON!!!" — or nothing at all. Memorable cups develop from initial smell to the first sip to the last swallow to a minute after. Different colors emerge and the brain is delightfully puzzled by the assorted, even conflicting experiences of smell, feel, flavor, finish of a cup. I believe this is what coffee enthusiasts would call "complexity", and this is the sweet spot I aim for when dialing in a coffee. I call it storytelling because the taste blooms and changes over a 5–10 second window.
+
+In short, good coffee makes you *wonder*.
+
 ## Troubleshooting
 
 ### My coffee tastes sour, weak, and thin.

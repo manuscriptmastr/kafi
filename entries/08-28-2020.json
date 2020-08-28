@@ -1,0 +1,48 @@
+{
+  "date": "08/28/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "3:02",
+  "aroma": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Deep, raisin, fermented, a little cinnamon?"
+  },
+  "acidity": {
+    "quantity": 5,
+    "quality": 2,
+    "notes": "Strong raisin, dried fruit, tangy note. Brightens to a sweet orange and cinnamon as cools."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 5,
+    "notes": "Sweet, smooth, and complex at beginning of sip. When raisin note emerges, it is a golden, sugary kind."
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Tea-like."
+  },
+  "finish": {
+    "quantity": 4,
+    "quality": 5,
+    "notes": "No strong, haunting acidity left in mouth. Glowing, warm, then minty feeling."
+  },
+  "flavor": "Given the new experience of spice, complexity, and the distinct dried fruit note, this is probably the closest yet to the intent of this coffee. The fruit note is not my favorite, but I can appreciate the complexity of this cup. Smooth on sip, then dominated by a sugary, fermented, raisin note. Pleasantly neutral aftertaste with mostly the sensation of the mouth cooling.",
+  "score": 9,
+  "notes": "8 second swirl bloom, but with 70+g of water. Drainage was consistent, flat slurry.",
+  "actionItem": ""
+}
