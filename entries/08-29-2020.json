@@ -1,0 +1,48 @@
+{
+  "date": "08/29/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "2:54",
+  "aroma": {
+    "quantity": 3,
+    "quality": 5,
+    "notes": "Vanilla, ripe bananas, cinnamon."
+  },
+  "acidity": {
+    "quantity": 5,
+    "quality": 4,
+    "notes": "Juicy, very focused tart nuance like the skin of a plum."
+  },
+  "sweetness": {
+    "quantity": 4,
+    "quality": 2,
+    "notes": "Golden, sugary, ripe, spices. This cup tastes well balanced — I just don't like the combination of a raw plum and cooking spices. They seem incongruent — like mixing a cool, refreshing summer taste with a warm, winter weather taste."
+  },
+  "body": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Light syrup."
+  },
+  "finish": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Aftertaste lingers then fades to a somewhat neutral, tea-like mouthfeel. No strong metallic or acidic tastes."
+  },
+  "flavor": "Complex, creamy, emphasis on cool plum juice and warm spices. I'm starting to like this, though the combo is unusual.",
+  "score": 9,
+  "notes": "8 second vigorous bloom swirl. Drawdown was consistent.",
+  "actionItem": ""
+}
