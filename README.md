@@ -64,6 +64,8 @@ You can have a world-class grinder and the best single origin coffee beans and h
 
 If possible, buy coffee beans after you've had the coffee shop make you a pour over (try to avoid additives like sugar or milk). Take some notes on aspects like the aroma, acidity (fruitiness), sweetness, body (thickness), and finish (aftertaste), then use those as markers for your own brewing. Even better, try [cupping your coffee](https://www.youtube.com/watch?v=cSEgP4VNynQ) to get these markers.
 
+Building up a vocabulary to capture your reaction is crucial to diagnosing what could be improved — for instance, knowing instinctively what a *hollow*, *empty* cup of coffee tastes and feels like. The Coffee Compass is very helpful, and here's [a great little article](https://www.baristahustle.com/blog/coffee-extraction-and-how-to-taste-it/) that summarizes what over/under/ideal extraction tastes like.
+
 ### What temperature should I heat the water to?
 
 TL;DR: for light to medium roasts, right off the boil. For darker roasts, play around with slightly cooler temperatures.
