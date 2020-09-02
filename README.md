@@ -27,7 +27,7 @@ npm install
 # add coffee-journal command
 npm link
 # create a new journal entry with sane defaults
-coffee-journal new
+coffee-journal journal new
 ```
 5. Begin your brew. Hover over any property names (such as `coffee.origin.region`) for a description of the field. Write down any adjectives to capture noticeable aspects of the coffee, as well as your reaction to them. Was the body soupy like broth or thin like a cheap tea? Does your mouth feel like you've been sucking on a penny?
 6. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall pour time.
@@ -154,7 +154,7 @@ Self explanatory, but sweetness is easy to perceive in relation to acidity (frui
 
 ```bash
 # Create a new journal entry
-coffee-journal journal create
+coffee-journal journal new
 # Analyze which coffee origins had the highest scores
-coffee-journal analytics score coffee.origin.country
+coffee-journal stats --by flavor --fields coffee.origin.country
 ```

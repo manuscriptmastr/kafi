@@ -1,11 +1,12 @@
 #!/usr/bin/env -S node --experimental-specifier-resolution=node
 import yargs from 'yargs';
-import { createJournalEntry } from './src/journal';
+import journal from './src/cli/journal';
+import stats from './src/cli/stats';
 
+// TODO: Eventually we can replace .command with .commandDir in ESM
 yargs
-  .usage('Usage: $0 new')
-  .command('new', 'creates a new journal entry', createJournalEntry)
-  .recommendCommands()
+  .command(journal)
+  .command(stats)
   .demandCommand()
   .help()
   .argv
