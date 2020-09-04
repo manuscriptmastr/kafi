@@ -1,0 +1,48 @@
+{
+  "date": "09/04/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "2:50",
+  "aroma": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Orange, cinnamon, and clove."
+  },
+  "acidity": {
+    "quantity": 3,
+    "quality": 5,
+    "notes": "Deep and cool grape, bright orange, citrus, complex, mellow."
+  },
+  "sweetness": {
+    "quantity": 5,
+    "quality": 5,
+    "notes": "Vanilla undertone in fruit notes. Very smooth and creamy. Mouth does not want to pucker."
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 4,
+    "notes": "Tea-like. It works but I don't have a strong preference."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 4,
+    "notes": "Orange fades into tea notes. Sweetness lingers on tongue, then feels minty. Long finish."
+  },
+  "flavor": "Probably the 'easiest' cup to drink so far from this SO. The fruit note is very complex, with more focused flavors like cherry/grape/plum and brighter citrus tones. Sweetness really makes this cup — I don't feel the need to get water, and the finish settles smoothly and sugary like a cough drop or peppermint tea.",
+  "score": 10,
+  "notes": "7 second bloom swirl with 69g water.",
+  "actionItem": ""
+}
