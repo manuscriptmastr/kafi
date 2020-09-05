@@ -1,0 +1,48 @@
+{
+  "date": "09/05/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "3:03",
+  "aroma": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Mostly just a sweet vapor — ripe banana, faint spiciness."
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 1,
+    "notes": "Small plum note accompanied by a louder 'twangy' note."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 1,
+    "notes": "Not entirely flat, but not as complex as it could be."
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Tea-like. Indifferent."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 1,
+    "notes": "Strong, lingering, alkaline, bad breath feeling. Sucking my mouth, may be astringent. Throat is dry halfway through cup."
+  },
+  "flavor": "Definitely overextracted. First impression was that the coffee was diluted except for the 'twang' note (is that associated with astringency?). Cup is missing some complexity, finish is a very strong and long 'bad breath' feeling. Coffee tastes diluted and somewhat metallic as it cools. Not enjoyable at all.",
+  "score": 4,
+  "notes": "7 second swirl bloom with 70g water. Did not let spoon touch sides of filter and let the final swirl knock off boulders instead — the filter was much cleaner!",
+  "actionItem": "This could have been a fluke due to a bad filter or the fact that the coffee is getting old. Two thoughts come to mind: your swirl bloom was vigorous, and your initial pour was very gentle. You've already been doing vigorous swirls, so next time pour a bit harder for more agitation."
+}

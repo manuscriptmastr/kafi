@@ -51,7 +51,20 @@ You can have a world-class grinder and the best single origin coffee beans and h
 
 ## FAQ
 
-### MVP mindset: what factors most impact quality the brew?
+### Why keep a journal?
+
+I make far more bad cups than good cups these days. Journaling has drastically helped me convert bad cups to action items so I can make more good cups — or at least narrow my margins to good and great.
+
+It may be a truism, but the bad cups — the 'failures' — teach me just as much about good coffee as the handful of awesome cups I make. I now have a strong mind-body connection for how extraction correlates to my experience.
+- Very underextracted: mouth puckers, sour fruit, underdeveloped, aftertaste 'disappears'.
+- Underextracted: mouth puckers, watery texture, slight aftertaste.
+- Sweet spot: mouth is relaxed, aroma is just slightly 'dark', flavor changes drastically over a single sip like a 'story', fruit notes are sweet like fruit juice, mouth feels minty and neutral.
+- Overextracted: mouth puckers, aroma smells 'ripe' like a banana, tastes diluted and boring except for a strange 'tang', finish is metallic and feels like 'bad breath'.
+- Very overextracted: mouth feels chalky and dry, flavor completely 'disappears', body feels like a thick, salty broth.
+
+For me, the difference between a perfect cup and a noticeably under/overextracted cup is only a 10-second margin, so I find it crucial to take notes.
+
+### MVP mindset: what products most impact quality the brew?
 
 1. Coffee — light to medium, single origin roasts are about as close as you can get to what coffee truly tastes like. If possible, order a pour over of the coffee you're interested in recreating so that you have an idea of what your daily coffee *should* be tasting like.
 2. Method — most people are genuinely shocked when they first taste a pour over method like Chemex, V60, or Aeropress. Ironically, these kinds of methods are absurdly cheap compared to an expensive coffee machine, but are used by third wave coffee shops and in barista championships.
