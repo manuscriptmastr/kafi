@@ -1,0 +1,48 @@
+{
+  "date": "09/06/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "2:36",
+  "aroma": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Sweet like a cake. Smoky, bourbon, dark fruit — hot punch or apple cider?"
+  },
+  "acidity": {
+    "quantity": 5,
+    "quality": 3,
+    "notes": "Slightly sour fruit, though rounded a tad."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Heading in the right direction, but needs to be a tiny bit more developed for the 'jewel tone' kind of fruity."
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Tea-like."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Slightly acidic finish, minty feeling."
+  },
+  "flavor": "Overall better balance between acidity and sweetness, but definitely just a bit sour. Sourness increases as cools.",
+  "score": 6,
+  "notes": "By far the fastest drawdown for the Congo. 6 second swirl bloom (count to 7), finished pour at 1:20, s+t at 1:40",
+  "actionItem": "Sweet spot is right at 2:50 for this coffee. Go back to 7 second swirl bloom and see whether the time shoots back to 3+ minutes."
+}
