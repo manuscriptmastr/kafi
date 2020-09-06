@@ -1,0 +1,48 @@
+{
+  "date": "09/06/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "3:04",
+  "aroma": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Sweet and roasty like a dessert just popped out of the oven."
+  },
+  "acidity": {
+    "quantity": 5,
+    "quality": 4,
+    "notes": "Focused plum juice. A tad too much perhaps, and I taste the 'twangy' note with it. If I swish coffee over my tongue for awhile, I really feel the sandpapery, chalky sensation on my tongue."
+  },
+  "sweetness": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Mellow, fruit juice kind of sweetness. Cup is just slightly flat but the cool plum note has that 'jewel tone' roundedness that indicates balance with sweetness."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Light syrup."
+  },
+  "finish": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Better than last. Tongue and throat are still a little dry, but no strong 'bad breath' aftertaste."
+  },
+  "flavor": "First sip screamed 'PLUM JUICE'. Plum note is sweet and round, though also accompanied by the tanginess I associate with astringency. Flavor diminishes as cools.",
+  "score": 7,
+  "notes": "7 second swirl bloom with 70g water, fast pour, finished pour at 1:21, swirl tap at 1:39.",
+  "actionItem": "Interestingly, the drawdown took exactly the same amount of time, but the plum note was noticeably brighter/clearer/glowing. Keep the fast pour (finish at 1:20, s+t at 1:40), but shorten swirl bloom to 6 seconds to make up for old coffee."
+}
