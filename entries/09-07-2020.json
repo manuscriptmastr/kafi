@@ -1,0 +1,48 @@
+{
+  "date": "09/07/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "2:57",
+  "aroma": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Vanilla, slight spice, slight cider smell."
+  },
+  "acidity": {
+    "quantity": 5,
+    "quality": 2,
+    "notes": "Fruit note is dominated by the whining 'twang' note. Astringency?"
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Mellow, round, slightly less complex than it could be."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Tea-like."
+  },
+  "finish": {
+    "quantity": 4,
+    "quality": 3,
+    "notes": "Slight acidity lingers, not necessarily unpleasant."
+  },
+  "flavor": "Like other cups around 3 minutes, an otherwise mellow cup gets dominated by that sharp, citrusy tang.",
+  "score": 1,
+  "notes": "Made a big well in dry coffee bed, swirled vigorously until saturated (8 seconds), poured 200g by 1:05 (not fast at all), finished by 1:35, swirl and tap around 1:45 or 1:50.",
+  "actionItem": "Change grind to 24 for Congo only. The good news is that as long as we thoroughly swirl bloom, we're getting a consistent time (3 minutes) and consistent astringency."
+}
