@@ -1,0 +1,48 @@
+{
+  "date": "09/08/2020",
+  "coffee": {
+    "origin": {
+      "country": "Congo",
+      "region": "Idjwi Island, South Kivu"
+    },
+    "roaster": "Fulcrum Coffee",
+    "roastDate": "08/10/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "3:16 (with assistance)",
+  "aroma": {
+    "quantity": 4,
+    "quality": 5,
+    "notes": "Deep, ruddy, woody, creamy, cidery."
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Glowing plum, just a hint of bitterness (that does not overwhelm the cup)."
+  },
+  "sweetness": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Mellow, well-balanced with acidity, perhaps a little '2D'."
+  },
+  "body": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Thick syrup."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 1,
+    "notes": "Astringent, dusty, tongue and throat are extremely dry halfway through the cup. Acidic taste lingers."
+  },
+  "flavor": "Overextracted and the most astringent cup I can remember, but not empty nor overpowered with bitterness. Interesting how changing the grind by one click dramatically thickened the body.",
+  "score": 5,
+  "notes": "Vigorous swirl bloom with 70g water for 8 seconds, poured 200g by 1:00, finished pour by 1:25. Drawdown was very slow in final stages, so I had to assist a bit. Completely different behavior than grind 23, possibly more fines.",
+  "actionItem": "Try your last batch at grind 24 for science :D."
+}
