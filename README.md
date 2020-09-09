@@ -163,11 +163,11 @@ The wet coffee grounds in your pour over.
 ### Sweetness
 Self explanatory, but sweetness is easy to perceive in relation to acidity (fruitiness). Is the lemon note tangy/puckery, or rounded/rich like lemonade?
 
-## CLI Ideas
+## CLI
 
 ```bash
 # Create a new journal entry
 coffee-journal journal new
 # Analyze which coffee origins had the highest scores
-coffee-journal stats --by flavor --fields coffee.origin.country
+coffee-journal stats --by score --fields coffee.origin.country grind pourTime
 ```
