@@ -1,0 +1,48 @@
+{
+  "date": "09/09/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MKIII"
+  },
+  "ratio": "22g:340g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "3:25",
+  "aroma": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Tropical fruit, lime, hint of spice."
+  },
+  "acidity": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Fruity, just slightly on the harsh, tangy side (might be a hint of bitterness?). Bitterness diminishes as cools while fruit notes soften and round out."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Well-balanced with acidity for jewel tones, though perhaps missing some complexity."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Light syrup. As the cup cools, I notice a smooth, rich, creamy taste that perceptually thickens the coffee."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 3,
+    "notes": "Super long finish, but left with a slimy, parched feeling in mouth. Slightly alkaline taste lingers, somewhat indifferent to it. Finish improves as coffee cools."
+  },
+  "flavor": "While I'd like more complexity out of this coffee, this cup has some first rate qualities, particularly as it cooled. Focal point shifts from the fruit notes to the creamy body as the coffee cools. In spite of a long drawdown, I don't feel any astringency. The fruit note is a little too tangy when hot, which makes me think I got some bitterness. Fruit weakens/mellows/rounds out as cools, while the creamy body becomes more interesting.",
+  "score": 8,
+  "notes": "8 second swirl bloom with 70g water, 200g by 1:00, finish pour by 1:25 (?). Drawdown was much slower than anything I've seen in awhile, but did not clog.",
+  "actionItem": "Change grind to 24 and see whether that balances the longer drawdown or makes it worse with more fines."
+}
