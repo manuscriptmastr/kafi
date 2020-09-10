@@ -11,6 +11,18 @@ Recently, I began following [James Hoffman's channel](https://www.youtube.com/ch
 
 I was inspired to combine both the journal and tasting aspects into one idea. At the moment, this is simply a collection of JSON entries with a JSON Schema for static validation in [Visual Studio Code](https://code.visualstudio.com/), but in the future I hope to turn this into an app that helps users easily track and improve their daily brew.
 
+## CLI
+
+```bash
+# Create a new journal entry
+coffee-journal journal new
+# Analyze which coffee origins had the highest scores
+coffee-journal stats --by score --fields coffee.origin.country grind pourTime
+# TODO: add --match to filter entries based on constant variables
+# TODO: add helper functions like lt (less than), gt (greater than), eq (equals), etc.
+coffee-journal stats --by score --match grind(23) pourTime(lt('3:00')) --fields coffee.origin.country pourTime
+```
+
 ## Setup
 
 1. Download [Visual Studio Code](https://code.visualstudio.com/) for static [JSON Schema](https://json-schema.org/) validation.
@@ -162,12 +174,3 @@ The wet coffee grounds in your pour over.
 
 ### Sweetness
 Self explanatory, but sweetness is easy to perceive in relation to acidity (fruitiness). Is the lemon note tangy/puckery, or rounded/rich like lemonade?
-
-## CLI
-
-```bash
-# Create a new journal entry
-coffee-journal journal new
-# Analyze which coffee origins had the highest scores
-coffee-journal stats --by score --fields coffee.origin.country grind pourTime
-```
