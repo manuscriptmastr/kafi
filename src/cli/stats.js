@@ -23,6 +23,16 @@ const {
   values
 } = R;
 
+/**
+ * TODO:
+ * - Add support for the --match flag
+ * - Add support for helper functions like
+ *   - simple equality: grind(23) same as grind(eq(23))
+ *   - dot properties: equipment.method(Hario V60)
+ *   - comparisons: pourTime(lt(2:00))
+ * - Line up columns in reports
+ */
+
 const mapAsync = curryN(2, pipe(map, arr => Promise.all(arr)));
 // Get filenames of all entries
 const getEntryNames = () => fs.readdir(`${process.cwd()}/entries`);

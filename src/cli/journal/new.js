@@ -5,7 +5,11 @@ import R from 'ramda';
 const { applySpec, head, join, last, map, pipe, split, sortBy } = R;
 import template from '../../template.json';
 
-// TODO: Handle case when no entries are available in folder
+/**
+ * TODO:
+ * - Handle case when no entries are available in folder
+ * - Switch to dayjs?
+ */
 
 const filenameToDateArray = pipe(
   split('.json'),
