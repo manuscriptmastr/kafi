@@ -1,4 +1,4 @@
-#!/usr/bin/env -S node --experimental-specifier-resolution=node
+#!/usr/bin/env -S node --experimental-specifier-resolution=node --no-warnings
 import yargs from 'yargs';
 import journal from './src/cli/journal';
 import stats from './src/cli/stats';

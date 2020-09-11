@@ -1,11 +1,43 @@
 import { promises as fs } from 'fs';
 import R from 'ramda';
-const { andThen, curry, filter, map, pathEq, pick, pipeWith, prop, sortBy } = R;
+const {
+  andThen,
+  converge,
+  curry,
+  curryN,
+  fromPairs,
+  head,
+  join,
+  keys,
+  map,
+  o,
+  path,
+  pipe,
+  pipeWith,
+  prop,
+  sortBy,
+  split,
+  tap,
+  toUpper,
+  unapply,
+  values
+} = R;
 
+const mapAsync = curryN(2, pipe(map, arr => Promise.all(arr)));
+// Get filenames of all entries
 const getEntryNames = () => fs.readdir(`${process.cwd()}/entries`);
+// Import entry from filename
 const getEntryByName = name => import(`${process.cwd()}/entries/${name}`).then(prop('default'));
-
-const mapAsync = curry((fn, arr) => Promise.all(map(fn, arr)));
+// Find value in object from property or path string
+const pathStr = curry((string, object) => path(split('.', string), object));
+// Include only fields in entry
+const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathStr(field, entry)], fields)));
+// Get header string from list of entries
+const headers = pipe(head, keys, join('   '), toUpper);
+// Format entries to stdout-friendy
+const data = pipe(map(pipe(values, join('   '))), join('\n'));
+// Create report from entries
+const prettify = converge(unapply(join('\n')), [headers, data]);
 
 export default {
   command: 'stats',
@@ -25,9 +57,9 @@ export default {
   handler: ({ by, fields }) => pipeWith(andThen, [
     getEntryNames,
     mapAsync(getEntryByName),
-    filter(pathEq(['equipment', 'grinder'], 'Comandante C40 MKIII')),
-    sortBy(prop(by)),
-    map(pick(fields)),
-    console.log
+    sortBy(pathStr(by)),
+    map(strainBy([by, ...fields])),
+    prettify,
+    tap(console.log),
   ])()
 };

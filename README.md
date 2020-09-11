@@ -13,14 +13,25 @@ I was inspired to combine both the journal and tasting aspects into one idea. At
 
 ## CLI
 
+### Journal
 ```bash
 # Create a new journal entry
 coffee-journal journal new
-# Analyze which coffee origins had the highest scores
-coffee-journal stats --by score --fields coffee.origin.country grind pourTime
-# TODO: add --match to filter entries based on constant variables
-# TODO: add helper functions like lt (less than), gt (greater than), eq (equals), etc.
-coffee-journal stats --by score --match grind(23) pourTime(lt('3:00')) --fields coffee.origin.country pourTime
+```
+
+### Stats
+```bash
+# Analyze how grind setting and pour time corresponded to score
+coffee-journal stats --by score --fields grind pourTime
+# You can search with dot properties as well
+coffee-journal stats --by aroma.quality --fields coffee.origin.region score
+```
+
+### Future Additions
+```bash
+# list only entries that match certain criteria
+# use helper functions like lt (less than), gt (greater than), eq (equals), etc.
+coffee-journal stats --by score --match grind(23) pourTime(lt('3:00')) --fields grind pourTime
 ```
 
 ## Setup
