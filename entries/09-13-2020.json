@@ -1,0 +1,48 @@
+{
+  "date": "09/13/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:340g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "3:11",
+  "aroma": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Vanilla, spice, warm cider, with a loud fruit punchy note. I don't think there's any bitterness, but I was surprised how strong the fruit note was, which could be the 'tang'."
+  },
+  "acidity": {
+    "quantity": 4,
+    "quality": 5,
+    "notes": "Deep fruit punch note — sugary and tart."
+  },
+  "sweetness": {
+    "quantity": 4,
+    "quality": 4,
+    "notes": "Some mouthfilling complexity, fruit notes are well-balanced."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Syrupy. Could tell when pouring coffee into cup that it wasn't thick, but also not watery."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 4,
+    "notes": "Minty finish immediately after swallow. Tongue feels fresh long after. A little astringency halfway through cup. Slight aftertaste like after green tea."
+  },
+  "flavor": "Fruit punch/tropical note is the focal point of this cup. Moderate complexity with that characteristic cream note. Finish is minty but just slightly astringent. Cup becomes increasingly juicy as it cools.",
+  "score": 9,
+  "notes": "8 second swirl bloom with 70g (didn't quite feel like enough). Max 2 second Rao spin with tap. Last third of drawdown was a little faster than last time.",
+  "actionItem": "Research how to shave off 10 seconds with technique. This is so close."
+}
