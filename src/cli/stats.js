@@ -1,36 +1,41 @@
 import { promises as fs } from 'fs';
 import R from 'ramda';
 const {
+  allPass,
   andThen,
-  converge,
   curry,
   curryN,
+  filter,
   fromPairs,
   head,
   join,
   keys,
   map,
-  o,
   path,
   pipe,
   pipeWith,
   prop,
+  reduce,
+  repeat,
   sortBy,
   split,
   tap,
   toUpper,
-  unapply,
-  values
+  values,
+  zipWith
 } = R;
 
 /**
  * TODO:
  * - Add support for the --match flag
  * - Add support for helper functions like
- *   - simple equality: grind(23) same as grind(eq(23))
- *   - dot properties: equipment.method(Hario V60)
- *   - comparisons: pourTime(lt(2:00))
- * - Line up columns in reports
+ *   - "grind(23)" or "grind(equals(23))" => pipe(path(['grind']), equals(23))
+ *   - "equipment.grinder("Comandante C40 MK3")" => pipe(path(['equipment', 'grinder']), equals('Comandante C40 MK3'))
+ *   - "equipment.method("Hario V60")" => pipe(path(['equipment', 'method']), equals('Hario V60'))
+ *   - "acidity.notes(contains("plum"))" => pipe(path(['acidity', 'notes']), includes('plum'))
+ *   - "pourTime(lessthan(2:00))" => pipe(path(['pourTime']), lt('2:00'))
+ *   - "date(before("August 3rd"))" => pipe(path(['date']), ...somefancydatefn)
+ * - Tighten up JSON validation for fields like times and dates
  */
 
 const mapAsync = curryN(2, pipe(map, arr => Promise.all(arr)));
@@ -39,35 +44,69 @@ const getEntryNames = () => fs.readdir(`${process.cwd()}/entries`);
 // Import entry from filename
 const getEntryByName = name => import(`${process.cwd()}/entries/${name}`).then(prop('default'));
 // Find value in object from property or path string
-const pathStr = curry((string, object) => path(split('.', string), object));
+const pathString = curry((string, object) => path(split('.', string), object));
 // Include only fields in entry
-const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathStr(field, entry)], fields)));
-// Get header string from list of entries
-const headers = pipe(head, keys, join('   '), toUpper);
-// Format entries to stdout-friendy
-const data = pipe(map(pipe(values, join('   '))), join('\n'));
-// Create report from entries
-const prettify = converge(unapply(join('\n')), [headers, data]);
+const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
+// Prettify logic
+const headers = pipe(head, keys);
+
+const maxLength = reduce((max, str) =>
+  max > str.toString().length
+    ? max
+    : str.toString().length
+  , 0
+);
+
+const whitespace = pipe(repeat(' '), join(''));
+
+const addTrailingWhiteSpace = curry((fill, str) =>
+  str.toString().length >= fill
+    ? `${str}`
+    : `${str}${whitespace(fill - str.toString().length)}`
+);
+
+const matrix = arr => {
+  const head = headers(arr);
+  const table = [map(toUpper, head), repeat(' ', head.length), ...map(values, arr)];
+  const dataByColumn = map(header => map(prop(header), arr), head);
+  const maxLengths = map(maxLength, zipWith((h, d) => [h, ...d], head, dataByColumn));
+  return map(zipWith(addTrailingWhiteSpace, maxLengths), table);
+};
+
+const row = join('   ');
+
+const column = join('\n');
+
+const prettify = pipe(matrix, map(row), column);
 
 export default {
   command: 'stats',
   desc: 'Analyze journal entries',
   builder: yargs => yargs
     .option('by', {
+      alias: ['b', 'sort'],
       describe: 'Sort results by field',
       type: 'string',
       default: 'score'
     })
+    // .option('match', {
+    //   alias: ['m', 'filter', 'filters'],
+    //   describe: 'Filter entries by criteria',
+    //   type: 'array',
+    //   default: []
+    // })
     .option('fields', {
+      alias: ['f', 'include'],
       describe: 'Fields to include',
       type: 'array',
       demandOption: true
     })
   ,
-  handler: ({ by, fields }) => pipeWith(andThen, [
+  handler: ({ by, match, fields }) => pipeWith(andThen, [
     getEntryNames,
     mapAsync(getEntryByName),
-    sortBy(pathStr(by)),
+    filter(allPass(match)),
+    sortBy(pathString(by)),
     map(strainBy([by, ...fields])),
     prettify,
     tap(console.log),
