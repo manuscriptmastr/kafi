@@ -1,0 +1,48 @@
+{
+  "date": "09/14/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:355g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "2:50",
+  "aroma": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Fresh, warm, smoky — smells like a quicker extraction, not well developed."
+  },
+  "acidity": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Sweet, juicy, somewhat puckery yet weak/watery. Somewhat sour overall."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 2,
+    "notes": "Underdeveloped. Fruit notes are more puckery like cranberry juice than fruit punch."
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 2,
+    "notes": "Tea-like."
+  },
+  "finish": {
+    "quantity": 5,
+    "quality": 1,
+    "notes": "Alkaline taste in back of throat. Grassy aftertaste. Mouth is puckering/tense after sips."
+  },
+  "flavor": "Sour, underdeveloped, and weak.",
+  "score": 4,
+  "notes": "Accidentally did 78g of water. Poured as fast as possible, finished 200g by 1:55, finished pour by 1:17. Lots of boulders at edge due to agitation. Drawdown was much faster — I had to do the Rao spin as soon as I rinsed off my spoon.",
+  "actionItem": "This was a success — we attempted to change brew time with flow rate only, and ended up shaving 20 seconds rather than 10. Reduce flow rate a bit to get back to the 3:00–3:05 sweet spot."
+}
