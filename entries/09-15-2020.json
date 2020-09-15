@@ -1,0 +1,48 @@
+{
+  "date": "09/15/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:355g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "3:54",
+  "aroma": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Smooth, vanilla, fruit punch."
+  },
+  "acidity": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Literally killed the fruit notes. I taste something tangy but it has more of the character of bitterness."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 1,
+    "notes": "Empty except for the mouthfilling mint taste. Slightly astringent, though not nearly as much as I expected. No complexity."
+  },
+  "body": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Syrup."
+  },
+  "finish": {
+    "quantity": 4,
+    "quality": 1,
+    "notes": "Minty mouthfeel, along with some (but not a lot of) astringency and a nagging 'bad breath' sensation."
+  },
+  "flavor": "This is actually not the worst cup of coffee I've made, but it is certainly the worst I've made in awhile. Syrupy, no tasting notes, with minty mouthfeel.",
+  "score": 3,
+  "notes": "80g water bloom swirl. Tried out a different technique — poured roughly 5g/second, or finish by 1:45 (this time more like 1:55). First 60% from just below splatter height, second low as possible. Water was very clear during last stages of drawdown. Very slow, few to no boulders on sides. Very flat slurry.",
+  "actionItem": "Definitely a clear example of how agitation affects brew time. With pour technique alone, I changed brew time within a range of 64 seconds. What I don't know is how to consistently hit somewhere in between this extreme (4.1g/s) and as-fast-as-possible (8.5g/s). Pour height may have made an even bigger impact as well."
+}

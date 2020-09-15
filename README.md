@@ -96,6 +96,23 @@ For me, the difference between a perfect cup and a noticeably under/overextracte
 5. Gooseneck kettle — you can totally do amazing pour overs with a regular kettle, but the gooseneck spout really helps with consistency.
 6. Water — depending on where you live, this might be a small or huge improvement. Water is 98% of your coffee, and if your water tastes bad, your coffee will, too. There are many options for improving water for coffee, but avoid reverse osmosis if possible. It does strange things to the brew process.
 
+### My brew is under/overextracted. How can I change my extraction time?
+
+One of the greatest surprises to me is that it doesn't take a pretentious palate to recognize the difference even 10–20 seconds makes in the taste of the coffee. Even more surprising, these fluctuations in extraction are due to what seem like minutiae like the way you bloom, the speed and height from which you pour, the grind size, the filter, the temperature of the water, how long you spin, etc. In fact, changing any *one* of these factors can change brew time by over a minute!
+
+Changing extraction boils down to a single challenge: how do I extract as much of the coffee as possible, as evenly as possible, at a contact time that hits "the sweet spot", without causing fines to clog my filter?
+
+Macro adjustments change brew time by 60 seconds or more:
+- Change your filter (seriously)
+- Adjust your bloom technique (stir, swirl, length)
+- Adjust your pour technique (pour height and speed)
+
+Micro adjustments change the balance of the coffee:
+- Adjust your grind by one click at a time
+- Adjust your coffee to water ratio
+
+Save your sanity by making the macro adjustments first. In a sense, *you* are the greatest variable in your coffee, more so than the obvious adjustments like grind and ratio.
+
 ### How will I know what I'm aiming for taste-wise?
 
 If possible, buy coffee beans after you've had the coffee shop make you a pour over (try to avoid additives like sugar or milk). Take some notes on aspects like the aroma, acidity (fruitiness), sweetness, body (thickness), and finish (aftertaste), then use those as markers for your own brewing. Even better, try [cupping your coffee](https://www.youtube.com/watch?v=cSEgP4VNynQ) to get these markers.
