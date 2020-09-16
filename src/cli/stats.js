@@ -4,26 +4,17 @@ const {
   allPass,
   andThen,
   curry,
-  curryN,
   filter,
   fromPairs,
-  head,
-  join,
-  keys,
   map,
-  path,
-  pipe,
   pipeWith,
   prop,
-  reduce,
-  repeat,
   sortBy,
-  split,
-  tap,
-  toUpper,
-  values,
-  zipWith
+  tap
 } = R;
+import { pathString } from '../parse';
+import { table } from '../prettify';
+import { mapAsync } from '../util';
 
 /**
  * TODO:
@@ -38,77 +29,37 @@ const {
  * - Tighten up JSON validation for fields like times and dates
  */
 
-const mapAsync = curryN(2, pipe(map, arr => Promise.all(arr)));
 // Get filenames of all entries
 const getEntryNames = () => fs.readdir(`${process.cwd()}/entries`);
 // Import entry from filename
 const getEntryByName = name => import(`${process.cwd()}/entries/${name}`).then(prop('default'));
-// Find value in object from property or path string
-const pathString = curry((string, object) => path(split('.', string), object));
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
-// Prettify logic
-const headers = pipe(head, keys);
-
-const maxLength = reduce((max, str) =>
-  max > str.toString().length
-    ? max
-    : str.toString().length
-  , 0
-);
-
-const whitespace = pipe(repeat(' '), join(''));
-
-const addTrailingWhiteSpace = curry((fill, str) =>
-  str.toString().length >= fill
-    ? `${str}`
-    : `${str}${whitespace(fill - str.toString().length)}`
-);
-
-const matrix = arr => {
-  const head = headers(arr);
-  const table = [map(toUpper, head), repeat(' ', head.length), ...map(values, arr)];
-  const dataByColumn = map(header => map(prop(header), arr), head);
-  const maxLengths = map(maxLength, zipWith((h, d) => [h, ...d], head, dataByColumn));
-  return map(zipWith(addTrailingWhiteSpace, maxLengths), table);
-};
-
-const row = join('   ');
-
-const column = join('\n');
-
-const prettify = pipe(matrix, map(row), column);
 
 export default {
   command: 'stats',
   desc: 'Analyze journal entries',
   builder: yargs => yargs
-    .option('by', {
-      alias: ['b', 'sort'],
+    .option('sort', {
       describe: 'Sort results by field',
       type: 'string',
       default: 'score'
     })
-    // .option('match', {
-    //   alias: ['m', 'filter', 'filters'],
-    //   describe: 'Filter entries by criteria',
-    //   type: 'array',
-    //   default: []
-    // })
     .option('fields', {
-      alias: ['f', 'include'],
       describe: 'Fields to include',
       type: 'array',
       demandOption: true
     })
   ,
-  handler: ({ by, match, fields }) => pipeWith(andThen, [
+  // filters are subobjects of a full entry object.
+  // Combine into single object, then build recursive version
+  // using whereEq to filter an entry based on spec object
+  handler: ({ ['$0']: pos, _, sort, fields, ...filters }) => pipeWith(andThen, [
     getEntryNames,
     mapAsync(getEntryByName),
-    filter(allPass(match)),
-    sortBy(pathString(by)),
-    map(strainBy([by, ...fields])),
-    prettify,
-    tap(console.log),
+    sortBy(pathString(sort)),
+    map(strainBy([sort, ...fields])),
+    table,
+    tap(() => console.log(filters)),
   ])()
 };

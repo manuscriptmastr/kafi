@@ -22,16 +22,16 @@ coffee-journal journal new
 ### Stats
 ```bash
 # Analyze how grind setting and pour time corresponded to score
-coffee-journal stats --by score --fields grind pourTime
+coffee-journal stats --sort score --fields grind pourTime
 # You can search with dot properties as well
-coffee-journal stats --by aroma.quality --fields coffee.origin.region score
+coffee-journal stats --sort aroma.quality --fields coffee.origin.region score
 ```
 
 ### Future Additions
 ```bash
-# list only entries that match certain criteria
-# use helper functions like lt (less than), gt (greater than), eq (equals), etc.
-coffee-journal stats --by score --match grind(23) pourTime(lt('3:00')) --fields grind pourTime
+# allow filters by fields
+# list only entries that used Hario V60
+coffee-journal stats --sort score --fields grind pourTime --equipment.method="Hario V60"
 ```
 
 ## Setup
