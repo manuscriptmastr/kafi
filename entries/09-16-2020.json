@@ -1,0 +1,48 @@
+{
+  "date": "09/16/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:340g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "3:05",
+  "aroma": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Warm, honeyish (thought of hotel lotion)."
+  },
+  "acidity": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Fruit notes are small but pleasant. Still pleasant as cools."
+  },
+  "sweetness": {
+    "quantity": 4,
+    "quality": 3,
+    "notes": "Balanced with acidity and smooth, but not exciting."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Tea-like to light syrup."
+  },
+  "finish": {
+    "quantity": 3,
+    "quality": 3,
+    "notes": "Teeth feel minty, mouth feels warm, some green tea/grassy aftertastes. Slightly drying/salivating, but feels different than astringency."
+  },
+  "flavor": "This cup is very confusing, though in the ballpark of 'good'. The body and finish aren't necessarily screaming overextraction, but sweetness is developed while the cup as a whole is somewhat hollow. Tongue is parched and mouth is salivating.",
+  "score": 7,
+  "notes": "80g bloom water and 8 second swirl, 200g at 1:00 (moderately fast and high at 8g/s), finished pour at 1:27 (second part 5.2, overall 6.2g/s), short swirl and tap about 10-15 seconds after. Had boulders stuck on sides, so agitation was still good.",
+  "actionItem": "I think this was slightly overextracted since acidity was all but gone. The fast and high initial pour (thus high agitation) seems to have significantly changed the composition of the coffee from the 3:04 pour over that scored 10. To reduce brew time, reduce initial pour height while keeping speed high."
+}
