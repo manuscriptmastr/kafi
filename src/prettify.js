@@ -33,7 +33,7 @@ const addTrailingWhiteSpace = curry((fill, str) =>
 
 export const matrix = arr => {
   const head = headers(arr);
-  const table = [map(toUpper, head), repeat(' ', head.length), ...map(values, arr)];
+  const table = [map(toUpper, head), ...map(values, arr)];
   const dataByColumn = map(header => map(prop(header), arr), head);
   const maxLengths = map(maxLength, zipWith((h, d) => [h, ...d], head, dataByColumn));
   return map(zipWith(addTrailingWhiteSpace, maxLengths), table);

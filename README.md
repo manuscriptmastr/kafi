@@ -21,17 +21,14 @@ coffee-journal journal new
 
 ### Stats
 ```bash
-# Analyze how grind setting and pour time corresponded to score
-coffee-journal stats --sort score --fields grind pourTime
-# You can search with dot properties as well
-coffee-journal stats --sort aroma.quality --fields coffee.origin.region score
-```
-
-### Future Additions
-```bash
-# allow filters by fields
-# list only entries that used Hario V60
-coffee-journal stats --sort score --fields grind pourTime --equipment.method="Hario V60"
+# Basic use
+coffee-journal stats --fields grind pourTime
+# Sort by field (defaults to score)
+coffee-journal stats --fields grind pourTime --sort score
+# Use dot notation (available on all flags)
+coffee-journal stats --fields coffee.origin.region score
+# Filter results by properties
+coffee-journal stats --fields grind pourTime --equipment.grinder="Baratza Encore" --grind=23
 ```
 
 ## Setup
