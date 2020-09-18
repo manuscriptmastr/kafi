@@ -45,7 +45,7 @@ export const createJournalEntry = async () => {
   const newFilename = `${format(today, 'MM-dd-yyyy')}${isToday(date) ? `-${iteration + 1}` : ''}.json`;
   const newEntry = { ...template, date: format(today, 'MM/dd/yyyy'), coffee, equipment, ratio, grind, bloomTime };
   await fs.writeFile(`${process.cwd()}/entries/${newFilename}`, JSON.stringify(newEntry));
-  console.log(`Wrote new entry: ${newFilename}.json`);
+  console.log(`Wrote new entry: ${newFilename}`);
 };
 
 export default {
