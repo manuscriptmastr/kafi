@@ -1,0 +1,48 @@
+{
+  "date": "09/19/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:355g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "3:08",
+  "aroma": {
+    "quantity": 1,
+    "quality": 1,
+    "notes": "Weak, faint vanilla scent."
+  },
+  "acidity": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Smooth. Not glowing. Just slightly sour and watery, but more like a blueberry/blueberry picked when it's still reddish. Fruit increases to a pungent cherry/alkaline flavor as coffee cools."
+  },
+  "sweetness": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Not developed, but definitely some smoothness/creaminess."
+  },
+  "body": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Tea-like, but the smoothness tricks my mouth into thinking it's much thicker."
+  },
+  "finish": {
+    "quantity": 1,
+    "quality": 2,
+    "notes": "Little to no finish. Fairly neutral mouthfeel. Mouth feels sticky but not dry/sandpapery."
+  },
+  "flavor": "First sip was clean, no tang/bitterness, a conservative grape note, and a smooth mouthfeel. Finish disappears but leaves mouth sticky/parched, indicating sourness rather than astringency. Overall, I liked where this was going — it was focused and on its way to well-balanced and glowy. No 'off tastes' or juxtaposition of sourness and astringency.",
+  "score": 7,
+  "notes": "High initial pour, first pour a little slow, got to 200g at 1:05, accidentally overshot at 375g, took off filter early at 3:08 to compensate. Drawdown was very slow.",
+  "actionItem": "A little faster initial pour, end by 1:00."
+}

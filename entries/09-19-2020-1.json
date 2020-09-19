@@ -1,0 +1,48 @@
+{
+  "date": "09/19/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:355g",
+  "grind": 24,
+  "bloomTime": "0:45",
+  "pourTime": "3:09",
+  "aroma": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Faint but fresh, not as much vanilla warmth."
+  },
+  "acidity": {
+    "quantity": 1,
+    "quality": 2,
+    "notes": "Weak and watery but pointedly, darkly acidic. Lime juice lingers in mouth on swallow. Citrus/alkaline acidity increases just slightly as coffee cools."
+  },
+  "sweetness": {
+    "quantity": 1,
+    "quality": 2,
+    "notes": "Smooth, but almost no sweetness."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Light syrup."
+  },
+  "finish": {
+    "quantity": 1,
+    "quality": 3,
+    "notes": "Finish disappears. Mouth is relatively neutral — the slightest tinge of sandpapery dryness on mouth and particularly teeth."
+  },
+  "flavor": "Very different. Surprisingly weak. Fruit note is more of a cold, chilly kind. This would encourage me to grind finer.",
+  "score": 6,
+  "notes": "8 second bloom with 70g water, high initial pour, 200g by 1:00, finish at 1:25 (low but fast), S+T around 1:45. For bloom pour, I kept water in the well and it did not drain out nearly as fast (definitely preferred this). Drawdown did not slow down a drip like last time.",
+  "actionItem": "Change grind to 23 using the same technique."
+}
