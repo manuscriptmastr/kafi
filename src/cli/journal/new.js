@@ -8,6 +8,7 @@ import template from '../../template.json';
 /**
  * TODO:
  * - Handle case when no entries are available in folder
+ * - notes => technique, observations, action item
  * - Switch to dayjs?
  */
 
