@@ -10,6 +10,7 @@ import template from '../../template.json';
  * - Handle case when no entries are available in folder
  * - notes => technique, observations, action item
  * - Switch to dayjs?
+ * - Rewrite README to reflect new findings (e.g. how does high agitation affect extraction?)
  */
 
 const filenameToDateArray = pipe(
