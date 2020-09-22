@@ -1,0 +1,48 @@
+{
+  "date": "09/22/2020",
+  "coffee": {
+    "origin": {
+      "country": "El Salvador",
+      "region": "Ariz Family Pacamara"
+    },
+    "roaster": "Olympia Coffee Roasting Co",
+    "roastDate": "09/03/2020"
+  },
+  "equipment": {
+    "method": "Hario V60",
+    "grinder": "Comandante C40 MK3"
+  },
+  "ratio": "22g:355g",
+  "grind": 23,
+  "bloomTime": "0:45",
+  "pourTime": "2:58",
+  "aroma": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Vanilla, spice, plum."
+  },
+  "acidity": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Juicy, full, slight dark purple tang throughout like the skin of a plum. Decreases slightly as cools."
+  },
+  "sweetness": {
+    "quantity": 3,
+    "quality": 4,
+    "notes": "Smooth, rich, creamy. Fairly complex, but I almost want more. Still soft and sweet as cools."
+  },
+  "body": {
+    "quantity": 2,
+    "quality": 4,
+    "notes": "Light syrup? Creaminess could be from the sweetness."
+  },
+  "finish": {
+    "quantity": 2,
+    "quality": 3,
+    "notes": "Not really a finish, or rather the taste just 'washes out'. Relatively neutral mouthfeel at least."
+  },
+  "flavor": "First impressions: juicy. Full and mouthwatering acidity like a sweet peach, dark tang like the skin of a plum. Creamy, very sweet. Very close — if this were just slightly more complex and had a nice long finish, I'd give this a 10.",
+  "score": 9,
+  "notes": "70g/8sec, 200g/1:00, 355/1:21. Low and fast throughout. Drawdown was initially fast so I did the Rao Spin as soon as possible.",
+  "actionItem": "Goal is to shorten brew time by 5-10 seconds. Finish pour markers by 0:57/0:17."
+}
