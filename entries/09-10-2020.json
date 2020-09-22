@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:48",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Smooth, mellow cup — sweetness and acidity are almost balanced. Fruit isn't harsh but not quite glowing. Complexity is okay, but there's a distinct grassy 'off' taste like overextracted green tea. This taste dominates the finish as well. Body thickens as cools while flavors diminish except for a little bitterness/tang.",
   "score": 6,
-  "notes": "8 second swirl bloom with 97g water. Drawdown was relatively consistent but slower than drawdowns with grind 23. Coarser grinds and longer times seem to correlate to smoother, less astringent, les volatile cups with higher body, but with less complexity/excitement overall.",
+  "observations": "8 second swirl bloom with 97g water. Drawdown was relatively consistent but slower than drawdowns with grind 23. Coarser grinds and longer times seem to correlate to smoother, less astringent, les volatile cups with higher body, but with less complexity/excitement overall.",
   "actionItem": "None, end of Congo SO."
 }

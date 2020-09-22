@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:44",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Wow. In spite (or because) of the long drawdown, this is easily the most luscious, full-bodied, three-dimensional, balanced cup from these beans. The fruit note is not overwhelming like last time and is well-balanced with sweetness, the finish just 'melts', no astringency. However, the taste decreases as the coffee cools.",
   "score": 10,
-  "notes": "Water was already draining very slowly by the time I filled to the top. I did a generous swirl and tap twice, not sure that was a good idea, but it did finish without stalling.",
+  "observations": "Water was already draining very slowly by the time I filled to the top. I did a generous swirl and tap twice, not sure that was a good idea, but it did finish without stalling.",
   "actionItem": "Try one more time at 24. Research what the diminishing taste on cooldown warrants."
 }

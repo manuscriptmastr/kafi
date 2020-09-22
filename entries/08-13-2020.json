@@ -17,6 +17,7 @@
   "grind": 21,
   "bloomTime": "0:30",
   "pourTime": "2:19",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 3,
@@ -44,6 +45,6 @@
   },
   "flavor": "Missing the fruit note that was there in another cup at grind 23. Pleasant body but rather flat and weak tastewise. Mouth still feels dry so definitely astringent.",
   "score": 4,
-  "notes": "I used as little agitation as possible. Coffee bed was a little humpy after drawdown in spite (or because of?) large swirl.",
+  "observations": "I used as little agitation as possible. Coffee bed was a little humpy after drawdown in spite (or because of?) large swirl.",
   "actionItem": "Increase grind to 22. If astringent feeling goes away, then play with the ratio or slow down pour to increase perceived strength."
 }

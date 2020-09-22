@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:03",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Definitely overextracted. First impression was that the coffee was diluted except for the 'twang' note (is that associated with astringency?). Cup is missing some complexity, finish is a very strong and long 'bad breath' feeling. Coffee tastes diluted and somewhat metallic as it cools. Not enjoyable at all.",
   "score": 4,
-  "notes": "7 second swirl bloom with 70g water. Did not let spoon touch sides of filter and let the final swirl knock off boulders instead — the filter was much cleaner!",
+  "observations": "7 second swirl bloom with 70g water. Did not let spoon touch sides of filter and let the final swirl knock off boulders instead — the filter was much cleaner!",
   "actionItem": "This could have been a fluke due to a bad filter or the fact that the coffee is getting old. Two thoughts come to mind: your swirl bloom was vigorous, and your initial pour was very gentle. You've already been doing vigorous swirls, so next time pour a bit harder for more agitation."
 }

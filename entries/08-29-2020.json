@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:54",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 5,
@@ -43,6 +44,6 @@
   },
   "flavor": "Complex, creamy, emphasis on cool plum juice and warm spices. I'm starting to like this, though the combo is unusual.",
   "score": 9,
-  "notes": "8 second vigorous bloom swirl. Drawdown was consistent.",
+  "observations": "8 second vigorous bloom swirl. Drawdown was consistent.",
   "actionItem": ""
 }

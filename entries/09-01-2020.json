@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:36",
+  "technique": "",
   "aroma": {
     "quantity": 4,
     "quality": 5,
@@ -43,6 +44,6 @@
   },
   "flavor": "Even better than yesterday. Fruit note is less overwhelming and finish is longer.",
   "score": 10,
-  "notes": "7 second swirl bloom with 70g water.",
+  "observations": "7 second swirl bloom with 70g water.",
   "actionItem": "Try to replicate this recipe again."
 }

@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:36",
+  "technique": "8 second bloom swirl with 70g water, first pour (moderately high) by 1:05 (6g/s), finish by 1:30 (overall 6.5g/s), S+T at 1:55.",
   "aroma": {
     "quantity": 3,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Tangy and hollow.",
   "score": 1,
-  "notes": "8 second bloom swirl with 70g water, first pour (moderately high) by 1:05 (6g/s), finish by 1:30 (overall 6.5g/s), S+T at 1:55. Slow but smooth drawdown.",
+  "observations": "Slow but smooth drawdown.",
   "actionItem": "Aim for fast initial pour, little to no agitation."
 }

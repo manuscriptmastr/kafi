@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:04",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "First sip screamed 'PLUM JUICE'. Plum note is sweet and round, though also accompanied by the tanginess I associate with astringency. Flavor diminishes as cools.",
   "score": 7,
-  "notes": "7 second swirl bloom with 70g water, fast pour, finished pour at 1:21, swirl tap at 1:39.",
+  "observations": "7 second swirl bloom with 70g water, fast pour, finished pour at 1:21, swirl tap at 1:39.",
   "actionItem": "Interestingly, the drawdown took exactly the same amount of time, but the plum note was noticeably brighter/clearer/glowing. Keep the fast pour (finish at 1:20, s+t at 1:40), but shorten swirl bloom to 6 seconds to make up for old coffee."
 }

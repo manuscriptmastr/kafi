@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:35",
   "pourTime": "2:24",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 1,
@@ -43,6 +44,6 @@
   },
   "flavor": "Still a nice soft, if perhaps a little weak of a brew. Better balance between acidity and sweetness, but I want everything to be a bit louder.",
   "score": 6,
-  "notes": "Changed grind to 24, but the pour time was still crazy short.",
+  "observations": "Changed grind to 24, but the pour time was still crazy short.",
   "actionItem": "Lower grind to 22"
 }

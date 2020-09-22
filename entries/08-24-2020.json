@@ -16,6 +16,7 @@
   "grind": 22,
   "bloomTime": "0:45",
   "pourTime": "3:25",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "First sensation is of how thick the body is — soupy, syrupy. Then I get a tangy, orangy note also with a distinct 'twangy' tang note. Finish is slightly metallic and astringent.",
   "score": 4,
-  "notes": "8 second swirl bloom. Drip was slow on initial pour, fast as I got to the top, then slowed significantly at about 1/3 left. Very different behavior from the Papua New Guinea",
+  "observations": "8 second swirl bloom. Drip was slow on initial pour, fast as I got to the top, then slowed significantly at about 1/3 left. Very different behavior from the Papua New Guinea",
   "actionItem": "Try either a less aggressive bloom or grind 23 with a more aggressive bloom."
 }

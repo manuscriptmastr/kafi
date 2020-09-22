@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:05",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "This cup is very confusing, though in the ballpark of 'good'. The body and finish aren't necessarily screaming overextraction, but sweetness is developed while the cup as a whole is somewhat hollow. Tongue is parched and mouth is salivating.",
   "score": 7,
-  "notes": "80g bloom water and 8 second swirl, 200g at 1:00 (moderately fast and high at 8g/s), finished pour at 1:27 (second part 5.2, overall 6.2g/s), short swirl and tap about 10-15 seconds after. Had boulders stuck on sides, so agitation was still good.",
+  "observations": "80g bloom water and 8 second swirl, 200g at 1:00 (moderately fast and high at 8g/s), finished pour at 1:27 (second part 5.2, overall 6.2g/s), short swirl and tap about 10-15 seconds after. Had boulders stuck on sides, so agitation was still good.",
   "actionItem": "I think this was slightly overextracted since acidity was all but gone. The fast and high initial pour (thus high agitation) seems to have significantly changed the composition of the coffee from the 3:04 pour over that scored 10. To reduce brew time, reduce initial pour height while keeping speed high."
 }

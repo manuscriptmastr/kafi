@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:31",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "Plum juice is the main attraction, with a woody base. Body is tea-like and finish disappears quickly. This cup was '3D' and quite well balanced.",
   "score": 9,
-  "notes": "6 second swirl bloom with 73g water.",
+  "observations": "6 second swirl bloom with 73g water.",
   "actionItem": "Try a 7 second swirl bloom to compare. Does it mellow out the fruit note even more?"
 }

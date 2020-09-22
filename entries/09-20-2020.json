@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:20",
+  "technique": "8 second bloom with 70g water, high initial pour, 200g by 1:00, finish at 1:20 (low but fast).",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Highly concentrated and pungent acidity but flat and watery. Overall concentration is better than last.",
   "score": 6,
-  "notes": "Poured into well. 8 second bloom with 70g water, high initial pour, 200g by 1:00, finish at 1:20 (low but fast). Had to assist for drawdown.",
+  "observations": "Poured into well. Had to assist for drawdown.",
   "actionItem": "Very interesting experiment with high/fast pours. The combination of astringency and weakness is likely due to the initial pour bypassing grounds too quickly. Stick to the bloom swirl and spin for agitation and lower kettle to normal. Keep the speed up."
 }

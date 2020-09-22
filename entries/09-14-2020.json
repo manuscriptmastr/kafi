@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "2:50",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 1,
@@ -43,6 +44,6 @@
   },
   "flavor": "Sour, underdeveloped, and weak.",
   "score": 4,
-  "notes": "Accidentally did 78g of water. Poured as fast as possible, finished 200g by 1:55, finished pour by 1:17. Lots of boulders at edge due to agitation. Drawdown was much faster — I had to do the Rao spin as soon as I rinsed off my spoon.",
+  "observations": "Accidentally did 78g of water. Poured as fast as possible, finished 200g by 1:55, finished pour by 1:17. Lots of boulders at edge due to agitation. Drawdown was much faster — I had to do the Rao spin as soon as I rinsed off my spoon.",
   "actionItem": "This was a success — we attempted to change brew time with flow rate only, and ended up shaving 20 seconds rather than 10. Reduce flow rate a bit to get back to the 3:00–3:05 sweet spot."
 }

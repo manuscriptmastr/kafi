@@ -78,7 +78,7 @@
     },
     "ratio": {
       "type": "string",
-      "description": "The ration of coffee to water, such as '1:16' or '22g:340g'"
+      "description": "The ratio of coffee to water, such as '1:16' or '22g:340g'"
     },
     "grind": {
       "type": "integer",
@@ -91,6 +91,10 @@
     "pourTime": {
       "type": "string",
       "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops."
+    },
+    "technique": {
+      "type": "string",
+      "description": "The techniques you used to brew your coffee, such as 'bloom swirl' or 'Rao Spin'."
     },
     "aroma": {
       "$ref": "#/definitions/aspect",
@@ -122,7 +126,7 @@
       "maximum": 10,
       "description": "On a scale of 1 to 10, how much did you enjoy this brew?"
     },
-    "notes": {
+    "observations": {
       "type": "string",
       "default": "",
       "description": "Any additional notes about this brew, such as a faster pour."
@@ -141,6 +145,7 @@
     "grind",
     "bloomTime",
     "pourTime",
+    "technique",
     "aroma",
     "acidity",
     "sweetness",

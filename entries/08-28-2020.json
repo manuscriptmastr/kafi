@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:02",
+  "technique": "",
   "aroma": {
     "quantity": 4,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "Given the new experience of spice, complexity, and the distinct dried fruit note, this is probably the closest yet to the intent of this coffee. The fruit note is not my favorite, but I can appreciate the complexity of this cup. Smooth on sip, then dominated by a sugary, fermented, raisin note. Pleasantly neutral aftertaste with mostly the sensation of the mouth cooling.",
   "score": 9,
-  "notes": "8 second swirl bloom, but with 70+g of water. Drainage was consistent, flat slurry.",
+  "observations": "8 second swirl bloom, but with 70+g of water. Drainage was consistent, flat slurry.",
   "actionItem": ""
 }

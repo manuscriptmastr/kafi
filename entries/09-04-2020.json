@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:50",
+  "technique": "7 second bloom swirl with 69g water.",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Probably the 'easiest' cup to drink so far from this SO. The fruit note is very complex, with more focused flavors like cherry/grape/plum and brighter citrus tones. Sweetness really makes this cup — I don't feel the need to get water, and the finish settles smoothly and sugary like a cough drop or peppermint tea.",
   "score": 10,
-  "notes": "7 second bloom swirl with 69g water.",
+  "observations": "",
   "actionItem": ""
 }

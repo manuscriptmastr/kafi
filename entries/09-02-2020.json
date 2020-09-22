@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:26",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Clean, well-balanced, but somewhat dilute/weak (but not hollow/empty). Jewel-like plum/cherry note reminds me of the Risaralda, Colombia decaf SO I had at Third Wave.",
   "score": 6,
-  "notes": "70g bloom water aiming for 7 second swirl bloom, but got distracted trying to time swirl bloom, not vigorous enough, possibly not long enough.",
+  "observations": "70g bloom water aiming for 7 second swirl bloom, but got distracted trying to time swirl bloom, not vigorous enough, possibly not long enough.",
   "actionItem": "Continue with 7 second, vigorous swirl bloom. Don't use timer for now, just count the swirl bloom aloud."
 }

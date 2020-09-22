@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:16",
+  "technique": "",
   "aroma": {
     "quantity": 4,
     "quality": 5,
@@ -43,6 +44,6 @@
   },
   "flavor": "Overextracted and the most astringent cup I can remember, but not empty nor overpowered with bitterness. Interesting how changing the grind by one click dramatically thickened the body.",
   "score": 5,
-  "notes": "Forced drawdown. Vigorous swirl bloom with 70g water for 8 seconds, poured 200g by 1:00, finished pour by 1:25. Drawdown was very slow in final stages, so I had to assist a bit. Completely different behavior than grind 23, possibly more fines.",
+  "observations": "Forced drawdown. Vigorous swirl bloom with 70g water for 8 seconds, poured 200g by 1:00, finished pour by 1:25. Drawdown was very slow in final stages, so I had to assist a bit. Completely different behavior than grind 23, possibly more fines.",
   "actionItem": "Try your last batch at grind 24 for science :D."
 }

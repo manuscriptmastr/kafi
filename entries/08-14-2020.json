@@ -16,6 +16,7 @@
   "grind": 22,
   "bloomTime": "0:45",
   "pourTime": "3:05",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 1,
@@ -43,6 +44,6 @@
   },
   "flavor": "Completely different experience. The body on this is amazing, but the tasting notes are all gone. Still getting some astringency.",
   "score": 4,
-  "notes": "Let bloom for 45 seconds, did generous swirl, didn't try to clean sides of filter, poured gently, did spoon swirl, then did generous swirl and tap. Bed was perfectly flat and water flowed very evenly.",
+  "observations": "Let bloom for 45 seconds, did generous swirl, didn't try to clean sides of filter, poured gently, did spoon swirl, then did generous swirl and tap. Bed was perfectly flat and water flowed very evenly.",
   "actionItem": "Increase grind to 23 and stop squeezing out leftover water. At some point we should get the tasting notes back but still have a great body with the method and longer bloom. Then increase coffee as needed."
 }

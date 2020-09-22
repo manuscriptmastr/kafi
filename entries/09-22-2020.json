@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:58",
+  "technique": "Bloom swirl 70g water for 8 seconds, pour (low and fast) 200g by 1:00, finish by 1:20. Do a 2–3 second Rao Spin ASAP.",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "First impressions: juicy. Full and mouthwatering acidity like a sweet peach, dark tang like the skin of a plum. Creamy, very sweet. Very close — if this were just slightly more complex and had a nice long finish, I'd give this a 10.",
   "score": 9,
-  "notes": "70g/8sec, 200g/1:00, 355/1:21. Low and fast throughout. Drawdown was initially fast so I did the Rao Spin as soon as possible.",
+  "observations": "Drawdown was initially fast so I did the Rao Spin as soon as possible.",
   "actionItem": "Goal is to shorten brew time by 5-10 seconds. Finish pour markers by 0:57/0:17."
 }

@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:11",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Fruit punch/tropical note is the focal point of this cup. Moderate complexity with that characteristic cream note. Finish is minty but just slightly astringent. Cup becomes increasingly juicy as it cools.",
   "score": 9,
-  "notes": "8 second swirl bloom with 70g (didn't quite feel like enough). Max 2 second Rao spin with tap. Last third of drawdown was a little faster than last time.",
+  "observations": "8 second swirl bloom with 70g (didn't quite feel like enough). Max 2 second Rao spin with tap. Last third of drawdown was a little faster than last time.",
   "actionItem": "Research how to shave off 10 seconds with technique. This is so close."
 }

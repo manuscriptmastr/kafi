@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:18",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 5,
@@ -43,6 +44,6 @@
   },
   "flavor": "Smooth but non-descript for the first two seconds, then suddenly the raisin note blooms in my mouth. On swallow I feel the tea-like finish. Through the cup, the raisin note builds up to where it tastes more sour. On cooldown everything except the sour quality tends to disappear. Overall better balanced but still one note is screaming for attention.",
   "score": 6,
-  "notes": "Only variable that changed was that I increased bloom swirl time to 8 seconds, e.g. 'ONE, TWO... NINE!'",
+  "observations": "Only variable that changed was that I increased bloom swirl time to 8 seconds, e.g. 'ONE, TWO... NINE!'",
   "actionItem": "Keep the same bloom swirl but decrease grind size to 23."
 }

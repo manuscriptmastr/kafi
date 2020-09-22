@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:54",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "This is actually not the worst cup of coffee I've made, but it is certainly the worst I've made in awhile. Syrupy, no tasting notes, with minty mouthfeel.",
   "score": 3,
-  "notes": "80g water bloom swirl. Tried out a different technique — poured roughly 5g/second, or finish by 1:45 (this time more like 1:55). First 60% from just below splatter height, second low as possible. Water was very clear during last stages of drawdown. Very slow, few to no boulders on sides. Very flat slurry.",
+  "observations": "80g water bloom swirl. Tried out a different technique — poured roughly 5g/second, or finish by 1:45 (this time more like 1:55). First 60% from just below splatter height, second low as possible. Water was very clear during last stages of drawdown. Very slow, few to no boulders on sides. Very flat slurry.",
   "actionItem": "Definitely a clear example of how agitation affects brew time. With pour technique alone, I changed brew time within a range of 64 seconds. What I don't know is how to consistently hit somewhere in between this extreme (4.1g/s) and as-fast-as-possible (8.5g/s). Pour height may have made an even bigger impact as well."
 }

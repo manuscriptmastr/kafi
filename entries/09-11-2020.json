@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:04",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "First sip is amazingly 3D, glowy, sweet, round, warbling. Finish is... refreshing, like having one of those listerine sheets. No astringency felt by tongue until latter part of cup.",
   "score": 10,
-  "notes": "Very difficult for the Comandante to grind. 8 second vigorous/wide bloom swirl with 70g water. Drawdown was a little faster. Rao spin and tap was a bit more conservative. Some boulders stuck at the top of filter.",
+  "observations": "Very difficult for the Comandante to grind. 8 second vigorous/wide bloom swirl with 70g water. Drawdown was a little faster. Rao spin and tap was a bit more conservative. Some boulders stuck at the top of filter.",
   "actionItem": ""
 }

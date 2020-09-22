@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:16",
+  "technique": "8 second bloom swirl, but I didn't swirl as widely/intensely.",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "More complex, 'story-telling', developing flavor and smell. That is great. Base taste is earthy, woody, fruit note is a slightly tangy, 'whining' plum or sour cherry. Aftertaste has both some nice woody sensations but also the unpleasant tang.",
   "score": 7,
-  "notes": "8 second bloom swirl, but I didn't swirl as widely/intensely.",
+  "observations": "",
   "actionItem": "Swirl bloom more intensely. We want to maximize drawdown for this grind size to move barely out of the sour phase."
 }

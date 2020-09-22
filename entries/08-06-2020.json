@@ -16,6 +16,7 @@
   "grind": 9,
   "bloomTime": "0:35",
   "pourTime": "4:00",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 3,
@@ -43,5 +44,5 @@
   },
   "flavor": "Usually distinct lemon — this time softer fruit, like a peach or apple. Rather flat yet sour (tongue is dry), possibly due to long extraction time. Pleasant, tea-like finish with a distinct “grass” note coming in and out.",
   "score": 3,
-  "notes": "Swirl bloomed generously (high on walls) over 30 seconds, rested 5 seconds. Fines got caught really high. Slow drip throughout."
+  "observations": "Swirl bloomed generously (high on walls) over 30 seconds, rested 5 seconds. Fines got caught really high. Slow drip throughout."
 }

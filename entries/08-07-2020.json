@@ -16,6 +16,7 @@
   "grind": 9,
   "bloomTime": "0:35",
   "pourTime": "3:02",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 4,
@@ -43,5 +44,5 @@
   },
   "flavor": "Instantly hit with a zingy lemon note, then I notice how milky the body is. Fairly neutral aftertaste (might be tea-ish) unlike previous pour. Overall quite good.",
   "score": 7,
-  "notes": "Shallow, fast swirl with a little washing of the sides after bloom"
+  "observations": "Shallow, fast swirl with a little washing of the sides after bloom"
 }

@@ -16,6 +16,7 @@
   "grind": 22,
   "bloomTime": "0:45",
   "pourTime": "2:34",
+  "technique": "8 second bloom swirl with 60g of water.",
   "aroma": {
     "quantity": 3,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "First sensation is of how sweet the fruit note is. Fruit is definitely a stone fruit, like a peach, cherry, or plum. It's almost overwhelming but not. One of the sweetest cups I've had so far. Finish is tea-like with a lingering warmth.",
   "score": 8,
-  "notes": "8 second bloom swirl with 60g of water. This drawdown was identical to the last, but it pushes the fruit note forward more in this cup. Not sure which one I like better.",
+  "observations": "This drawdown was identical to the last, but it pushes the fruit note forward more in this cup. Not sure which one I like better.",
   "actionItem": "Make one more cup at 22, then try 23 again to compare profiles."
 }

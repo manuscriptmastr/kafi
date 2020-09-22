@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:08",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 1,
@@ -43,6 +44,6 @@
   },
   "flavor": "First sip was clean, no tang/bitterness, a conservative grape note, and a smooth mouthfeel. Finish disappears but leaves mouth sticky/parched, indicating sourness rather than astringency. Overall, I liked where this was going — it was focused and on its way to well-balanced and glowy. No 'off tastes' or juxtaposition of sourness and astringency.",
   "score": 7,
-  "notes": "High initial pour, first pour a little slow, got to 200g at 1:05, accidentally overshot at 375g, took off filter early at 3:08 to compensate. Drawdown was very slow.",
+  "observations": "High initial pour, first pour a little slow, got to 200g at 1:05, accidentally overshot at 375g, took off filter early at 3:08 to compensate. Drawdown was very slow.",
   "actionItem": "A little faster initial pour, end by 1:00."
 }

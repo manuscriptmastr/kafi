@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:02",
+  "technique": "8 second bloom swirl with 70g water. First 200g by 0:55 (13g/s, high, pushed until water pushed faster through bed), finish by 1:17 (7g/s) (overall 8.9g/s).",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "First impression: sweet and watery.",
   "score": 6,
-  "notes": "8 second bloom swirl with 70g water. First 200g by 0:55 (13g/s, high, pushed until water pushed faster through bed), finish by 1:17 (7g/s) (overall 8.9g/s). Lots of boulders on side.",
+  "observations": "Lots of boulders on side.",
   "actionItem": "Possibly an uneven extraction. Try a high initial pour with a slower rate, closer to 8-10g/s (e.g. by 1:00)."
 }

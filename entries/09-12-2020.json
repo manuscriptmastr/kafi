@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "3:15",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 2,
@@ -43,6 +44,6 @@
   },
   "flavor": "Overall taste is still glowing like a sunset with tropical fruit, lime, and cream, but cup is noticeably astringent compared to last.",
   "score": 8,
-  "notes": "Accidentally did 80g water for swirl bloom. Drawdown in last third was very slow, drip by drip.",
+  "observations": "Accidentally did 80g water for swirl bloom. Drawdown in last third was very slow, drip by drip.",
   "actionItem": "Slightly overextracted. Use 70g of water and research at what water level Rao spin works best."
 }

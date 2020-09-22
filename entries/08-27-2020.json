@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:48",
+  "technique": "8 second bloom swirl, but more vigorous.",
   "aroma": {
     "quantity": 4,
     "quality": 5,
@@ -43,6 +44,6 @@
   },
   "flavor": "Soft, syrupy, mellow on sip. Cherry note colors flavor rather than coming and going. Not as earthy/woody as other cups. Further mellows as cools.",
   "score": 7,
-  "notes": "8 second bloom swirl, but more vigorous.",
+  "observations": "",
   "actionItem": ""
 }

@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:25",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "While I'd like more complexity out of this coffee, this cup has some first rate qualities, particularly as it cooled. Focal point shifts from the fruit notes to the creamy body as the coffee cools. In spite of a long drawdown, I don't feel any astringency. The fruit note is a little too tangy when hot, which makes me think I got some bitterness. Fruit weakens/mellows/rounds out as cools, while the creamy body becomes more interesting.",
   "score": 8,
-  "notes": "8 second swirl bloom with 70g water, 200g by 1:00, finish pour by 1:25 (?). Drawdown was much slower than anything I've seen in awhile, but did not clog.",
+  "observations": "8 second swirl bloom with 70g water, 200g by 1:00, finish pour by 1:25 (?). Drawdown was much slower than anything I've seen in awhile, but did not clog.",
   "actionItem": "Change grind to 24 and see whether that balances the longer drawdown or makes it worse with more fines."
 }

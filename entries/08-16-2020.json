@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:33",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "The tasting notes are back! It's like the coffee went back to being '3D'. Still loads of body, but now I get the cherry zing. The characteristic herb or grass note is back as well — it's what reminds me this is a Papua New Guinea roast, and also the one 'off' taste I don't personally care for.",
   "score": 7,
-  "notes": "Did not clean sides of filter this time. Kept 45 second bloom and generous swirls/taps/the whole shebang. Drained a little slower than 'normal' but was steady throughout. No stalling.",
+  "observations": "Did not clean sides of filter this time. Kept 45 second bloom and generous swirls/taps/the whole shebang. Drained a little slower than 'normal' but was steady throughout. No stalling.",
   "actionItem": "Back off the 24 just to see whether that improves the overall flavor-to-body ratio balance."
 }

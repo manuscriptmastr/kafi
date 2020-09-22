@@ -16,6 +16,7 @@
   "grind": 9,
   "bloomTime": "0:35",
   "pourTime": "2:45",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "Lemonade",
   "score": 7,
-  "notes": "Brew was still a little under time, which left body undeveloped.",
+  "observations": "Brew was still a little under time, which left body undeveloped.",
   "actionItem": "Time might be a fluke due to uneven grind. Nothing for now."
 }

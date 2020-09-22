@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "2:37",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "Underdeveloped — insipid, sour, watery.",
   "score": 4,
-  "notes": "Swirled bloom for exactly 2 seconds ('ONE... TWO... THREE!) and the slurry was still blooming after. However, the drawdown was remarkably fast so that seems to pinpoint the bloom as the problem. I might have poured a tad bit faster but mostly to keep up with how quickly it began to drain. All other variables were the same.",
+  "observations": "Swirled bloom for exactly 2 seconds ('ONE... TWO... THREE!) and the slurry was still blooming after. However, the drawdown was remarkably fast so that seems to pinpoint the bloom as the problem. I might have poured a tad bit faster but mostly to keep up with how quickly it began to drain. All other variables were the same.",
   "actionItem": "This was actually a huge success! It turns out the bloom swirl is where the problem is happening. Adjust the length of the swirl so that more CO2 is released quicker, but fines don't make it to the bottom. This will probably lengthen drawdown by itself. After that, take grind finer."
 }

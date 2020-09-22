@@ -16,6 +16,7 @@
   "grind": 24,
   "bloomTime": "0:45",
   "pourTime": "2:59",
+  "technique": "Bloom swirl 70g water for 8 seconds, pour (low and fast) 200g by 1:00, finish by 1:20. Do a 2–3 second Rao Spin ASAP.",
   "aroma": {
     "quantity": 3,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "Lots of storytelling (complexity) in the first sip, but overall sour and watery.",
   "score": 5,
-  "notes": "Poured bloom into well. Fast and low, 70g/8sec, 200g/1:00, finish at 1:23. Fast drawdown. Bloom water did not feel like enough.",
+  "observations": "Fast drawdown. Bloom water did not feel like enough.",
   "actionItem": "Change grind to 23 but keep same technique."
 }

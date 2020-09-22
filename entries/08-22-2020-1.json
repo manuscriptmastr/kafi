@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:34",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "First and overall impression is a warm, earthy, vanilla flavor — there is more emphasis on the earthy qualities than the emerging cherry note. Aftertaste is balanced between tea-like and acidic — I don't feel like running for water. I like this.",
   "score": 7,
-  "notes": "Drawdown was remarkably fast here as well as the Congo on grind 23. Same 8 second bloom swirl, though with 70g of water as this coffee is lighter thus takes up more volumetric room.",
+  "observations": "Drawdown was remarkably fast here as well as the Congo on grind 23. Same 8 second bloom swirl, though with 70g of water as this coffee is lighter thus takes up more volumetric room.",
   "actionItem": "Grind at 22 to explore how this changes"
 }

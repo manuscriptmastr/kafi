@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:42",
+  "technique": "",
   "aroma": {
     "quantity": 3,
     "quality": 5,
@@ -43,6 +44,6 @@
   },
   "flavor": "Empty, hollow, dilute, yet syrupy — strangely all the notes have disappeared. The presence of body and sweetness, coupled with the hollow, empty flavor suggests over extraction. From previous cups, it looks like this coffee reaches optimum extraction around 2:30. 2:15 results in a slightly sour, tangy taste; 2:45 results in a '2D' cup.",
   "score": 5,
-  "notes": "8 second swirl bloom with 66g water.",
+  "observations": "8 second swirl bloom with 66g water.",
   "actionItem": "Papua New Guinea ONLY — shorten bloom swirl to 7 seconds. Still vigorous."
 }

@@ -16,6 +16,7 @@
   "grind": 9,
   "bloomTime": "0:40",
   "pourTime": "2:36",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 2,
@@ -43,6 +44,6 @@
   },
   "flavor": "Definitely sour. Predominately the puckering lemon zing, then just watery.",
   "score": 2,
-  "notes": "Did a long (40sec) but shallow bloom, then did a fairly quick pour. Drained remarkably fast. Thinking the quick pour forced too much water to bypass the grounds.",
+  "observations": "Did a long (40sec) but shallow bloom, then did a fairly quick pour. Drained remarkably fast. Thinking the quick pour forced too much water to bypass the grounds.",
   "actionItem": "Slower pour"
 }

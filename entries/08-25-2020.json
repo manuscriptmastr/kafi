@@ -16,6 +16,7 @@
   "grind": 22,
   "bloomTime": "0:45",
   "pourTime": "2:42",
+  "technique": "8 second bloom swirl with 60g of water, cleaned top with a spoon, good swirl and tap on drawdown.",
   "aroma": {
     "quantity": 1,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "This was not a bad cup at all — just felt and tasted like a '2D' version of a balanced cup of coffee. The finish and body were great, though!",
   "score": 6,
-  "notes": "8 second bloom swirl with 60g of water, cleaned top with a spoon, good swirl and tap on drawdown.",
+  "observations": "",
   "actionItem": "Perhaps grind 23 is the best balance? We're losing some of the complexity, perhaps from extracting other parts of the coffee that overwhelm this. Based on the body and 'flatness', this could not have been a sour, underextracted brew."
 }

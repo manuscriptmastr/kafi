@@ -8,7 +8,6 @@ import template from '../../template.json';
 /**
  * TODO:
  * - Handle case when no entries are available in folder
- * - notes => technique, observations, action item
  * - Switch to dayjs?
  * - Rewrite README to reflect new findings (e.g. how does high agitation affect extraction?)
  */
@@ -42,10 +41,10 @@ export const createJournalEntry = async () => {
   const filenames = await fs.readdir(`${process.cwd()}/entries`);
   const { filename, iteration, date } = getMostRecentJournalEntry(filenames);
   const { default: lastEntry } = await import(`${process.cwd()}/entries/${filename}`);
-  const { coffee, equipment, ratio, grind, bloomTime } = lastEntry;
+  const { coffee, equipment, ratio, grind, bloomTime, technique } = lastEntry;
   const today = new Date();
   const newFilename = `${format(today, 'MM-dd-yyyy')}${isToday(date) ? `-${iteration + 1}` : ''}.json`;
-  const newEntry = { ...template, date: format(today, 'MM/dd/yyyy'), coffee, equipment, ratio, grind, bloomTime };
+  const newEntry = { ...template, date: format(today, 'MM/dd/yyyy'), coffee, equipment, ratio, grind, bloomTime, technique };
   await fs.writeFile(`${process.cwd()}/entries/${newFilename}`, JSON.stringify(newEntry));
   console.log(`Wrote new entry: ${newFilename}`);
 };

@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "3:43",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 3,
@@ -43,6 +44,6 @@
   },
   "flavor": "Uninteresting. Good body, but tasting notes are still rather muted (though more present than last time) and tongue feels very sandpapery after drinking the full cup.",
   "score": 4,
-  "notes": "Poured gently on to bloom but did try to clean the sides a bit. Did the generous swirl and tap but I could already tell this one was slower.",
+  "observations": "Poured gently on to bloom but did try to clean the sides a bit. Did the generous swirl and tap but I could already tell this one was slower.",
   "actionItem": "Pour strictly onto the slurry — don't clean the sides. Let the swirl at the end of brew clean them. Continue using the generous bloom swirl and drawdown swirl so that you're changing only one variable."
 }

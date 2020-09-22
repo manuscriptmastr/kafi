@@ -16,6 +16,7 @@
   "grind": 23,
   "bloomTime": "0:45",
   "pourTime": "2:57",
+  "technique": "",
   "aroma": {
     "quantity": 2,
     "quality": 4,
@@ -43,6 +44,6 @@
   },
   "flavor": "Like other cups around 3 minutes, an otherwise mellow cup gets dominated by that sharp, citrusy tang. I think it's safe to say I'm tasting bitterness — it's that overpowering nuance that screams over the better parts of the cup.",
   "score": 1,
-  "notes": "Made a big well in dry coffee bed, swirled vigorously until saturated (8 seconds), poured 200g by 1:05 (not fast at all), finished by 1:35, swirl and tap around 1:45 or 1:50.",
+  "observations": "Made a big well in dry coffee bed, swirled vigorously until saturated (8 seconds), poured 200g by 1:05 (not fast at all), finished by 1:35, swirl and tap around 1:45 or 1:50.",
   "actionItem": "Change grind to 24 for Congo only. The good news is that as long as we thoroughly swirl bloom, we're getting a consistent time (3 minutes) and consistent bitterness."
 }
