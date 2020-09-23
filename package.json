@@ -1,5 +1,5 @@
 {
-  "name": "coffee-journal",
+  "name": "pourover-cli",
   "version": "1.0.0",
   "description": "Statically-validated JSON coffee journal for percolation brews",
   "main": "index.js",
@@ -7,12 +7,12 @@
     "test": "ava --watch"
   },
   "bin": {
-    "coffee-journal": "index.js"
+    "pourover": "index.js"
   },
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manuscriptmastr/coffee-journal.git"
+    "url": "git+https://github.com/manuscriptmastr/pourover-cli.git"
   },
   "ava": {
     "nodeArguments": [
@@ -32,9 +32,9 @@
   "author": "Joshua Martin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manuscriptmastr/coffee-journal/issues"
+    "url": "https://github.com/manuscriptmastr/pourover-cli/issues"
   },
-  "homepage": "https://github.com/manuscriptmastr/coffee-journal#readme",
+  "homepage": "https://github.com/manuscriptmastr/pourover-cli#readme",
   "dependencies": {
     "dayjs": "^1.8.36",
     "ramda": "^0.27.1",
