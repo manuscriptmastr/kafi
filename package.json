@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/manuscriptmastr/coffee-journal#readme",
   "dependencies": {
-    "date-fns": "^2.15.0",
+    "dayjs": "^1.8.36",
     "ramda": "^0.27.1",
     "yargs": "^15.4.1"
   },

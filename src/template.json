@@ -16,6 +16,7 @@
   "grind": 0,
   "bloomTime": "",
   "pourTime": "",
+  "technique": "",
   "aroma": {
     "quantity": 1,
     "quality": 1,
@@ -43,6 +44,6 @@
   },
   "flavor": "",
   "score": 1,
-  "notes": "",
+  "observations": "",
   "actionItem": ""
 }

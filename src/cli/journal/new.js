@@ -1,14 +1,14 @@
-import dateFns from 'date-fns';
-const { format, isToday } = dateFns;
+import dayjs from 'dayjs';
+import isToday from 'dayjs/plugin/isToday';
 import { promises as fs } from 'fs';
 import R from 'ramda';
-const { applySpec, head, join, last, map, pipe, split, sortBy } = R;
+const { always, applySpec, head, ifElse, join, last, map, pipe, prop, split, sortBy } = R;
 import template from '../../template.json';
+
+dayjs.extend(isToday);
 
 /**
  * TODO:
- * - Handle case when no entries are available in folder
- * - Switch to dayjs?
  * - Rewrite README to reflect new findings (e.g. how does high agitation affect extraction?)
  */
 
@@ -24,27 +24,40 @@ const dateArrayToFilename = ([year, month, day, iteration]) =>
 
 const dateArrayToIteration = ([_, __, ___, iteration]) => Number(iteration);
 
+const dateArrayToObject = applySpec({
+  filename: dateArrayToFilename,
+  iteration: dateArrayToIteration,
+  date: ([year, month, day]) => dayjs(`${month}-${day}-${year}`, FORMAT)
+});
+
 const sortArrays = sortBy(join('-'));
+
+const FORMAT = 'MM-DD-YYYY';
 
 const getMostRecentJournalEntry = pipe(
   map(filenameToDateArray),
   sortArrays,
   last,
-  applySpec({
-    filename: dateArrayToFilename,
-    iteration: dateArrayToIteration,
-    date: ([year, month, day]) => new Date(`${month}-${day}-${year}`)
-  })
+  ifElse(K => !!K, dateArrayToObject, always({ filename: null, iteration: null, date: null })),
 );
 
 export const createJournalEntry = async () => {
   const filenames = await fs.readdir(`${process.cwd()}/entries`);
   const { filename, iteration, date } = getMostRecentJournalEntry(filenames);
-  const { default: lastEntry } = await import(`${process.cwd()}/entries/${filename}`);
-  const { coffee, equipment, ratio, grind, bloomTime, technique } = lastEntry;
-  const today = new Date();
-  const newFilename = `${format(today, 'MM-dd-yyyy')}${isToday(date) ? `-${iteration + 1}` : ''}.json`;
-  const newEntry = { ...template, date: format(today, 'MM/dd/yyyy'), coffee, equipment, ratio, grind, bloomTime, technique };
+
+  const today = dayjs();
+
+  let newFilename = `${today.format(FORMAT)}.json`;
+  let newEntry = { ...template, date: today.format('MM/DD/YYYY') };
+
+  if (filename) {
+    const { default: lastEntry } = await import(`${process.cwd()}/entries/${filename}`);
+    const { coffee, equipment, ratio, grind, bloomTime, technique } = lastEntry;
+
+    newFilename = `${today.format(FORMAT)}${date.isToday() ? `-${iteration + 1}` : ''}.json`;
+    newEntry = { ...newEntry, coffee, equipment, ratio, grind, bloomTime, technique };
+  }
+
   await fs.writeFile(`${process.cwd()}/entries/${newFilename}`, JSON.stringify(newEntry));
   console.log(`Wrote new entry: ${newFilename}`);
 };

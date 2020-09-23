@@ -129,7 +129,7 @@
     "observations": {
       "type": "string",
       "default": "",
-      "description": "Any additional notes about this brew, such as a faster pour."
+      "description": "Any notes about this brew, such as drawdown."
     },
     "actionItem": {
       "type": "string",
