@@ -2,7 +2,18 @@ import dayjs from 'dayjs';
 import isToday from 'dayjs/plugin/isToday';
 import { promises as fs } from 'fs';
 import R from 'ramda';
-const { always, applySpec, head, ifElse, join, last, map, pipe, prop, split, sortBy } = R;
+const {
+  always,
+  applySpec,
+  head,
+  ifElse,
+  join,
+  last,
+  map,
+  pipe,
+  split,
+  sortBy
+} = R;
 import template from '../../template.json';
 
 dayjs.extend(isToday);
