@@ -18,11 +18,6 @@ import template from '../../template.json';
 
 dayjs.extend(isToday);
 
-/**
- * TODO:
- * - Rewrite README to reflect new findings (e.g. how does high agitation affect extraction?)
- */
-
 const filenameToDateArray = pipe(
   split('.json'),
   head,
