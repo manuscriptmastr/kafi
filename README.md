@@ -36,7 +36,13 @@ npm link
 # create a new journal entry with sane defaults
 pourover journal new
 ```
-4. Begin your brew. Hover over any property names (such as `coffee.origin.region`) for a description of the field. Write down any adjectives to capture noticeable aspects of the coffee, as well as your reaction to them. Was the body soupy like broth or thin like a cheap tea? Does your mouth feel like you've been sucking on a penny?
+4. Brew your coffee, then jot out your reactions to things like:
+- What does the smell remind you of?
+- What does that fruity note remind you of?
+- Do you *like* what you're tasting? What part of it do you like or dislike?
+- How interesting is the overall flavor? Does it change, or is it rather one-dimensional?
+- How does the coffee *feel*?
+- How does your mouth feel during and after a sip?
 5. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall pour time.
 ![Coffee Compass](./coffee-compass.jpg)
 
@@ -70,29 +76,3 @@ pourover stats --fields grind pourTime --equipment.grinder="Baratza Encore" --gr
 - [Scott Rao's V60 Method](https://www.youtube.com/watch?v=c0Qe_ASxfNM)
 - [Hario V60 Pour Over by Matt Perger](https://vimeo.com/46612013)
 - [4:6 Method](https://www.youtube.com/watch?v=wmCW8xSWGZY)
-
-## FAQ
-
-### Why keep a journal?
-
-### MVP mindset: what products most impact quality the brew?
-
-### How will I know what I'm aiming for taste-wise?
-
-### What temperature should I heat the water to?
-
-### What's the difference between a Chemex, V60, or Kalita Wave?
-
-### What do you consider characteristics of good coffee?
-
-## Troubleshooting
-
-### My coffee tastes sour, weak, and thin.
-
-### My coffee tastes overwhelming, tangy, and soupy.
-
-### As my coffee cools, the taste disappears.
-
-### My mouth feels dry after drinking.
-
-### My Ethiopian roast takes longer than other roasts and sometimes stalls
