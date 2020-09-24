@@ -1,12 +1,10 @@
 import dayjs from 'dayjs';
 import isToday from 'dayjs/plugin/isToday';
-import { promises as fs } from 'fs';
 import R from 'ramda';
 const {
   always,
   ascend,
   cond,
-  curry,
   defaultTo,
   head,
   last,
@@ -15,6 +13,11 @@ const {
   sortWith,
   useWith
 } = R;
+import {
+  getEntryByFilename,
+  getEntryFilenames,
+  writeEntry
+} from '../../../util';
 import template from '../../../template.json';
 
 dayjs.extend(isToday);
@@ -22,13 +25,13 @@ dayjs.extend(isToday);
 export const DATE_FORMAT = 'MM-DD-YYYY';
 
 export const dateFromFilename = pipe(
-  match(/^[0-9]{2}-[0-9]{2}-[0-9]{4}/),
+  match(/^\d{2}-\d{2}-\d{4}(?=(-\d+)?.json$)/),
   head,
   str => dayjs(str, DATE_FORMAT)
 );
 
 export const iterationFromFilename = pipe(
-  match(/(?<=-)[0-9](?=.json$)/),
+  match(/(?<=^\d{2}-\d{2}-\d{4}-)\d+(?=.json$)/),
   head,
   defaultTo('0'),
   str => parseInt(str, 10)
@@ -48,20 +51,10 @@ export const mostRecentFilename = pipe(
   last
 );
 
-const getEntryFilenames = () => fs.readdir(`${process.cwd()}/entries`);
-
-const getEntry = filename =>
-  import(`${process.cwd()}/entries/${filename}`)
-    .then(({ default: entry }) => entry);
-
-const writeEntry = curry((filename, entry) =>
-  fs.writeFile(`${process.cwd()}/entries/${filename}`, JSON.stringify(entry))
-);
-
 export const createJournalEntry = async () => {
   const filenames = await getEntryFilenames();
   const filename = mostRecentFilename(filenames);
-
+  const iteration = iterationFromFilename(filename);
   const today = dayjs();
 
   let newFilename = `${today.format(DATE_FORMAT)}.json`;
@@ -69,8 +62,7 @@ export const createJournalEntry = async () => {
 
   if (filename) {
     const date = dateFromFilename(filename);
-    const { default: lastEntry } = await getEntry(filename);
-    const { coffee, equipment, ratio, grind, bloomTime, technique } = lastEntry;
+    const { coffee, equipment, ratio, grind, bloomTime, technique } = await getEntryByFilename(filename);
 
     newFilename = `${today.format(DATE_FORMAT)}${date.isToday() ? `-${iteration + 1}` : ''}.json`;
     newEntry = { ...newEntry, coffee, equipment, ratio, grind, bloomTime, technique };

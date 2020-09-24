@@ -1,4 +1,3 @@
-import { promises as fs } from 'fs';
 import R from 'ramda';
 const {
   andThen,
@@ -7,22 +6,23 @@ const {
   fromPairs,
   map,
   pipeWith,
-  prop,
   sortBy,
   tap
 } = R;
 import { table } from '../prettify';
-import { mapAsync, partialEq, pathString } from '../util';
+import {
+  getEntryByFilename,
+  getEntryFilenames,
+  mapAsync,
+  partialEq,
+  pathString
+} from '../util';
 
 /**
  * TODO:
  * - Tighten up JSON validation for fields like times and dates
  */
 
-// Get filenames of all entries
-const getEntryNames = () => fs.readdir(`${process.cwd()}/entries`);
-// Import entry from filename
-const getEntryByName = name => import(`${process.cwd()}/entries/${name}`).then(prop('default'));
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
 
@@ -42,8 +42,8 @@ export default {
     })
   ,
   handler: ({ ['$0']: pos, _, sort, fields, ...filters }) => pipeWith(andThen, [
-    getEntryNames,
-    mapAsync(getEntryByName),
+    getEntryFilenames,
+    mapAsync(getEntryByFilename),
     filter(partialEq(filters)),
     sortBy(pathString(sort)),
     map(strainBy([sort, ...fields])),
