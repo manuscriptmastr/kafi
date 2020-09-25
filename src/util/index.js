@@ -30,5 +30,5 @@ export const getEntryByFilename = filename =>
     .then(prop('default'));
 
 export const writeEntry = curry((filename, entry) =>
-  fs.writeFile(`${process.cwd()}/entries/${filename}`, JSON.stringify(entry))
+  fs.writeFile(`${process.cwd()}/entries/${filename}`, JSON.stringify(entry, null, 2))
 );

@@ -20,11 +20,6 @@ import {
 } from '../../../util';
 import template from '../../../template.json';
 
-/**
- * TODO:
- * - Autoformat JSON file
- */
-
 dayjs.extend(isToday);
 
 export const DATE_FORMAT = 'MM-DD-YYYY';
