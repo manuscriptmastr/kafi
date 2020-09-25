@@ -18,11 +18,6 @@ import {
   pathString
 } from '../util';
 
-/**
- * TODO:
- * - Tighten up JSON validation for fields like times and dates
- */
-
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
 
