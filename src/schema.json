@@ -29,6 +29,7 @@
   "properties": {
     "date": {
       "type": "string",
+      "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
       "description": "The date you brewed this coffee."
     },
     "coffee": {
@@ -55,6 +56,7 @@
         },
         "roastDate": {
           "type": "string",
+          "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
           "description": "The date this coffee was roasted."
         }
       },
@@ -78,6 +80,7 @@
     },
     "ratio": {
       "type": "string",
+      "pattern": "^(\\d+:\\d+)|(\\d+g:\\d+g)$",
       "description": "The ratio of coffee to water, such as '1:16' or '22g:340g'"
     },
     "grind": {
@@ -86,10 +89,12 @@
     },
     "bloomTime": {
       "type": "string",
+      "pattern": "^\\d{1}:\\d{2}$",
       "description": "The bloom time."
     },
     "pourTime": {
       "type": "string",
+      "pattern": "^\\d{1}:\\d{2}$",
       "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops."
     },
     "technique": {
