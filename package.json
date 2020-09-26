@@ -1,7 +1,7 @@
 {
   "name": "pourover-cli",
   "version": "1.0.0",
-  "description": "Statically-validated JSON coffee journal for percolation brews",
+  "description": "JSON coffee journal CLI for percolation brews",
   "main": "index.js",
   "scripts": {
     "test": "ava --watch"
@@ -27,7 +27,8 @@
     "chemex",
     "v60",
     "kalita-wave",
-    "percolation"
+    "percolation",
+    "cli"
   ],
   "author": "Joshua Martin",
   "license": "ISC",
