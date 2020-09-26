@@ -30,7 +30,7 @@
     "date": {
       "type": "string",
       "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
-      "description": "The date you brewed this coffee."
+      "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
     },
     "coffee": {
       "type": "object",
@@ -40,7 +40,7 @@
           "properties": {
             "country": {
               "type": "string",
-              "description": "The country, such as 'Ethiopia' or 'Guatemala'"
+              "description": "The country, such as 'Ethiopia' or 'Guatemala'."
             },
             "region": {
               "type": "string",
@@ -57,7 +57,7 @@
         "roastDate": {
           "type": "string",
           "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
-          "description": "The date this coffee was roasted."
+          "description": "The date this coffee was roasted, formatted as 'MM/DD/YYYY'."
         }
       },
       "description": "The coffee beans used in your brew.",
@@ -81,7 +81,7 @@
     "ratio": {
       "type": "string",
       "pattern": "^(\\d+:\\d+)|(\\d+g:\\d+g)$",
-      "description": "The ratio of coffee to water, such as '1:16' or '22g:340g'"
+      "description": "The ratio of coffee to water, such as '1:16' or '22g:340g'."
     },
     "grind": {
       "type": "integer",
@@ -90,12 +90,12 @@
     "bloomTime": {
       "type": "string",
       "pattern": "^\\d{1}:\\d{2}$",
-      "description": "The bloom time."
+      "description": "The bloom time, such as '0:45'."
     },
     "pourTime": {
       "type": "string",
       "pattern": "^\\d{1}:\\d{2}$",
-      "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops."
+      "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops, such as '2:54'."
     },
     "technique": {
       "type": "string",

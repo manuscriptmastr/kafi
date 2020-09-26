@@ -9,13 +9,13 @@ const {
   sortBy,
   tap
 } = R;
-import { table } from '../prettify';
 import {
   getEntryByFilename,
   getEntryFilenames,
   mapAsync,
   partialEq,
-  pathString
+  pathString,
+  table
 } from '../util';
 
 // Include only fields in entry
