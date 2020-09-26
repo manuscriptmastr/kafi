@@ -16,6 +16,8 @@
   },
   "ava": {
     "nodeArguments": [
+      "--require",
+      "dotenv/config",
       "--experimental-specifier-resolution=node"
     ]
   },
@@ -38,6 +40,7 @@
   "homepage": "https://github.com/manuscriptmastr/pourover-cli#readme",
   "dependencies": {
     "dayjs": "^1.8.36",
+    "dotenv": "^8.2.0",
     "ramda": "^0.27.1",
     "yargs": "^15.4.1"
   },
