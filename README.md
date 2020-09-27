@@ -57,11 +57,11 @@ pourover journal new
 ### Stats
 ```bash
 # Basic use
-pourover stats --fields grind pourTime
+pourover stats
+# Display specific fields (supports dot notation)
+pourover stats --fields coffee.origin.region grind pourTime
 # Sort by field (defaults to score)
-pourover stats --fields grind pourTime --sort score
-# Use dot notation (available on all flags)
-pourover stats --fields coffee.origin.region score
+pourover stats --fields grind pourTime --sort pourTime
 # Filter results by properties
 pourover stats --fields grind pourTime --equipment.grinder="Baratza Encore" --grind=23
 ```

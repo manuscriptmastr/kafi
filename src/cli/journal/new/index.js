@@ -3,6 +3,7 @@ import R from 'ramda';
 const {
   ascend,
   last,
+  pick,
   pipe,
   sortWith,
   useWith
@@ -11,12 +12,16 @@ import {
   DATE_FORMAT,
   dateComparator,
   dateFromFilename,
+  FILE_EXTENSION,
+  FRIENDLY_DATE_FORMAT,
   getEntryByFilename,
   getEntryFilenames,
   iterationFromFilename,
   writeEntry
 } from '../../../util';
 import template from '../../../template.json';
+
+const DEFAULT_FIELDS = ['coffee', 'equipment', 'ratio', 'grind', 'bloomTime', 'technique', 'actionItem'];
 
 export const mostRecentFilename = pipe(
   sortWith([
@@ -32,19 +37,19 @@ export const createJournalEntry = async () => {
   const iteration = iterationFromFilename(filename);
   const today = dayjs();
 
-  let newFilename = `${today.format(DATE_FORMAT)}.json`;
-  let newEntry = { ...template, date: today.format('MM/DD/YYYY') };
+  let basename = today.format(DATE_FORMAT);
+  let entry = { ...template, date: today.format(FRIENDLY_DATE_FORMAT) };
 
   if (filename) {
     const date = dateFromFilename(filename);
-    const { coffee, equipment, ratio, grind, bloomTime, technique } = await getEntryByFilename(filename);
+    const lastEntry = await getEntryByFilename(filename);
 
-    newFilename = `${today.format(DATE_FORMAT)}${date.isToday() ? `-${iteration + 1}` : ''}.json`;
-    newEntry = { ...newEntry, coffee, equipment, ratio, grind, bloomTime, technique };
+    basename = `${basename}${date.isToday() ? `-${iteration + 1}` : ''}`;
+    entry = { ...entry, ...pick(DEFAULT_FIELDS, lastEntry) };
   }
 
-  await writeEntry(newFilename, newEntry);
-  console.log(`Wrote new entry: ${newFilename}`);
+  await writeEntry(`${basename}${FILE_EXTENSION}`, entry);
+  console.log(`Wrote new entry: ${basename}${FILE_EXTENSION}`);
 };
 
 export default {

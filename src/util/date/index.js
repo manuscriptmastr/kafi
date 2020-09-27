@@ -9,19 +9,24 @@ const {
   match,
   pipe
 } = R;
+import { FILE_EXTENSION } from '../file';
 
 dayjs.extend(isToday);
 
 export const DATE_FORMAT = 'MM-DD-YYYY';
+export const FRIENDLY_DATE_FORMAT = 'MM/DD/YYYY';
+
+const DATE_FROM_FILENAME = `^\\d{2}-\\d{2}-\\d{4}(?=(-\\d+)?${FILE_EXTENSION}$)`;
+const ITERATION_FROM_FILENAME = `(?<=^\\d{2}-\\d{2}-\\d{4}-)\\d+(?=${FILE_EXTENSION}$)`;
 
 export const dateFromFilename = pipe(
-  match(/^\d{2}-\d{2}-\d{4}(?=(-\d+)?.json$)/),
+  match(new RegExp(DATE_FROM_FILENAME)),
   head,
   str => dayjs(str, DATE_FORMAT)
 );
 
 export const iterationFromFilename = pipe(
-  match(/(?<=^\d{2}-\d{2}-\d{4}-)\d+(?=.json$)/),
+  match(new RegExp(ITERATION_FROM_FILENAME)),
   head,
   defaultTo('0'),
   str => parseInt(str, 10)

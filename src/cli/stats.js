@@ -18,6 +18,8 @@ import {
   table
 } from '../util';
 
+const DEFAULT_FIELDS = ['coffee.origin.region', 'coffee.roaster', 'grind', 'bloomTime', 'pourTime'];
+
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
 
@@ -33,7 +35,7 @@ export default {
     .option('fields', {
       describe: 'Fields to include',
       type: 'array',
-      demandOption: true
+      default: DEFAULT_FIELDS
     })
   ,
   handler: ({ ['$0']: pos, _, sort, fields, ...filters }) => pipeWith(andThen, [
