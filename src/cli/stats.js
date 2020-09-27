@@ -18,7 +18,12 @@ import {
   table
 } from '../util';
 
-const DEFAULT_FIELDS = ['coffee.origin.region', 'coffee.roaster', 'grind', 'bloomTime', 'pourTime'];
+/**
+ * Todo:
+ * - Incorporate keywords/tags? e.g. 'weak', 'empty', 'sour', 'tangy'
+ */
+
+const DEFAULT_FIELDS = ['coffee.origin.region', 'coffee.roaster', 'ratio', 'grind', 'pourTime'];
 
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
