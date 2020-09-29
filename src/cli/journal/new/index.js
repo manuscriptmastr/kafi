@@ -48,8 +48,8 @@ export const createJournalEntry = async () => {
     entry = { ...entry, ...pick(DEFAULT_FIELDS, lastEntry) };
   }
 
-  await writeEntry(`${basename}${FILE_EXTENSION}`, entry);
-  console.log(`Wrote new entry: ${basename}${FILE_EXTENSION}`);
+  const filepath = await writeEntry(`${basename}${FILE_EXTENSION}`, entry);
+  console.log(`Wrote new entry: ${filepath}`);
 };
 
 export default {

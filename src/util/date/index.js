@@ -4,10 +4,13 @@ import R from 'ramda';
 const {
   always,
   cond,
+  curry,
   defaultTo,
   head,
   match,
-  pipe
+  nthArg,
+  pipe,
+  replace
 } = R;
 import { FILE_EXTENSION } from '../file';
 
@@ -18,6 +21,7 @@ export const FRIENDLY_DATE_FORMAT = 'MM/DD/YYYY';
 
 const DATE_FROM_FILENAME = `^\\d{2}-\\d{2}-\\d{4}(?=(-\\d+)?${FILE_EXTENSION}$)`;
 const ITERATION_FROM_FILENAME = `(?<=^\\d{2}-\\d{2}-\\d{4}-)\\d+(?=${FILE_EXTENSION}$)`;
+const TOKEN = /\{([\w-]+)\}/g;
 
 export const dateFromFilename = pipe(
   match(new RegExp(DATE_FROM_FILENAME)),
@@ -37,3 +41,7 @@ export const dateComparator = cond([
   [(a, b) => a.isSame(b, 'day'), always(0)],
   [(a, b) => a.isAfter(b, 'day'), always(1)],
 ]);
+
+export const parseDateTokenString = curry((pattern, date) =>
+  replace(TOKEN, pipe(nthArg(1), match => date.format(match)), pattern)
+);

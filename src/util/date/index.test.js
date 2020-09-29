@@ -4,7 +4,8 @@ import { FILE_EXTENSION } from '../file';
 import {
   DATE_FORMAT,
   dateFromFilename,
-  iterationFromFilename
+  iterationFromFilename,
+  parseDateTokenString
 } from '.';
 
 test('dateFromFilename(filename) returns a DayJS date given a filename', t => {
@@ -37,4 +38,13 @@ test('iterationFromFilename(filename) returns a number given a filename with an 
   const NOW = dayjs();
   const FILENAME = `${NOW.format(DATE_FORMAT)}-3${FILE_EXTENSION}`;
   t.deepEqual(iterationFromFilename(FILENAME), 3);
+});
+
+test('parseDateTokenString(string, date) returns string as is if no tokens are found', t => {
+  t.deepEqual(parseDateTokenString('just/a/string', dayjs()), 'just/a/string');
+  t.deepEqual(parseDateTokenString('just/a/{}/string', dayjs()), 'just/a/{}/string');
+});
+
+test('parseDateTokenString(string, date) returns string with date tokens replaced', t => {
+  t.deepEqual(parseDateTokenString('path/{YYYY}/{MM}/{DD}', dayjs('02-03-2020', 'MM-DD-YYYY')), 'path/2020/02/03');
 });

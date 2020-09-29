@@ -2,7 +2,7 @@ import { promises as fs } from 'fs';
 import R from 'ramda';
 const {
   curry,
-  prop,
+  prop
 } = R;
 
 /**
@@ -13,7 +13,7 @@ const {
  *   from the definition of how to store and name it?
  *   E.g. treating journal organization as a user property:
  *   - Given a date of August 1, 2020
- *   - And a user-defined env variable such as FILEPATH="~/Desktop/My Coffee Journal/{YY}/{MM}/{filename}"
+ *   - And a user-defined env variable such as PATTERN="~/Desktop/My Coffee Journal/{YY}/{MM}/{filename}"
  *   - Setup a file in path User > Desktop > My Coffee Journal > 2020 > August > 2020-08-01
  *   - Update VSCode settings to target this path with JSON Schema validation
  * - Create migration from one folder structure to the other (because I need this!).
@@ -23,7 +23,6 @@ const {
  */
 
 export const FILE_EXTENSION = '.json';
-const DEFAULT_PATH = `${process.cwd()}/entries/{filename}`;
 
 export const getEntryFilenames = () => fs.readdir(`${process.cwd()}/entries`);
 
@@ -31,6 +30,8 @@ export const getEntryByFilename = filename =>
   import(`${process.cwd()}/entries/${filename}`)
     .then(prop('default'));
 
-export const writeEntry = curry((filename, entry) =>
-  fs.writeFile(`${process.cwd()}/entries/${filename}`, JSON.stringify(entry, null, 2))
-);
+export const writeEntry = curry(async (filename, entry) => {
+  const filepath = `${process.cwd()}/entries/${filename}`;
+  await fs.writeFile(filepath, JSON.stringify(entry, null, 2));
+  return filepath;
+});
