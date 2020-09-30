@@ -22,8 +22,6 @@ const {
  * - Dynamically generate JSON Schema to lift out complex patterns and other behavior. Libraries?
  */
 
-export const FILE_EXTENSION = '.json';
-
 export const getEntryFilenames = () => fs.readdir(`${process.cwd()}/entries`);
 
 export const getEntryByFilename = filename =>

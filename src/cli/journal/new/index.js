@@ -12,7 +12,6 @@ import {
   DATE_FORMAT,
   dateComparator,
   dateFromFilename,
-  FILE_EXTENSION,
   FRIENDLY_DATE_FORMAT,
   getEntryByFilename,
   getEntryFilenames,
@@ -48,7 +47,7 @@ export const createJournalEntry = async () => {
     entry = { ...entry, ...pick(DEFAULT_FIELDS, lastEntry) };
   }
 
-  const filepath = await writeEntry(`${basename}${FILE_EXTENSION}`, entry);
+  const filepath = await writeEntry(`${basename}.json`, entry);
   console.log(`Wrote new entry: ${filepath}`);
 };
 

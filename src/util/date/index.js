@@ -12,15 +12,14 @@ const {
   pipe,
   replace
 } = R;
-import { FILE_EXTENSION } from '../file';
 
 dayjs.extend(isToday);
 
 export const DATE_FORMAT = 'MM-DD-YYYY';
 export const FRIENDLY_DATE_FORMAT = 'MM/DD/YYYY';
 
-const DATE_FROM_FILENAME = `^\\d{2}-\\d{2}-\\d{4}(?=(-\\d+)?${FILE_EXTENSION}$)`;
-const ITERATION_FROM_FILENAME = `(?<=^\\d{2}-\\d{2}-\\d{4}-)\\d+(?=${FILE_EXTENSION}$)`;
+const DATE_FROM_FILENAME = `^\\d{2}-\\d{2}-\\d{4}(?=(-\\d+)?.json$)`;
+const ITERATION_FROM_FILENAME = `(?<=^\\d{2}-\\d{2}-\\d{4}-)\\d+(?=.json$)`;
 const TOKEN = /\{([\w-]+)\}/g;
 
 export const dateFromFilename = pipe(
