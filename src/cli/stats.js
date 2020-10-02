@@ -18,8 +18,7 @@ import {
 } from '../util';
 
 /**
- * Todo:
- * - Incorporate keywords/tags? e.g. 'weak', 'empty', 'sour', 'tangy'
+ * @todo add keywords field or incorporate a library that pulls them out, e.g. 'weak', 'empty', 'sour', 'tangy'
  */
 
 const DEFAULT_FIELDS = ['coffee.origin.region', 'coffee.roaster', 'ratio', 'grind', 'pourTime'];

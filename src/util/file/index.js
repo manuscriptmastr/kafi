@@ -8,7 +8,7 @@ const {
 } = R;
 
 /**
- * Todo:
+ * @todo
  * - Replace all refs to 'process.cwd()/entries/{filename} with function call.
  * - Auto-stores files in year/month folders.
  * - Stretch goal: how can I separate the date an entry was written
