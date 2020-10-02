@@ -1,4 +1,4 @@
-#!/usr/bin/env -S node --require dotenv/config --experimental-specifier-resolution=node --no-warnings
+#!/usr/bin/env -S node --experimental-specifier-resolution=node --no-warnings
 import yargs from 'yargs';
 import journal from './src/cli/journal';
 import stats from './src/cli/stats';

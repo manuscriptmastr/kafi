@@ -14,8 +14,7 @@ import {
   getEntryFilenames,
   mapAsync,
   partialEq,
-  pathString,
-  table
+  pathString
 } from '../util';
 
 /**
@@ -49,7 +48,6 @@ export default {
     filter(partialEq(filters)),
     sortBy(pathString(sort)),
     map(strainBy([sort, ...fields])),
-    table,
-    tap(console.log),
+    tap(console.table),
   ])()
 };

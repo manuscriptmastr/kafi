@@ -1,4 +1,6 @@
 import { promises as fs } from 'fs';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 import R from 'ramda';
 const {
   curry,
@@ -22,14 +24,17 @@ const {
  * - Dynamically generate JSON Schema to lift out complex patterns and other behavior. Libraries?
  */
 
-export const getEntryFilenames = () => fs.readdir(`${process.cwd()}/entries`);
+const __filename = fileURLToPath(import.meta.url);
+const PROJECT_PATH = resolve(dirname(__filename), '../../../entries');
+
+export const getEntryFilenames = () => fs.readdir(PROJECT_PATH);
 
 export const getEntryByFilename = filename =>
-  import(`${process.cwd()}/entries/${filename}`)
+  import(`${PROJECT_PATH}/${filename}`)
     .then(prop('default'));
 
 export const writeEntry = curry(async (filename, entry) => {
-  const filepath = `${process.cwd()}/entries/${filename}`;
+  const filepath = `${PROJECT_PATH}/${filename}`;
   await fs.writeFile(filepath, JSON.stringify(entry, null, 2));
   return filepath;
 });
