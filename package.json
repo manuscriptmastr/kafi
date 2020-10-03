@@ -39,7 +39,7 @@
   "dependencies": {
     "dayjs": "^1.9.1",
     "ramda": "^0.27.1",
-    "yargs": "^15.4.1"
+    "yargs": "^16.0.3"
   },
   "devDependencies": {
     "ava": "^3.13.0"

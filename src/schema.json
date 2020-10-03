@@ -140,6 +140,15 @@
       "type": "string",
       "default": "",
       "description": "Any variables to change on the next brew."
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "\\w+"
+      },
+      "default": [],
+      "description": "Any keywords to improve searchability, such as 'weak' or 'hollow'."
     }
   },
   "required": [

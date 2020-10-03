@@ -29,3 +29,15 @@ test('partialEq(partial, object returns true when object contains other nested p
   t.true(partialEq({ hello: { there: 'world' }, yo: { yay: 'yeet' } }, { hello: { there: 'world' }, yo: { yay: 'yeet', random: 'hello' } }));
   t.true(partialEq({ a: { b: 'c', d: 'e' } }, { a: { b: 'c', d: 'e', f: 'g' }, b: 'c' }));
 });
+
+test('partialEq(partial, object returns true when single property is in array property', t => {
+  t.true(partialEq({ a: { b: 'c', d: 'e' } }, { a: { b: 'c', d: ['e', 'f', 'g'], } }));
+});
+
+test('partialEq(partial, object returns true when an array property is fully included in an array property', t => {
+  t.true(partialEq({ a: { b: 'c', d: ['e', 'g'] } }, { a: { b: 'c', d: ['e', 'f', 'g'], } }));
+});
+
+test('partialEq(partial, object returns false when an array property is only partially included an array property', t => {
+  t.false(partialEq({ a: { b: 'c', d: ['e', 'h'] } }, { a: { b: 'c', d: ['e', 'f', 'g'], } }));
+});
