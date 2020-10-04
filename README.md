@@ -56,6 +56,24 @@ pourover journal new
 
 ### Stats
 ```bash
+$ pourover stats --coffee.origin.region="Pitalito"
+┌─────────┬───────┬──────────────────────┬─────────────────────────┬────────────┬───────┬──────────┐
+│ (index) │ score │ coffee.origin.region │     coffee.roaster      │   ratio    │ grind │ pourTime │
+├─────────┼───────┼──────────────────────┼─────────────────────────┼────────────┼───────┼──────────┤
+│    0    │   2   │      'Pitalito'      │ 'Madcap Coffee Company' │ '22g:355g' │  23   │  '2:50'  │
+│    1    │   3   │      'Pitalito'      │ 'Madcap Coffee Company' │ '22g:355g' │  24   │  '3:06'  │
+│    2    │   5   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:35'  │
+│    3    │   5   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:51'  │
+│    4    │   7   │      'Pitalito'      │ 'Madcap Coffee Company' │ '22g:355g' │  23   │  '2:41'  │
+│    5    │   7   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:48'  │
+│    6    │   8   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:40'  │
+│    7    │   8   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:46'  │
+│    8    │   8   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:44'  │
+│    9    │   9   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:40'  │
+└─────────┴───────┴──────────────────────┴─────────────────────────┴────────────┴───────┴──────────┘
+```
+
+```bash
 # Basic use
 pourover stats
 # Display specific fields (supports dot notation)
