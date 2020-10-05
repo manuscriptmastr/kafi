@@ -94,3 +94,9 @@ pourover stats --fields grind pourTime --equipment.grinder="Baratza Encore" --gr
 - [Scott Rao's V60 Method](https://www.youtube.com/watch?v=c0Qe_ASxfNM)
 - [Hario V60 Pour Over by Matt Perger](https://vimeo.com/46612013)
 - [4:6 Method](https://www.youtube.com/watch?v=wmCW8xSWGZY)
+
+## Resources
+- [Brewing Better Coffee](https://coffeeadastra.com/2018/11/30/brewing-better-coffee/)
+- [POUR OVER THEORY: How I brew](https://medium.com/@dngilb/pour-over-theory-how-i-brew-6c07aff69ca4)
+- [Some Observations on Hand Pours](https://www.scottrao.com/blog/2016/10/8/some-observations-on-hand-pours)
+- [Coffee Extraction and How to Taste It](https://www.baristahustle.com/blog/coffee-extraction-and-how-to-taste-it/)
