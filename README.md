@@ -96,6 +96,7 @@ pourover stats --fields grind pourTime --equipment.grinder="Baratza Encore" --gr
 - [4:6 Method](https://www.youtube.com/watch?v=wmCW8xSWGZY)
 
 ## Resources
+- [Hoffman Coffee Calculator](https://coda.io/@alessandro-mingione/hoffmann-coffee-calculator)
 - [Brewing Better Coffee](https://coffeeadastra.com/2018/11/30/brewing-better-coffee/)
 - [POUR OVER THEORY: How I brew](https://medium.com/@dngilb/pour-over-theory-how-i-brew-6c07aff69ca4)
 - [Some Observations on Hand Pours](https://www.scottrao.com/blog/2016/10/8/some-observations-on-hand-pours)
