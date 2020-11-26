@@ -88,12 +88,14 @@ $ pourover stats --coffee.origin.region="Pitalito"
 ```bash
 # Basic use
 pourover stats
-# Display specific fields (supports dot notation)
+# Limit entries (defaults to last 30)
+pourover stats --limit 10
+# Display specific fields (defaults to coffee.roaster, coffee.origin.country, grind, pourTime, score)
 pourover stats --fields coffee.origin.region grind pourTime
-# Sort by fields (defaults to score)
-pourover stats --fields grind pourTime --sort coffee.roaster score grind
+# Sort by fields (defaults to date)
+pourover stats --sort coffee.roaster score grind
 # Filter results by properties
-pourover stats --fields grind pourTime --equipment.grinder="Baratza Encore" --grind=23
+pourover stats --equipment.grinder="Baratza Encore" --grind=23
 ```
 
 ## Methods
