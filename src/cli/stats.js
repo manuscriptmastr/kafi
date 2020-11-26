@@ -1,15 +1,22 @@
 import R from 'ramda';
 const {
   andThen,
+  ascend,
+  compose,
+  cond,
   curry,
+  equals,
   filter,
   fromPairs,
   map,
   pipeWith,
-  sortBy,
+  sortWith,
+  useWith,
   tap
 } = R;
 import {
+  dateComparator,
+  dateFromFriendlyDate,
   getEntryByFilename,
   getEntryFilenames,
   mapAsync,
@@ -17,6 +24,11 @@ import {
   pathString
 } from '../util';
 
+/**
+ * @todo Add a limit field
+ */
+
+const DEFAULT_SORT_FIELDS = ['score'];
 const DEFAULT_FIELDS = ['coffee.origin.region', 'coffee.roaster', 'ratio', 'grind', 'pourTime'];
 
 // Include only fields in entry
@@ -27,9 +39,9 @@ export default {
   desc: 'Analyze journal entries',
   builder: yargs => yargs
     .option('sort', {
-      describe: 'Sort results by field',
-      type: 'string',
-      default: 'score'
+      describe: 'Sort results by fields',
+      type: 'array',
+      default: DEFAULT_SORT_FIELDS
     })
     .option('fields', {
       describe: 'Fields to include',
@@ -41,8 +53,15 @@ export default {
     getEntryFilenames,
     mapAsync(getEntryByFilename),
     filter(partialEq(filters)),
-    sortBy(pathString(sort)),
-    map(strainBy([sort, ...fields])),
+    sortWith([
+      ...map(
+        cond([
+          [equals('date'), () => useWith(dateComparator, [dateFromFriendlyDate, dateFromFriendlyDate])],
+          [() => true, compose(ascend, pathString)]
+        ])
+      , sort),
+    ]),
+    map(strainBy([...sort, ...fields])),
     tap(console.table),
   ])()
 };

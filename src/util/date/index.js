@@ -28,6 +28,8 @@ export const dateFromFilename = pipe(
   str => dayjs(str, DATE_FORMAT)
 );
 
+export const dateFromFriendlyDate = str => dayjs(str, FRIENDLY_DATE_FORMAT);
+
 export const iterationFromFilename = pipe(
   match(new RegExp(ITERATION_FROM_FILENAME)),
   head,
