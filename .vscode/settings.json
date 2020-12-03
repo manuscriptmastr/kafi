@@ -5,7 +5,7 @@
         "/src/template.json",
         "/entries/*.json"
       ],
-      "url": "/src/schema.json"
+      "url": "/src/schema/pourover_v1.0.json"
     }
   ]
 }
