@@ -79,4 +79,4 @@ export const schema0ToSchema1 = applySpec({
   ]),
   score: prop('score'),
   actionItem: pipe(prop('actionItem'), defaultTo(''))
-})
+});
