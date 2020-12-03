@@ -46,11 +46,31 @@ export const schema0ToSchema1 = applySpec({
     notes: prop('technique')
   },
   time: prop('pourTime'),
-  aroma: pipe(prop('aroma'), dissoc('notes'), assoc('descriptors', [])),
-  acidity: pipe(prop('acidity'), dissoc('notes'), assoc('descriptors', [])),
-  sweetness: pipe(prop('sweetness'), dissoc('notes'), assoc('descriptors', [])),
-  body: pipe(prop('body'), dissoc('notes'), assoc('descriptors', [])),
-  finish: pipe(prop('finish'), dissoc('notes'), assoc('descriptors', [])),
+  aroma: {
+    quantity: pipe(path(['aroma', 'quantity'])),
+    quality: pipe(path(['aroma', 'quality'])),
+    descriptors: prop('keywords')
+  },
+  acidity: {
+    quantity: pipe(path(['acidity', 'quantity'])),
+    quality: pipe(path(['acidity', 'quality'])),
+    descriptors: prop('keywords')
+  },
+  sweetness: {
+    quantity: pipe(path(['sweetness', 'quantity'])),
+    quality: pipe(path(['sweetness', 'quality'])),
+    descriptors: prop('keywords')
+  },
+  body: {
+    quantity: pipe(path(['body', 'quantity'])),
+    quality: pipe(path(['body', 'quality'])),
+    descriptors: prop('keywords')
+  },
+  finish: {
+    quantity: pipe(path(['finish', 'quantity'])),
+    quality: pipe(path(['finish', 'quality'])),
+    descriptors: prop('keywords')
+  },
   notes: converge(unapply(join(' ')), [
     pipe(prop('observations'), unless(endsWith('.'), str => `${str}.`)),
     prop('flavor')

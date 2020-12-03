@@ -3,7 +3,11 @@ import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import R from 'ramda';
 const {
+  andThen,
   curry,
+  filter,
+  endsWith,
+  pipeWith,
   prop
 } = R;
 
@@ -23,7 +27,10 @@ const {
 const __filename = fileURLToPath(import.meta.url);
 const PROJECT_PATH = resolve(dirname(__filename), '../../../entries');
 
-export const getEntryFilenames = () => fs.readdir(PROJECT_PATH);
+export const getEntryFilenames = pipeWith(andThen, [
+  () => fs.readdir(PROJECT_PATH),
+  filter(endsWith('.json'))
+]);
 
 export const getEntryByFilename = filename =>
   import(`${PROJECT_PATH}/${filename}`)

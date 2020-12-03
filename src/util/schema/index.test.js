@@ -240,11 +240,11 @@ const ENTRY_3_VERSION_2 = {
     notes: 'Bloom swirl 50g water wide and aggressively for 12 seconds, bloom for a total of 45 seconds, pour 130g in by 1:00 as high as possible while slowly hitting all grounds, 215g/1:15 (high), 285g/1:30 as low as possible while getting close to the edges to push boulders toward the slurry, 355g/1:45 (low). Do a 2–3 second Rao Spin ASAP.' 
   },
   time: '3:02',
-  aroma: { quantity: 2, quality: 2, descriptors: [] },
-  acidity: { quantity: 3, quality: 4, descriptors: [] },
-  sweetness: { quantity: 3, quality: 4, descriptors: [] },
-  body: { quantity: 2, quality: 3, descriptors: [] },
-  finish: { quantity: 2, quality: 3, descriptors: [] },
+  aroma: { quantity: 2, quality: 2, descriptors: ["balanced", "salty", "heavy", "robust", "ocher", "luscious"] },
+  acidity: { quantity: 3, quality: 4, descriptors: ["balanced", "salty", "heavy", "robust", "ocher", "luscious"] },
+  sweetness: { quantity: 3, quality: 4, descriptors: ["balanced", "salty", "heavy", "robust", "ocher", "luscious"] },
+  body: { quantity: 2, quality: 3, descriptors: ["balanced", "salty", "heavy", "robust", "ocher", "luscious"] },
+  finish: { quantity: 2, quality: 3, descriptors: ["balanced", "salty", "heavy", "robust", "ocher", "luscious"] },
   notes: 'Drawdown looked fairly consistent. Overall, fairly balanced. Sweetness to acidity ratio is balanced, and I\'m not really getting bitterness as the cup cools. I don\'t find this cup necessarily exciting or intriguing, though.',
   score: 8,
   actionItem: ''
