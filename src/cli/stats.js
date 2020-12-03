@@ -26,7 +26,7 @@ import {
 } from '../util';
 
 const DEFAULT_SORT_FIELDS = ['date'];
-const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'grind', 'pourTime', 'score'];
+const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'time', 'score'];
 
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));

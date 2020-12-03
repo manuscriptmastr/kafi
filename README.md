@@ -23,14 +23,14 @@ This project requires:
 
 1. Fork or clone the repo.
 
-```bash
+```shell
 git clone git@github.com:manuscriptmastr/pourover-cli.git
 cd pourover-cli
 ```
 
 2. Setup the `pourover` CLI.
 
-```bash
+```shell
 # install NPM dependencies
 npm install
 # add pourover command
@@ -39,7 +39,7 @@ npm link
 
 3. Create a new journal entry.
 
-```bash
+```shell
 # create a new journal entry with sane defaults
 pourover journal new
 ```
@@ -60,42 +60,46 @@ pourover journal new
 
 ### Journal
 
-```bash
+```shell
 # Create a new journal entry
 pourover journal new
 ```
 
 ### Stats
 
-```bash
+```shell
 $ pourover stats --coffee.origin.region="Pitalito"
-┌─────────┬───────┬──────────────────────┬─────────────────────────┬────────────┬───────┬──────────┐
-│ (index) │ score │ coffee.origin.region │     coffee.roaster      │   ratio    │ grind │ pourTime │
-├─────────┼───────┼──────────────────────┼─────────────────────────┼────────────┼───────┼──────────┤
-│    0    │   2   │      'Pitalito'      │ 'Madcap Coffee Company' │ '22g:355g' │  23   │  '2:50'  │
-│    1    │   3   │      'Pitalito'      │ 'Madcap Coffee Company' │ '22g:355g' │  24   │  '3:06'  │
-│    2    │   5   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:35'  │
-│    3    │   5   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:51'  │
-│    4    │   7   │      'Pitalito'      │ 'Madcap Coffee Company' │ '22g:355g' │  23   │  '2:41'  │
-│    5    │   7   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:48'  │
-│    6    │   8   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:40'  │
-│    7    │   8   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:46'  │
-│    8    │   8   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:44'  │
-│    9    │   9   │      'Pitalito'      │ 'Madcap Coffee Company' │ '23g:355g' │  24   │  '2:40'  │
-└─────────┴───────┴──────────────────────┴─────────────────────────┴────────────┴───────┴──────────┘
+┌─────────┬──────────────┬─────────────────────────┬──────────────────────┬──────────────┬────────┬───────┐
+│ (index) │     date     │     coffee.roaster      │ coffee.origin.region │ coffee.grind │  time  │ score │
+├─────────┼──────────────┼─────────────────────────┼──────────────────────┼──────────────┼────────┼───────┤
+│    0    │ '09/25/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │ '2:41' │   7   │
+│    1    │ '09/26/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │ '2:50' │   2   │
+│    2    │ '09/27/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '3:06' │   3   │
+│    3    │ '09/28/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:40' │   8   │
+│    4    │ '09/29/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:40' │   9   │
+│    5    │ '09/30/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:35' │   5   │
+│    6    │ '10/01/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:46' │   8   │
+│    7    │ '10/02/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:48' │   7   │
+│    8    │ '10/03/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:44' │   8   │
+│    9    │ '10/04/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:51' │   5   │
+│   10    │ '10/05/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      25      │ '2:52' │   7   │
+│   11    │ '10/06/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:47' │   7   │
+│   12    │ '10/07/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:31' │   7   │
+│   13    │ '10/08/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '3:03' │   8   │
+└─────────┴──────────────┴─────────────────────────┴──────────────────────┴──────────────┴────────┴───────┘
 ```
 
-```bash
+```shell
 # Basic use
 pourover stats
 # Limit entries (defaults to last 30)
 pourover stats --limit 10
-# Display specific fields (defaults to coffee.roaster, coffee.origin.country, grind, pourTime, score)
-pourover stats --fields coffee.origin.region grind pourTime
+# Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, time, score)
+pourover stats --fields coffee.origin.region coffee.grind time
 # Sort by fields (defaults to date)
-pourover stats --sort coffee.roaster score grind
+pourover stats --sort coffee.roaster score coffee.grind
 # Filter results by properties
-pourover stats --equipment.grinder="Baratza Encore" --grind=23
+pourover stats --equipment.grinder="Baratza Encore" --coffee.grind=23
 ```
 
 ## Methods
