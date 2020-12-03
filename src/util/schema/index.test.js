@@ -134,7 +134,7 @@ const ENTRY_2_VERSION_1 = {
   "flavor": "Usually distinct lemon — this time softer fruit, like a peach or apple. Rather flat yet sour (tongue is dry), possibly due to long extraction time. Pleasant, tea-like finish with a distinct “grass” note coming in and out.",
   "keywords": [],
   "score": 3,
-  "observations": "Swirl bloomed generously (high on walls) over 30 seconds, rested 5 seconds. Fines got caught really high. Slow drip throughout."
+  "observations": ""
 };
 
 const ENTRY_2_VERSION_2 = {
@@ -163,7 +163,7 @@ const ENTRY_2_VERSION_2 = {
   sweetness: { quantity: 4, quality: 4, descriptors: [] },
   body: { quantity: 2, quality: 3, descriptors: [] },
   finish: { quantity: 4, quality: 3, descriptors: [] },
-  notes: 'Swirl bloomed generously (high on walls) over 30 seconds, rested 5 seconds. Fines got caught really high. Slow drip throughout. Usually distinct lemon — this time softer fruit, like a peach or apple. Rather flat yet sour (tongue is dry), possibly due to long extraction time. Pleasant, tea-like finish with a distinct “grass” note coming in and out.',
+  notes: 'Usually distinct lemon — this time softer fruit, like a peach or apple. Rather flat yet sour (tongue is dry), possibly due to long extraction time. Pleasant, tea-like finish with a distinct “grass” note coming in and out.',
   score: 3,
   actionItem: ''
 };

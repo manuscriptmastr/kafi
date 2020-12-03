@@ -1,13 +1,15 @@
 import R from 'ramda';
 const {
   always,
+  any,
   applySpec,
-  assoc,
   converge,
   defaultTo,
-  dissoc,
+  either,
   endsWith,
   head,
+  ifElse,
+  isEmpty,
   join,
   path,
   pipe,
@@ -71,8 +73,8 @@ export const schema0ToSchema1 = applySpec({
     quality: pipe(path(['finish', 'quality'])),
     descriptors: prop('keywords')
   },
-  notes: converge(unapply(join(' ')), [
-    pipe(prop('observations'), unless(endsWith('.'), str => `${str}.`)),
+  notes: converge(unapply(ifElse(any(isEmpty), join(''), join(' '))), [
+    pipe(prop('observations'), unless(either(isEmpty, endsWith('.')), str => `${str}.`)),
     prop('flavor')
   ]),
   score: prop('score'),
