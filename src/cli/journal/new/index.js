@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import defaults from 'json-schema-defaults';
 import R from 'ramda';
 const {
   ascend,
@@ -18,9 +19,9 @@ import {
   iterationFromFilename,
   writeEntry
 } from '../../../util';
-import template from '../../../template.json';
+import SCHEMA from '../../../schema/pourover_v1.0.json';
 
-const DEFAULT_FIELDS = ['coffee', 'equipment', 'ratio', 'grind', 'bloomTime', 'technique', 'actionItem'];
+const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe', 'actionItem'];
 
 export const mostRecentFilename = pipe(
   sortWith([
@@ -30,17 +31,17 @@ export const mostRecentFilename = pipe(
   last
 );
 
-export const createJournalEntry = async () => {
+const createJournalEntry = async () => {
+  const today = dayjs();
+  let basename = today.format(DATE_FORMAT);
+  let entry = { ...defaults(SCHEMA), date: today.format(FRIENDLY_DATE_FORMAT) };
+
   const filenames = await getEntryFilenames();
   const filename = mostRecentFilename(filenames);
-  const iteration = iterationFromFilename(filename);
-  const today = dayjs();
-
-  let basename = today.format(DATE_FORMAT);
-  let entry = { ...template, date: today.format(FRIENDLY_DATE_FORMAT) };
 
   if (filename) {
     const date = dateFromFilename(filename);
+    const iteration = iterationFromFilename(filename);
     const lastEntry = await getEntryByFilename(filename);
 
     basename = `${basename}${date.isToday() ? `-${iteration + 1}` : ''}`;
