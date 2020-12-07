@@ -123,3 +123,37 @@ pourover stats --equipment.grinder="Baratza Encore" --coffee.grind=23
 - [POUR OVER THEORY: How I brew](https://medium.com/@dngilb/pour-over-theory-how-i-brew-6c07aff69ca4)
 - [Some Observations on Hand Pours](https://www.scottrao.com/blog/2016/10/8/some-observations-on-hand-pours)
 - [Coffee Extraction and How to Taste It](https://www.baristahustle.com/blog/coffee-extraction-and-how-to-taste-it/)
+
+## How do I taste the difference between an underextracted and an overextracted brew?
+
+_Assuming an evenly extracted cup,_ one of the strongest indicators of extraction is whether the unpleasantness of the cup is due to sourness or bitterness. However, the common phenomenon of **sour-bitter confusion** makes it frustratingly difficult to identify which, and therefore decide an action item. Here, I've consolidated some tips from the internet and my own experience.
+
+Note: As an untrained hobbyist, I personally have not found **astringency** to be a helpful differentiator. Both under and overextracted cups can leave a dry, rubbing sensation in my mouth, so I use other indicators to diagnose the cup.
+
+### Training your palate
+
+- Brew two cups: one at a grind much too coarse (sour), and the other much too fine (bitter). Note the differences between the two.
+- In front of a mirror, eat the flesh of a lemon, then the pith (the white part of the rind). Note how your face distorts for each.
+- Roll a piece of aluminum foil into a small stick, place it and a metal spoon on your tongue, then touch the two edges together. This is similar to bitterness.
+
+### Tasting your coffee
+
+Look for multiple symptoms before diagnosing a cup as under or overextracted:
+
+- Sour and underextracted
+  - Strong green tea aftertaste
+  - Strong acidic aftertaste
+  - Acidity is clean but lemon-like
+  - Overall cup tastes diluted, watery, clean, and 'fresh'
+  - Cup becomes increasingly sour, lemon-like, and puckery as it cools
+  - Little to no sweetness
+  - Face distorts up and forward: mouth puckers, cheeks raise, eyes clench, lower jaw moves forward
+  - Sides of tongue feel strange when you rub it along your teeth. I get this sensation after brushing my teeth with Colgate toothpaste.
+  - You immediately reach for water after finishing the cup
+- Bitter and overextracted
+  - Slightly tangy or herbal 'other' quality colors the acidity when cup is hot. It will be noticeably different in taste than one grind coarser (thus what James Hoffmann calls "the wall of bitterness"). Often it may taste like stronger acidity or an herbal/floral note.
+  - Acidity is muddy or hard to identify
+  - Overall cup tastes thick, rich, muddy, and 'dull'
+  - Cup becomes increasingly coin-like, metallic, medicinal, and zinc-like as it cools
+  - Face distorts down and back: edges of lips pull down toward lower jaw, eyes and cheeks stay roughly the same
+  - Your throat (the part known as the trachea) feels tight and closed
