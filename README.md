@@ -145,10 +145,10 @@ Look for multiple symptoms before diagnosing a cup as under or overextracted:
   - Strong acidic aftertaste
   - Acidity is clean but lemon-like
   - Overall cup tastes diluted, watery, clean, and 'fresh'
-  - Cup becomes increasingly sour, lemon-like, and puckery as it cools
+  - Cup remains or becomes increasingly sour, lemon-like, and puckery as it cools
   - Little to no sweetness
   - Face distorts up and forward: mouth puckers, cheeks raise, eyes clench, lower jaw moves forward
-  - Sides of tongue feel strange when you rub it along your teeth. I get this sensation after brushing my teeth with Colgate toothpaste.
+  - Sides of tongue feel strange when you rub it along your teeth. (I get this sensation after brushing my teeth with Colgate toothpaste.)
   - You immediately reach for water after finishing the cup
 - Bitter and overextracted
   - Slightly tangy or herbal 'other' quality colors the acidity when cup is hot. It will be noticeably different in taste than one grind coarser (thus what James Hoffmann calls "the wall of bitterness"). Often it may taste like stronger acidity or an herbal/floral note.
