@@ -1,9 +1,7 @@
-import newJournal from './new';
+import * as newJournal from './new';
 
-export default {
-  command: 'journal',
-  desc: 'Journal commands',
-  builder: yargs => yargs
-    .command(newJournal)
-    .demandCommand()
-};
+export const command = 'journal';
+export const desc = 'Journal commands';
+export const builder = yargs => yargs
+  .command(newJournal)
+  .demandCommand()
