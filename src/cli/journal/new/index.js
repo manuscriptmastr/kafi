@@ -52,8 +52,6 @@ const createJournalEntry = async () => {
   console.log(`Wrote new entry: ${filepath}`);
 };
 
-export default {
-  command: 'new',
-  desc: 'Create a new journal entry',
-  handler: createJournalEntry
-};
+export const command = 'new';
+export const desc = 'Create a new journal entry';
+export const handler = createJournalEntry;
