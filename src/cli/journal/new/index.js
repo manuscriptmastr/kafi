@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import defaults from 'json-schema-defaults';
+import $RefParser from 'json-schema-ref-parser';
 import R from 'ramda';
 const {
   ascend,
@@ -34,7 +35,7 @@ export const mostRecentFilename = pipe(
 const createJournalEntry = async () => {
   const today = dayjs();
   let basename = today.format(DATE_FORMAT);
-  let entry = { ...defaults(SCHEMA), date: today.format(FRIENDLY_DATE_FORMAT) };
+  let entry = { ...(await $RefParser.dereference(SCHEMA).then(defaults)), date: today.format(FRIENDLY_DATE_FORMAT) };
 
   const filenames = await getEntryFilenames();
   const filename = mostRecentFilename(filenames);

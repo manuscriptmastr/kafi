@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "properties": {
+    "quantity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 0,
+      "description": "On a scale of 1 to 5, how intense was it?"
+    },
+    "quality": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "default": 0,
+      "description": "On a scale of 1 to 5, how much did you enjoy it?"
+    },
+    "descriptors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "\\w+"
+      },
+      "default": [],
+      "description": "Jot down your reactions to this aspect."
+    }
+  },
+  "required": ["quantity", "quality"]
+}

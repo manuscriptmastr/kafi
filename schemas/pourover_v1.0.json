@@ -1,36 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "definitions": {
-    "aspect": {
-      "type": "object",
-      "properties": {
-        "quantity": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5,
-          "default": 0,
-          "description": "On a scale of 1 to 5, how intense was it?"
-        },
-        "quality": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5,
-          "default": 0,
-          "description": "On a scale of 1 to 5, how much did you enjoy it?"
-        },
-        "descriptors": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "pattern": "\\w+"
-          },
-          "default": [],
-          "description": "Jot down your reactions to this aspect."
-        }
-      },
-      "required": ["quantity", "quality"]
-    }
-  },
   "type": "object",
   "properties": {
     "$schema": {
@@ -39,18 +8,14 @@
       "description": "The JSON schema to validate this journal entry against."
     },
     "date": {
-      "type": "string",
-      "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
-      "default": "",
+      "allOf": [{ "$ref": "schemas/date_v1.0.json" }],
       "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
     },
     "coffee": {
       "type": "object",
       "properties": {
         "weight": {
-          "type": "string",
-          "pattern": "^\\d+g$",
-          "default": "",
+          "allOf": [{ "$ref": "schemas/weight_v1.0.json" }],
           "description": "The weight of the coffee beans in grams, such as '30g'."
         },
         "grind": {
@@ -85,8 +50,7 @@
           "description": "The name of the individual or business who roasted the coffee."
         },
         "roastDate": {
-          "type": "string",
-          "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
+          "allOf": [{ "$ref": "schemas/date_v1.0.json" }],
           "description": "The date this coffee was roasted, formatted as 'MM/DD/YYYY'."
         }
       },
@@ -97,15 +61,11 @@
       "type": "object",
       "properties": {
         "weight": {
-          "type": "string",
-          "pattern": "^\\d+g$",
-          "default": "",
+          "allOf": [{ "$ref": "schemas/weight_v1.0.json" }],
           "description": "The weight of the water in grams, such as '500g'."
         },
         "temperature": {
-          "type": "string",
-          "pattern": "^\\d+º[FC]$",
-          "default": "212ºF",
+          "allOf": [{ "$ref": "schemas/temperature_v1.0.json" }],
           "description": "The temperature at which you began brewing."
         },
         "recipe": {
@@ -141,15 +101,11 @@
           "type": "object",
           "properties": {
             "weight": {
-              "type": "string",
-              "pattern": "^\\d+g$",
-              "default": "",
+              "allOf": [{ "$ref": "schemas/weight_v1.0.json" }],
               "description": "The weight of the bloom water in grams, such as '50g'."
             },
             "time": {
-              "type": "string",
-              "pattern": "^\\d{1}:\\d{2}$",
-              "default": "",
+              "allOf": [{ "$ref": "schemas/time_v1.0.json" }],
               "description": "The total time from your initial pour on dry grounds to the next pour."
             }
           },
@@ -166,29 +122,27 @@
       "required": ["bloom", "notes"]
     },
     "time": {
-      "type": "string",
-      "pattern": "^\\d{1}:\\d{2}$",
-      "default": "",
+      "allOf": [{ "$ref": "schemas/time_v1.0.json" }],
       "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops, such as '2:54'."
     },
     "aroma": {
-      "$ref": "#/definitions/aspect",
+      "$ref": "schemas/aspect_v1.0.json",
       "description": "The smell of your brew (low to high), such as 'caramel', 'peach', or 'chocolate'."
     },
     "acidity": {
-      "$ref": "#/definitions/aspect",
+      "$ref": "schemas/aspect_v1.0.json",
       "description": "The fruitiness (low to high), such as 'tart', 'crisp', or 'mellow'. Usually indicated by puckering/drying of the tongue or salivation."
     },
     "sweetness": {
-      "$ref": "#/definitions/aspect",
+      "$ref": "schemas/aspect_v1.0.json",
       "description": "The sweetness (low to high), such as 'mild', 'deep', or 'rich'. Usually indicated by how 'rounded' the fruit quality is."
     },
     "body": {
-      "$ref": "#/definitions/aspect",
+      "$ref": "schemas/aspect_v1.0.json",
       "description": "The texture or mouthfeel (light to heavy), such as 'watery', 'silky', 'syrupy', or 'creamy'."
     },
     "finish": {
-      "$ref": "#/definitions/aspect",
+      "$ref": "schemas/aspect_v1.0.json",
       "description": "The aftertaste (short to long), such as 'quick', 'lingering', or 'clean'. Don't rush this aspect."
     },
     "notes": {
