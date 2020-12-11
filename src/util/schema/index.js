@@ -20,6 +20,10 @@ const {
   unless
 } = R;
 
+/**
+ * @todo Consider using 'examples' field in JSON Schema
+ */
+
 export const schema0ToSchema1 = applySpec({
   $schema: always('../schemas/pourover_v1.0.json'),
   date: prop('date'),
