@@ -19,7 +19,7 @@ import {
   iterationFromFilename,
   writeEntry
 } from '../../../util';
-import SCHEMA from '../../../schema/pourover_v1.0.json';
+import SCHEMA from '../../../../schemas/pourover_v1.0.json';
 
 const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe', 'actionItem'];
 

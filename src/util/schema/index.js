@@ -21,7 +21,7 @@ const {
 } = R;
 
 export const schema0ToSchema1 = applySpec({
-  schema: always('pourover_v1.0'),
+  $schema: always('../schemas/pourover_v1.0.json'),
   date: prop('date'),
   coffee: {
     weight: pipe(prop('ratio'), split(':'), head),

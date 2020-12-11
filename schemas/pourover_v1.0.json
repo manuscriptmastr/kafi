@@ -33,10 +33,9 @@
   },
   "type": "object",
   "properties": {
-    "schema": {
-      "type": "string",
-      "pattern": "^[a-z]+_v\\d+\\.\\d+$",
-      "default": "pourover_v1.0",
+    "$schema": {
+      "const": "../schemas/pourover_v1.0.json",
+      "default": "../schemas/pourover_v1.0.json",
       "description": "The JSON schema to validate this journal entry against."
     },
     "date": {
