@@ -5,9 +5,9 @@ import commands from './src/cli';
 
 /**
  * @todo Change pourover => coffee-cli (or something catchy!) and pourover-cli to said catchy name
- * @todo coffee-cli [pourover|cupping] journal
- * @todo coffee-cli [pourover|cupping] stats
- * @todo coffee-cli [pourover|cupping] update
+ * @todo coffee-cli journal [pourover|cupping]
+ * @todo coffee-cli analyze [pourover|cupping]
+ * @todo coffee-cli update [pourover|cupping]
  */
 
 yargs(hideBin(process.argv))
