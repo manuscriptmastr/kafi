@@ -12,70 +12,12 @@
       "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
     },
     "coffee": {
-      "type": "object",
-      "properties": {
-        "weight": {
-          "allOf": [{ "$ref": "schemas/weight.json" }],
-          "description": "The weight of the coffee beans in grams, such as '30g'."
-        },
-        "grind": {
-          "type": "integer",
-          "default": 0,
-          "description": "The number of clicks, with zero being when burrs are fully closed."
-        },
-        "origin": {
-          "type": "object",
-          "properties": {
-            "country": {
-              "type": "string",
-              "default": "",
-              "description": "The country, such as 'Ethiopia' or 'Rwanda'."
-            },
-            "region": {
-              "type": "string",
-              "default": "",
-              "description": "The region, such as 'Guji' or 'Gitwe'."
-            },
-            "grower": {
-              "type": "string",
-              "default": "",
-              "description": "The farmer, collective, or coop, such as 'Nano Challa' or 'Ariz Family'."
-            }
-          },
-          "description": "The area in which this coffee was grown.",
-          "required": ["country", "region", "grower"]
-        },
-        "roaster": {
-          "type": "string",
-          "description": "The name of the individual or business who roasted the coffee."
-        },
-        "roastDate": {
-          "allOf": [{ "$ref": "schemas/date.json" }],
-          "description": "The date this coffee was roasted, formatted as 'MM/DD/YYYY'."
-        }
-      },
-      "description": "The coffee beans used in your brew.",
-      "required": ["weight", "grind", "origin", "roaster", "roastDate"]
+      "allOf": [{ "$ref": "schemas/coffee.json" }],
+      "description": "The coffee beans used in your brew."
     },
     "water": {
-      "type": "object",
-      "properties": {
-        "weight": {
-          "allOf": [{ "$ref": "schemas/weight.json" }],
-          "description": "The weight of the water in grams, such as '500g'."
-        },
-        "temperature": {
-          "allOf": [{ "$ref": "schemas/temperature.json" }],
-          "description": "The temperature at which you began brewing."
-        },
-        "recipe": {
-          "type": "string",
-          "default": "",
-          "description": "The recipe you used for your water."
-        }
-      },
-      "description": "The water used in your brew.",
-      "required": ["weight", "temperature", "recipe"]
+      "allOf": [{ "$ref": "schemas/water.json" }],
+      "description": "The water used in your brew."
     },
     "equipment": {
       "type": "object",
@@ -126,23 +68,23 @@
       "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops, such as '2:54'."
     },
     "aroma": {
-      "$ref": "schemas/aspect.json",
+      "allOf": [{ "$ref": "schemas/aspect.json" }],
       "description": "The smell of your brew (low to high), such as 'caramel', 'peach', or 'chocolate'."
     },
     "acidity": {
-      "$ref": "schemas/aspect.json",
+      "allOf": [{ "$ref": "schemas/aspect.json" }],
       "description": "The fruitiness (low to high), such as 'tart', 'crisp', or 'mellow'. Usually indicated by puckering/drying of the tongue or salivation."
     },
     "sweetness": {
-      "$ref": "schemas/aspect.json",
+      "allOf": [{ "$ref": "schemas/aspect.json" }],
       "description": "The sweetness (low to high), such as 'mild', 'deep', or 'rich'. Usually indicated by how 'rounded' the fruit quality is."
     },
     "body": {
-      "$ref": "schemas/aspect.json",
+      "allOf": [{ "$ref": "schemas/aspect.json" }],
       "description": "The texture or mouthfeel (light to heavy), such as 'watery', 'silky', 'syrupy', or 'creamy'."
     },
     "finish": {
-      "$ref": "schemas/aspect.json",
+      "allOf": [{ "$ref": "schemas/aspect.json" }],
       "description": "The aftertaste (short to long), such as 'quick', 'lingering', or 'clean'. Don't rush this aspect."
     },
     "notes": {

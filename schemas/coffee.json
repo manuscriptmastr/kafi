@@ -3,7 +3,7 @@
   "type": "object",
   "properties": {
     "weight": {
-      "allOf": [{ "$ref": "schemas/weight.json" }],
+      "allOf": [{ "$ref": "./weight.json" }],
       "description": "The weight of the coffee beans in grams, such as '30g'."
     },
     "grind": {
@@ -38,7 +38,7 @@
       "description": "The name of the individual or business who roasted the coffee."
     },
     "roastDate": {
-      "allOf": [{ "$ref": "schemas/date.json" }],
+      "allOf": [{ "$ref": "./date.json" }],
       "description": "The date this coffee was roasted, formatted as 'MM/DD/YYYY'."
     }
   },
