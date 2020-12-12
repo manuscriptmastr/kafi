@@ -8,14 +8,14 @@
       "description": "The JSON schema to validate this journal entry against."
     },
     "date": {
-      "allOf": [{ "$ref": "schemas/date_v1.0.json" }],
+      "allOf": [{ "$ref": "schemas/date.json" }],
       "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
     },
     "coffee": {
       "type": "object",
       "properties": {
         "weight": {
-          "allOf": [{ "$ref": "schemas/weight_v1.0.json" }],
+          "allOf": [{ "$ref": "schemas/weight.json" }],
           "description": "The weight of the coffee beans in grams, such as '30g'."
         },
         "grind": {
@@ -50,7 +50,7 @@
           "description": "The name of the individual or business who roasted the coffee."
         },
         "roastDate": {
-          "allOf": [{ "$ref": "schemas/date_v1.0.json" }],
+          "allOf": [{ "$ref": "schemas/date.json" }],
           "description": "The date this coffee was roasted, formatted as 'MM/DD/YYYY'."
         }
       },
@@ -61,11 +61,11 @@
       "type": "object",
       "properties": {
         "weight": {
-          "allOf": [{ "$ref": "schemas/weight_v1.0.json" }],
+          "allOf": [{ "$ref": "schemas/weight.json" }],
           "description": "The weight of the water in grams, such as '500g'."
         },
         "temperature": {
-          "allOf": [{ "$ref": "schemas/temperature_v1.0.json" }],
+          "allOf": [{ "$ref": "schemas/temperature.json" }],
           "description": "The temperature at which you began brewing."
         },
         "recipe": {
@@ -101,11 +101,11 @@
           "type": "object",
           "properties": {
             "weight": {
-              "allOf": [{ "$ref": "schemas/weight_v1.0.json" }],
+              "allOf": [{ "$ref": "schemas/weight.json" }],
               "description": "The weight of the bloom water in grams, such as '50g'."
             },
             "time": {
-              "allOf": [{ "$ref": "schemas/time_v1.0.json" }],
+              "allOf": [{ "$ref": "schemas/time.json" }],
               "description": "The total time from your initial pour on dry grounds to the next pour."
             }
           },
@@ -122,27 +122,27 @@
       "required": ["bloom", "notes"]
     },
     "time": {
-      "allOf": [{ "$ref": "schemas/time_v1.0.json" }],
+      "allOf": [{ "$ref": "schemas/time.json" }],
       "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops, such as '2:54'."
     },
     "aroma": {
-      "$ref": "schemas/aspect_v1.0.json",
+      "$ref": "schemas/aspect.json",
       "description": "The smell of your brew (low to high), such as 'caramel', 'peach', or 'chocolate'."
     },
     "acidity": {
-      "$ref": "schemas/aspect_v1.0.json",
+      "$ref": "schemas/aspect.json",
       "description": "The fruitiness (low to high), such as 'tart', 'crisp', or 'mellow'. Usually indicated by puckering/drying of the tongue or salivation."
     },
     "sweetness": {
-      "$ref": "schemas/aspect_v1.0.json",
+      "$ref": "schemas/aspect.json",
       "description": "The sweetness (low to high), such as 'mild', 'deep', or 'rich'. Usually indicated by how 'rounded' the fruit quality is."
     },
     "body": {
-      "$ref": "schemas/aspect_v1.0.json",
+      "$ref": "schemas/aspect.json",
       "description": "The texture or mouthfeel (light to heavy), such as 'watery', 'silky', 'syrupy', or 'creamy'."
     },
     "finish": {
-      "$ref": "schemas/aspect_v1.0.json",
+      "$ref": "schemas/aspect.json",
       "description": "The aftertaste (short to long), such as 'quick', 'lingering', or 'clean'. Don't rush this aspect."
     },
     "notes": {

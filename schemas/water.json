@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "properties": {
+    "weight": {
+      "allOf": [{ "$ref": "schemas/weight.json" }],
+      "description": "The weight of the water in grams, such as '500g'."
+    },
+    "temperature": {
+      "allOf": [{ "$ref": "schemas/temperature.json" }],
+      "description": "The temperature at which you began brewing."
+    },
+    "recipe": {
+      "type": "string",
+      "default": "",
+      "description": "The recipe you used for your water."
+    }
+  },
+  "required": ["weight", "temperature", "recipe"]
+}

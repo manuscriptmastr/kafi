@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "properties": {
+    "weight": {
+      "allOf": [{ "$ref": "schemas/weight.json" }],
+      "description": "The weight of the coffee beans in grams, such as '30g'."
+    },
+    "grind": {
+      "type": "integer",
+      "default": 0,
+      "description": "The number of clicks, with zero being when burrs are fully closed."
+    },
+    "origin": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "default": "",
+          "description": "The country, such as 'Ethiopia' or 'Rwanda'."
+        },
+        "region": {
+          "type": "string",
+          "default": "",
+          "description": "The region, such as 'Guji' or 'Gitwe'."
+        },
+        "grower": {
+          "type": "string",
+          "default": "",
+          "description": "The farmer, collective, or coop, such as 'Nano Challa' or 'Ariz Family'."
+        }
+      },
+      "description": "The area in which this coffee was grown.",
+      "required": ["country", "region", "grower"]
+    },
+    "roaster": {
+      "type": "string",
+      "description": "The name of the individual or business who roasted the coffee."
+    },
+    "roastDate": {
+      "allOf": [{ "$ref": "schemas/date.json" }],
+      "description": "The date this coffee was roasted, formatted as 'MM/DD/YYYY'."
+    }
+  },
+  "required": ["weight", "grind", "origin", "roaster", "roastDate"]
+}
