@@ -22,7 +22,7 @@ import {
 } from '../../../util';
 import SCHEMA from '../../../../schemas/pourover_v1.0.json';
 
-const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe', 'actionItem'];
+const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
 
 export const mostRecentFilename = pipe(
   sortWith([
