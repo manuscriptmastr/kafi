@@ -1,4 +1,4 @@
-# pourover-cli
+# coffee-cli
 
 I love pour over coffee. It is so many disciplines — cuisine, art, science, therapy — rolled into a 14 minute daily routine. I love the innovation happening in the coffee industry, from crazy but wonderful drinks like espresso tonic to new processes like anaerobic fermentation to newer exporters like the Nano Challa Cooperative.
 
@@ -24,24 +24,24 @@ This project requires:
 1. Fork or clone the repo.
 
 ```shell
-git clone git@github.com:manuscriptmastr/pourover-cli.git
-cd pourover-cli
+git clone git@github.com:manuscriptmastr/coffee-cli.git
+cd coffee-cli
 ```
 
-2. Setup the `pourover` CLI.
+2. Setup the `coffee` CLI.
 
 ```shell
 # install NPM dependencies
 npm install
-# add pourover command
+# add coffee command
 npm link
 ```
 
 3. Create a new journal entry.
 
 ```shell
-# create a new journal entry with sane defaults
-pourover journal new
+# create a new pourover journal entry with sane defaults
+coffee journal pourover
 ```
 
 4. Brew your coffee, then jot out your reactions to things like:
@@ -62,13 +62,13 @@ pourover journal new
 
 ```shell
 # Create a new journal entry
-pourover journal new
+coffee journal pourover
 ```
 
 ### Stats
 
 ```shell
-$ pourover stats --coffee.origin.region="Pitalito"
+$ coffee stats pourover --coffee.origin.region="Pitalito"
 ┌─────────┬──────────────┬─────────────────────────┬──────────────────────┬──────────────┬────────┬───────┐
 │ (index) │     date     │     coffee.roaster      │ coffee.origin.region │ coffee.grind │  time  │ score │
 ├─────────┼──────────────┼─────────────────────────┼──────────────────────┼──────────────┼────────┼───────┤
@@ -91,15 +91,15 @@ $ pourover stats --coffee.origin.region="Pitalito"
 
 ```shell
 # Basic use
-pourover stats
+coffee stats pourover
 # Limit entries (defaults to last 30)
-pourover stats --limit 10
+coffee stats pourover --limit 10
 # Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, time, score)
-pourover stats --fields coffee.origin.region coffee.grind time
+coffee stats pourover --fields coffee.origin.region coffee.grind time
 # Sort by fields (defaults to date)
-pourover stats --sort coffee.roaster score coffee.grind
+coffee stats pourover --sort coffee.roaster score coffee.grind
 # Filter results by properties
-pourover stats --equipment.grinder="Baratza Encore" --coffee.grind=23
+coffee stats pourover --equipment.grinder="Baratza Encore" --coffee.grind=23
 ```
 
 ## Methods

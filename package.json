@@ -1,7 +1,7 @@
 {
-  "name": "pourover-cli",
+  "name": "coffee-cli",
   "version": "1.0.0",
-  "description": "JSON coffee journal CLI for percolation brews",
+  "description": "JSON coffee journal CLI",
   "main": "index.js",
   "scripts": {
     "test": "ava --watch"
@@ -12,7 +12,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manuscriptmastr/pourover-cli.git"
+    "url": "git+https://github.com/manuscriptmastr/coffee-cli.git"
   },
   "ava": {
     "nodeArguments": [
@@ -28,14 +28,16 @@
     "v60",
     "kalita-wave",
     "percolation",
+    "immersion",
+    "cupping",
     "cli"
   ],
   "author": "Joshua Martin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manuscriptmastr/pourover-cli/issues"
+    "url": "https://github.com/manuscriptmastr/coffee-cli/issues"
   },
-  "homepage": "https://github.com/manuscriptmastr/pourover-cli#readme",
+  "homepage": "https://github.com/manuscriptmastr/coffee-cli#readme",
   "dependencies": {
     "dayjs": "^1.9.7",
     "json-schema-defaults": "^0.4.0",
