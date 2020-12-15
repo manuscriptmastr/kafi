@@ -21,23 +21,28 @@ const {
  * - "pourover journal migrate --from --to" or have from/to as positional arguments
  * - Updates config after successful migration
  * @todo Create script to update all entries based on a schema change (e.g. adding keywords, which defaults to an empty array)
- * @todo Dynamically generate JSON Schema to lift out complex patterns and other behavior. Libraries?
  */
 
 const __filename = fileURLToPath(import.meta.url);
-const PROJECT_PATH = resolve(dirname(__filename), '../../../entries');
+const JOURNAL_ENTRIES_PATH = resolve(dirname(__filename), '../../../entries');
+const SCHEMA_PATH = resolve(dirname(__filename), '../../../schemas');
 
 export const getEntryFilenames = pipeWith(andThen, [
-  () => fs.readdir(PROJECT_PATH),
+  () => fs.readdir(JOURNAL_ENTRIES_PATH),
   filter(endsWith('.json'))
 ]);
 
 export const getEntryByFilename = filename =>
-  import(`${PROJECT_PATH}/${filename}`)
+  import(`${JOURNAL_ENTRIES_PATH}/${filename}`)
     .then(prop('default'));
 
+export const getJSONSchema = curry(async(version, type) =>
+  import(`${SCHEMA_PATH}/${type}_v${version}.json`)
+    .then(prop('default'))
+);
+
 export const writeEntry = curry(async (filename, entry) => {
-  const filepath = `${PROJECT_PATH}/${filename}`;
+  const filepath = `${JOURNAL_ENTRIES_PATH}/${filename}`;
   await fs.writeFile(filepath, JSON.stringify(entry, null, 2));
   return filepath;
 });

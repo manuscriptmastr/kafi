@@ -11,9 +11,15 @@ import {
   writeEntry
 } from '../util';
 
-export const command = 'update';
+export const command = 'update <type>';
 export const desc = 'Update journal entries to different schemas';
 export const builder = yargs => yargs
+  .positional('type', {
+    describe: 'Type of journal entry',
+    type: 'string',
+    choices: ['pourover', 'cupping'],
+    required: true
+  })
   .option('from', {
     describe: 'From schema version',
     type: 'string',
@@ -24,7 +30,7 @@ export const builder = yargs => yargs
     type: 'string',
     required: true
   });
-export const handler = ({ from, to }) => pipeWith(andThen, [
+export const handler = ({ type, from, to }) => pipeWith(andThen, [
   getEntryFilenames,
   mapAsync(async filename => {
     const entry = await getEntryByFilename(filename);

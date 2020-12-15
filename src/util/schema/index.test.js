@@ -54,6 +54,7 @@ const ENTRY_1_VERSION_1 = {
 
 const ENTRY_1_VERSION_2 = {
   $schema: '../schemas/pourover_v1.0.json',
+  type: 'pourover',
   date: '09/15/2020',
   coffee: {
     weight: '22g',
@@ -139,6 +140,7 @@ const ENTRY_2_VERSION_1 = {
 
 const ENTRY_2_VERSION_2 = {
   $schema: '../schemas/pourover_v1.0.json',
+  type: 'pourover',
   date: '08/06/2020',
   coffee: {
     weight: '25g',
@@ -225,6 +227,7 @@ const ENTRY_3_VERSION_1 = {
 
 const ENTRY_3_VERSION_2 = {
   $schema: '../schemas/pourover_v1.0.json',
+  type: 'pourover',
   date: '12/02/2020',
   coffee: {
     weight: '22g',

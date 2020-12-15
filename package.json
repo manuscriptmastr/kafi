@@ -7,7 +7,7 @@
     "test": "ava --watch"
   },
   "bin": {
-    "pourover": "index.js"
+    "coffee": "index.js"
   },
   "type": "module",
   "repository": {

@@ -7,6 +7,11 @@
       "default": "../schemas/pourover_v1.0.json",
       "description": "The JSON schema to validate this journal entry against."
     },
+    "type": {
+      "const": "pourover",
+      "default": "pourover",
+      "description": "The type of journal entry."
+    },
     "date": {
       "allOf": [{ "$ref": "schemas/date.json" }],
       "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
@@ -106,7 +111,7 @@
     }
   },
   "required": [
-    "schema",
+    "type",
     "date",
     "coffee",
     "water",

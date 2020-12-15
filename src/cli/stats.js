@@ -31,9 +31,15 @@ const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind'
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
 
-export const command = 'stats';
+export const command = 'stats <type>';
 export const desc = 'Analyze journal entries';
 export const builder = yargs => yargs
+  .positional('type', {
+    describe: 'Type of journal entry',
+    type: 'string',
+    choices: ['pourover', 'cupping'],
+    required: true
+  })
   .option('fields', {
     describe: 'Fields to include',
     type: 'array',
@@ -49,7 +55,7 @@ export const builder = yargs => yargs
     type: 'array',
     default: DEFAULT_SORT_FIELDS
   });
-export const handler = ({ ['$0']: pos, _, fields, limit, sort, ...filters }) => pipeWith(andThen, [
+export const handler = ({ ['$0']: pos, _, stats, fields, limit, sort, ...filters }) => pipeWith(andThen, [
   getEntryFilenames,
   mapAsync(getEntryByFilename),
   filter(partialEq(filters)),
