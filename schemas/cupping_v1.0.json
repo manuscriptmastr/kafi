@@ -3,74 +3,61 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "const": "../schemas/pourover_v1.0.json",
-      "default": "../schemas/pourover_v1.0.json",
+      "const": "../schemas/cupping_v1.0.json",
+      "default": "../schemas/cupping_v1.0.json",
       "description": "The JSON schema to validate this journal entry against."
     },
     "type": {
-      "const": "pourover",
-      "default": "pourover",
+      "const": "cupping",
+      "default": "cupping",
       "description": "The type of journal entry."
     },
     "date": {
       "allOf": [{ "$ref": "schemas/date.json" }],
-      "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
+      "description": "The date you cupped this coffee, formatted as 'MM/DD/YYYY'."
     },
     "coffee": {
       "allOf": [{ "$ref": "schemas/coffee.json" }],
-      "description": "The coffee beans used in your brew."
+      "description": "The coffee beans used in your cupping."
     },
     "water": {
       "allOf": [{ "$ref": "schemas/water.json" }],
-      "description": "The water used in your brew."
+      "description": "The water used in your cupping."
     },
     "equipment": {
       "type": "object",
       "properties": {
-        "method": {
-          "type": "string",
-          "default": "",
-          "description": "The method used to brew your coffee, such as 'Chemex' or 'Hario V60'."
-        },
         "grinder": {
           "type": "string",
           "default": "",
           "description": "The grinder make and model you used, such as 'Hario Skerton' or 'Baratza Encore'."
         }
       },
-      "description": "The equipment used to make this brew.",
-      "required": ["method", "grinder"]
+      "description": "The equipment used to make this cupping.",
+      "required": ["grinder"]
     },
     "recipe": {
       "type": "object",
       "properties": {
-        "bloom": {
+        "steep": {
           "type": "object",
           "properties": {
-            "weight": {
-              "allOf": [{ "$ref": "schemas/weight.json" }],
-              "description": "The weight of the bloom water in grams, such as '50g'."
-            },
             "time": {
               "allOf": [{ "$ref": "schemas/time.json" }],
-              "description": "The total time from your initial pour on dry grounds to the next pour."
+              "description": "The total time from your initial pour on dry grounds to breaking the crust."
             }
           },
-          "description": "The bloom settings you brewed with.",
-          "required": ["weight", "time"]
+          "description": "The steep settings you cupped with.",
+          "required": ["time"]
         },
         "notes": {
           "type": "string",
           "default": "",
-          "description": "Any notes on techniques used for your brew."
+          "description": "Any notes on techniques used for your cupping."
         }
       },
-      "description": "The techniques you used to brew.",
-      "required": ["bloom", "notes"]
-    },
-    "time": {
-      "allOf": [{ "$ref": "schemas/time.json" }],
-      "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops, such as '2:54'."
+      "description": "The techniques you used to cup.",
+      "required": ["steep", "notes"]
     },
     "aroma": {
       "allOf": [{ "$ref": "schemas/aspect.json" }],
@@ -95,19 +82,19 @@
     "notes": {
       "type": "string",
       "default": "",
-      "description": "Any notes about this brew, such as drawdown or overall flavor."
+      "description": "Any notes about this cupping, such as overall flavor."
     },
     "score": {
       "type": "integer",
       "minimum": 1,
       "maximum": 10,
       "default": 0,
-      "description": "On a scale of 1 to 10, how much did you enjoy this brew?"
+      "description": "On a scale of 1 to 10, how much did you enjoy this cupping?"
     },
     "actionItem": {
       "type": "string",
       "default": "",
-      "description": "Any variables to change on the next brew."
+      "description": "Any variables to change on the next cupping."
     }
   },
   "required": [
@@ -117,7 +104,6 @@
     "water",
     "equipment",
     "recipe",
-    "time",
     "aroma",
     "acidity",
     "sweetness",
