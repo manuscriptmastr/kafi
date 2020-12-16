@@ -3,10 +3,14 @@ import JSONSchemaDefaults from 'json-schema-defaults';
 import $RefParser from 'json-schema-ref-parser';
 import R from 'ramda';
 const {
+  andThen,
   ascend,
+  curry,
   last,
   pick,
-  pipe,
+  pipeWith,
+  propEq,
+  reverse,
   sortWith,
   useWith
 } = R;
@@ -24,13 +28,22 @@ import {
 
 const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
 
-export const mostRecentFilename = pipe(
-  sortWith([
-    useWith(dateComparator, [dateFromFilename, dateFromFilename]),
-    ascend(iterationFromFilename)
-  ]),
-  last
-);
+export const sortFilenamesByDate = sortWith([
+  useWith(dateComparator, [dateFromFilename, dateFromFilename]),
+  ascend(iterationFromFilename)
+]);
+
+const findFirstEntryOfType = curry(async (type, filenames) => {
+  let entry;
+  for (const filename of filenames) {
+    const candidate = await getEntryByFilename(filename);
+    if (propEq('type', type, candidate)) {
+      entry = candidate;
+      break;
+    }
+  }
+  return entry;
+});
 
 export const command = 'journal <type>';
 export const desc = 'Create a new journal entry';
@@ -49,15 +62,26 @@ export const handler = async ({ type, version = '1.0' }) => {
     .then(JSONSchemaDefaults);
   let entry = { ...defaults, date: today.format(FRIENDLY_DATE_FORMAT) };
 
-  const filenames = await getEntryFilenames();
-  const filename = mostRecentFilename(filenames);
+  const lastFilename = await pipeWith(andThen, [
+    getEntryFilenames,
+    sortFilenamesByDate,
+    last
+  ])();
 
-  if (filename) {
-    const date = dateFromFilename(filename);
-    const iteration = iterationFromFilename(filename);
-    const lastEntry = await getEntryByFilename(filename);
-
+  if (lastFilename) {
+    const date = dateFromFilename(lastFilename);
+    const iteration = iterationFromFilename(lastFilename);
     basename = `${basename}${date.isToday() ? `-${iteration + 1}` : ''}`;
+  }
+
+  const lastEntry = await pipeWith(andThen, [
+    getEntryFilenames,
+    sortFilenamesByDate,
+    reverse,
+    findFirstEntryOfType(type)
+  ])();
+
+  if (lastEntry) {
     entry = { ...entry, ...pick(DEFAULT_FIELDS, lastEntry) };
   }
 

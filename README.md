@@ -40,8 +40,8 @@ npm link
 3. Create a new journal entry.
 
 ```shell
-# create a new pourover journal entry with sane defaults
-coffee journal pourover
+# create a new journal entry with sane defaults
+coffee journal <cupping|pourover>
 ```
 
 4. Brew your coffee, then jot out your reactions to things like:
@@ -62,39 +62,39 @@ coffee journal pourover
 
 ```shell
 # Create a new journal entry
-coffee journal pourover
+coffee journal <cupping|pourover>
 ```
 
 ### Stats
 
 ```shell
 $ coffee stats pourover --coffee.origin.region="Pitalito"
-┌─────────┬──────────────┬─────────────────────────┬──────────────────────┬──────────────┬────────┬───────┐
-│ (index) │     date     │     coffee.roaster      │ coffee.origin.region │ coffee.grind │  time  │ score │
-├─────────┼──────────────┼─────────────────────────┼──────────────────────┼──────────────┼────────┼───────┤
-│    0    │ '09/25/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │ '2:41' │   7   │
-│    1    │ '09/26/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │ '2:50' │   2   │
-│    2    │ '09/27/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '3:06' │   3   │
-│    3    │ '09/28/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:40' │   8   │
-│    4    │ '09/29/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:40' │   9   │
-│    5    │ '09/30/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:35' │   5   │
-│    6    │ '10/01/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:46' │   8   │
-│    7    │ '10/02/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:48' │   7   │
-│    8    │ '10/03/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:44' │   8   │
-│    9    │ '10/04/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:51' │   5   │
-│   10    │ '10/05/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      25      │ '2:52' │   7   │
-│   11    │ '10/06/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:47' │   7   │
-│   12    │ '10/07/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '2:31' │   7   │
-│   13    │ '10/08/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │ '3:03' │   8   │
-└─────────┴──────────────┴─────────────────────────┴──────────────────────┴──────────────┴────────┴───────┘
+┌─────────┬──────────────┬─────────────────────────┬──────────────────────┬──────────────┬───────┐
+│ (index) │     date     │     coffee.roaster      │ coffee.origin.region │ coffee.grind │ score │
+├─────────┼──────────────┼─────────────────────────┼──────────────────────┼──────────────┼───────┤
+│    0    │ '09/25/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │   7   │
+│    1    │ '09/26/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │   2   │
+│    2    │ '09/27/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   3   │
+│    3    │ '09/28/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   8   │
+│    4    │ '09/29/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   9   │
+│    5    │ '09/30/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   5   │
+│    6    │ '10/01/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   8   │
+│    7    │ '10/02/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   7   │
+│    8    │ '10/03/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   8   │
+│    9    │ '10/04/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   5   │
+│   10    │ '10/05/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      25      │   7   │
+│   11    │ '10/06/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   7   │
+│   12    │ '10/07/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   7   │
+│   13    │ '10/08/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │   8   │
+└─────────┴──────────────┴─────────────────────────┴──────────────────────┴──────────────┴───────┘
 ```
 
 ```shell
 # Basic use
-coffee stats pourover
+coffee stats <cupping|pourover>
 # Limit entries (defaults to last 30)
 coffee stats pourover --limit 10
-# Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, time, score)
+# Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, score)
 coffee stats pourover --fields coffee.origin.region coffee.grind time
 # Sort by fields (defaults to date)
 coffee stats pourover --sort coffee.roaster score coffee.grind
