@@ -1,19 +1,25 @@
-import R from 'ramda';
+import R, { pipe } from 'ramda';
 const {
+  add,
   andThen,
   ascend,
   compose,
   cond,
   curry,
+  eqProps,
   equals,
   filter,
   fromPairs,
+  groupWith,
   map,
+  mergeWith,
   pipeWith,
+  reduce,
   sortWith,
   takeLast,
+  tap,
   useWith,
-  tap
+  when
 } = R;
 import {
   dateComparator,
@@ -28,10 +34,20 @@ import {
 const DEFAULT_SORT_FIELDS = ['date'];
 const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'score'];
 
+// Assume --sort and  --fields are numbers
+const flattenEntriesByAverage = curry((sortField, entries) => pipe(
+  groupWith(eqProps(sortField)),
+  map(duplicates => {
+    const length = duplicates.length;
+    const reduced = reduce(mergeWith(add), {}, duplicates);
+    return map(value => parseFloat((value / length).toFixed(1)), reduced);
+  })
+)(entries));
+
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
 
-export const command = 'stats <type>';
+export const command = 'stats <type> [fn]';
 export const desc = 'Analyze journal entries';
 export const builder = yargs => yargs
   .positional('type', {
@@ -39,6 +55,11 @@ export const builder = yargs => yargs
     type: 'string',
     choices: ['pourover', 'cupping'],
     required: true
+  })
+  .positional('fn', {
+    describe: 'Perform a function on the journal entries matching criteria',
+    type: 'string',
+    choices: ['average']
   })
   .option('fields', {
     describe: 'Fields to include',
@@ -54,8 +75,8 @@ export const builder = yargs => yargs
     describe: 'Sort results by fields',
     type: 'array',
     default: DEFAULT_SORT_FIELDS
-  });
-export const handler = ({ ['$0']: pos, _, stats, fields, limit, sort, ...filters }) => pipeWith(andThen, [
+  })
+export const handler = ({ ['$0']: pos, _, stats, fn, fields, limit, sort, ...filters }) => pipeWith(andThen, [
   getEntryFilenames,
   mapAsync(getEntryByFilename),
   filter(partialEq(filters)),
@@ -67,7 +88,12 @@ export const handler = ({ ['$0']: pos, _, stats, fields, limit, sort, ...filters
       ])
     , sort),
   ]),
-  takeLast(limit),
   map(strainBy([...sort, ...fields])),
+  when(() => fn === 'average', flattenEntriesByAverage(sort[0])),
+  /**
+   * @todo takeLast() is more specific to sorting by date.
+   * How can we takeFirst() in other cases?
+   */
+  takeLast(limit),
   tap(console.table),
 ])();
