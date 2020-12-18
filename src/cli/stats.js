@@ -32,13 +32,14 @@ import {
 } from '../util';
 
 /**
- * @todo Add support --{aspect}.descriptors for matching elements of array
+ * @todo takeLast() is more specific to sorting by date. Most times we want the first N entries.
+ * How can we takeFirst() in other cases?
+ * @todo How to make average et al more robust against non-number fields?
  */
 
 const DEFAULT_SORT_FIELDS = ['date'];
 const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'score'];
 
-// Assume --sort and  --fields are numbers
 const flattenEntriesByAverage = curry((sortField, entries) => pipe(
   groupWith(eqProps(sortField)),
   map(duplicates => {
@@ -94,10 +95,6 @@ export const handler = ({ ['$0']: pos, _, stats, fn, fields, limit, sort, ...fil
   ]),
   map(strainBy([...sort, ...fields])),
   when(() => fn === 'average', flattenEntriesByAverage(sort[0])),
-  /**
-   * @todo takeLast() is more specific to sorting by date.
-   * How can we takeFirst() in other cases?
-   */
   takeLast(limit),
   tap(console.table),
 ])();
