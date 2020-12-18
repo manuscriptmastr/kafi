@@ -11,6 +11,11 @@ import {
   writeEntry
 } from '../util';
 
+/**
+ * @todo Wire up coffee update <type> command,
+ * also combine schema transforms with defaults from JSON Schema when a transform returns undefined
+ */
+
 export const command = 'update <type>';
 export const desc = 'Update journal entries to different schemas';
 export const builder = yargs => yargs

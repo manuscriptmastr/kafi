@@ -26,6 +26,11 @@ import {
   writeEntry
 } from '../../util';
 
+/**
+ * @todo Add iteration to pourover and cupping schema
+ * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
+ */
+
 const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
 
 export const sortFilenamesByDate = sortWith([

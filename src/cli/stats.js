@@ -31,6 +31,10 @@ import {
   pathString
 } from '../util';
 
+/**
+ * @todo Add support --{aspect}.descriptors for matching elements of array
+ */
+
 const DEFAULT_SORT_FIELDS = ['date'];
 const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'score'];
 
