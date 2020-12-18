@@ -27,7 +27,7 @@ import {
 } from '../../util';
 
 /**
- * @todo Add iteration to pourover and cupping schema
+ * @todo Should iteration start from 1?
  * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
  * @todo Rework the handler to be more modular
  */
