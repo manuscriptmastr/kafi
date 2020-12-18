@@ -29,6 +29,7 @@ import {
 /**
  * @todo Add iteration to pourover and cupping schema
  * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
+ * @todo Rework the handler to be more modular
  */
 
 const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
@@ -75,8 +76,9 @@ export const handler = async ({ type, version = '1.0' }) => {
 
   if (lastFilename) {
     const date = dateFromFilename(lastFilename);
-    const iteration = iterationFromFilename(lastFilename);
-    basename = `${basename}${date.isToday() ? `-${iteration + 1}` : ''}`;
+    const iteration = date.isToday() ? iterationFromFilename(lastFilename) + 1 : 0;
+    basename = `${basename}${iteration > 0 ? `-${iteration}` : ''}`;
+    entry = { ...entry, iteration };
   }
 
   const lastEntry = await pipeWith(andThen, [

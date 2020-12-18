@@ -7,13 +7,13 @@ import {
   getEntryByFilename,
   getEntryFilenames,
   mapAsync,
-  schema0ToSchema1,
   writeEntry
 } from '../util';
 
 /**
  * @todo Wire up coffee update <type> command,
  * also combine schema transforms with defaults from JSON Schema when a transform returns undefined
+ * @todo Assume user can only go forward. If --to is earlier than the journal entry, we should throw
  */
 
 export const command = 'update <type>';
@@ -39,7 +39,8 @@ export const handler = ({ type, from, to }) => pipeWith(andThen, [
   getEntryFilenames,
   mapAsync(async filename => {
     const entry = await getEntryByFilename(filename);
-    const newEntry = schema0ToSchema1(entry);
+    // const newEntry = ... some transform to entry given the type, from, and to
+    newEntry = {};
     await writeEntry(filename, newEntry)
   })
 ])();

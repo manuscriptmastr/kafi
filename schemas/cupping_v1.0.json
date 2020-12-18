@@ -16,6 +16,12 @@
       "allOf": [{ "$ref": "schemas/date.json" }],
       "description": "The date you cupped this coffee, formatted as 'MM/DD/YYYY'."
     },
+    "iteration": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "The (n - 1) coffee today."
+    },
     "coffee": {
       "allOf": [{ "$ref": "schemas/coffee.json" }],
       "description": "The coffee beans used in your cupping."
