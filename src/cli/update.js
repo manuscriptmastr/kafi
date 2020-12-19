@@ -11,7 +11,7 @@ import {
 } from '../util';
 
 /**
- * @todo Wire up coffee update <type> command,
+ * @todo Wire up update <type> command,
  * also combine schema transforms with defaults from JSON Schema when a transform returns undefined
  * @todo Assume user can only go forward. If --to is earlier than the journal entry, we should throw
  */

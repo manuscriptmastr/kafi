@@ -18,7 +18,7 @@ const {
  * - Setup a file in path User > Desktop > My Coffee Journal > 2020 > August > 2020-08-01
  * - Update VSCode settings to target this path with JSON Schema validation
  * @todo Create migration from one folder structure to the other (because I need this!).
- * - "pourover journal migrate --from --to" or have from/to as positional arguments
+ * - "journal migrate --from --to" or have from/to as positional arguments
  * - Updates config after successful migration
  * @todo Create script to update all entries based on a schema change (e.g. adding keywords, which defaults to an empty array)
  */

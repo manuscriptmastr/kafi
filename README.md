@@ -1,8 +1,8 @@
-# coffee-cli
+# kafi
 
-I love pour over coffee. It is so many disciplines — cuisine, art, science, therapy — rolled into a 14 minute daily routine. I love the innovation happening in the coffee industry, from crazy but wonderful drinks like espresso tonic to new processes like anaerobic fermentation to newer exporters like the Nano Challa Cooperative.
+I love brewing coffee. It is so many disciplines — cuisine, art, science, therapy — rolled into a 14 minute daily routine. I love the innovation happening in the coffee industry, from crazy but wonderful drinks like espresso tonic to new processes like anaerobic fermentation to newer exporters like the Nano Challa Cooperative.
 
-Over the COVID-19 pandemic, I began to keep a journal of my daily brew, including notes on variables like coffee origin, grind size, and pour time. It was extremely helpful and pushed my technique drastically. Still, keeping a handwritten journal for a 14-minute routine was tedious — in most cases, my grind or coffee did not change, but for the sake of clarity, I wanted to include all these variables in every journal entry.
+Over the COVID-19 pandemic, I began to keep a journal of my daily V60 pourover, including notes on variables like coffee origin, grind size, and pour time. It was extremely helpful and pushed my technique drastically. Still, keeping a handwritten journal for a 14-minute routine was tedious — in most cases, my grind or coffee did not change, but for the sake of clarity, I wanted to include all these variables in every journal entry.
 
 Recently, I began following [James Hoffmann's channel](https://www.youtube.com/channel/UCMb0O2CdPBNi-QqPk5T3gsQ). Three of his videos particularly inspired me:
 
@@ -24,16 +24,16 @@ This project requires:
 1. Fork or clone the repo.
 
 ```shell
-git clone git@github.com:manuscriptmastr/coffee-cli.git
-cd coffee-cli
+git clone git@github.com:manuscriptmastr/kafi.git
+cd kafi
 ```
 
-2. Setup the `coffee` CLI.
+2. Setup the `kafi` CLI.
 
 ```shell
 # install NPM dependencies
 npm install
-# add coffee command
+# add kafi command
 npm link
 ```
 
@@ -41,7 +41,7 @@ npm link
 
 ```shell
 # create a new journal entry with sane defaults
-coffee journal <cupping|pourover>
+kafi journal <cupping|pourover>
 ```
 
 4. Brew your coffee, then jot out your reactions to things like:
@@ -53,7 +53,7 @@ coffee journal <cupping|pourover>
 - How does the coffee _feel_?
 - How does your mouth feel during and after a sip?
 
-5. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall pour time.
+5. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall brew time.
    ![Coffee Compass](./coffee-compass.jpg)
 
 ## CLI
@@ -62,13 +62,13 @@ coffee journal <cupping|pourover>
 
 ```shell
 # Create a new journal entry
-coffee journal <cupping|pourover>
+kafi journal <cupping|pourover>
 ```
 
 ### Stats
 
 ```shell
-$ coffee stats pourover --coffee.origin.region="Pitalito"
+$ kafi stats pourover --coffee.origin.region="Pitalito"
 ┌─────────┬──────────────┬─────────────────────────┬──────────────────────┬──────────────┬───────┐
 │ (index) │     date     │     coffee.roaster      │ coffee.origin.region │ coffee.grind │ score │
 ├─────────┼──────────────┼─────────────────────────┼──────────────────────┼──────────────┼───────┤
@@ -91,15 +91,15 @@ $ coffee stats pourover --coffee.origin.region="Pitalito"
 
 ```shell
 # Basic use
-coffee stats <cupping|pourover>
+kafi stats <cupping|pourover>
 # Limit entries (defaults to last 30)
-coffee stats pourover --limit 10
+kafi stats pourover --limit 10
 # Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, score)
-coffee stats pourover --fields coffee.origin.region coffee.grind time
+kafi stats pourover --fields coffee.origin.region coffee.grind time
 # Sort by fields (defaults to date)
-coffee stats pourover --sort coffee.roaster score coffee.grind
+kafi stats pourover --sort coffee.roaster score coffee.grind
 # Filter results by properties
-coffee stats pourover --equipment.grinder="Baratza Encore" --coffee.grind=23
+kafi stats pourover --equipment.grinder="Baratza Encore" --coffee.grind=23
 ```
 
 ## Methods
