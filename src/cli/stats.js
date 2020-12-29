@@ -37,6 +37,8 @@ import {
  * @todo How to make average et al more robust against non-number fields?
  * @todo Print out a graph to visualize trends,
  * such as when sweetness.quantity hits its peak in Ethiopian coffees.
+ * @todo Beautify CLI with Chalk
+ * @todo Use https://github.com/sindresorhus/terminal-link to create shortlinks
  */
 
 const DEFAULT_SORT_FIELDS = ['date'];
