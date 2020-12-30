@@ -39,6 +39,7 @@ import {
  * such as when sweetness.quantity hits its peak in Ethiopian coffees.
  * @todo Beautify CLI with Chalk
  * @todo Use https://github.com/sindresorhus/terminal-link to create shortlinks
+ * @todo Strings like '3:15' should work with average
  */
 
 const DEFAULT_SORT_FIELDS = ['date'];
