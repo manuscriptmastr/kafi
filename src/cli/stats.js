@@ -34,11 +34,10 @@ import {
 /**
  * @todo takeLast() is more specific to sorting by date. Most times we want the first N entries.
  * How can we takeFirst() in other cases?
- * @todo How to make average et al more robust against non-number fields?
+ * @todo average is buggy, need to think through use cases more.
  * @todo Print out a graph to visualize trends,
  * such as when sweetness.quantity hits its peak in Ethiopian coffees.
  * @todo Beautify CLI with Chalk
- * @todo Use https://github.com/sindresorhus/terminal-link to create shortlinks
  * @todo Strings like '3:15' should work with average
  */
 

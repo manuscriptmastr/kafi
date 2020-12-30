@@ -1,5 +1,25 @@
 import test from 'ava';
-import { partialEq } from '.';
+import { partialEq, pathString } from '.';
+
+test('pathString(string) returns undefined when passed an empty string', t => {
+  t.deepEqual(pathString('', { a: 1 }), undefined);
+});
+
+test('pathString(string) returns undefined when passed a string that is not a valid path', t => {
+  t.deepEqual(pathString('b', { a: 1 }), undefined);
+});
+
+test('pathString(string) returns value when passed a string that is a valid key', t => {
+  t.deepEqual(pathString('a', { a: 1 }), 1);
+});
+
+test('pathString(string) returns value when passed a string that is a valid path', t => {
+  t.deepEqual(pathString('a.b.c', { a: { b: { c: 1 } } }), 1);
+});
+
+test('pathString accepts curried arguments', t => {
+  t.deepEqual(pathString('a.b.c')({ a: { b: { c: 1 } } }), 1);
+});
 
 test('partialEq(partial, object) returns true when partial is empty object', t => {
   t.true(partialEq({}, { hello: 'world' }));

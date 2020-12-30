@@ -1,8 +1,10 @@
 import R from 'ramda';
 const {
+  assocPath,
   curry,
   curryN,
   equals,
+  identity,
   intersection,
   length,
   path,
@@ -10,12 +12,15 @@ const {
   map,
   split,
   type,
+  useWith,
   where,
 } = R;
 
 export const mapAsync = curryN(2, pipe(map, arr => Promise.all(arr)));
 
-export const pathString = curry((string, object) => path(split('.', string), object));
+export const pathString = useWith(path, [split('.'), identity]);
+
+export const assocPathString = useWith(assocPath, [split('.'), identity, identity]);
 
 export const partialEq = curry((partial, object) => where(map(curry((x, y) =>
   type(x) === 'Object' && type(y) === 'Object'
