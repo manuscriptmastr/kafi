@@ -17,7 +17,7 @@ I was inspired to combine both the journal and tasting aspects into a CLI (comma
 This project requires:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Node.js](https://nodejs.org/en/)
+- [Node.js, version 14 or higher](https://nodejs.org/en/)
 
 ## Quick Start
 
