@@ -11,6 +11,11 @@
       "default": 0,
       "description": "The number of clicks, with zero being when burrs are fully closed."
     },
+    "variety": {
+      "type": "string",
+      "default": "",
+      "description": "The variety of the coffee, such as 'Pacas' or 'Gesha'."
+    },
     "origin": {
       "type": "object",
       "properties": {
@@ -24,7 +29,7 @@
           "default": "",
           "description": "The region, such as 'Guji' or 'Gitwe'."
         },
-        "grower": {
+        "producer": {
           "type": "string",
           "default": "",
           "description": "The farmer, collective, or coop, such as 'Nano Challa' or 'Ariz Family'."
