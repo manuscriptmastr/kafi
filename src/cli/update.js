@@ -40,7 +40,7 @@ export const handler = ({ type, from, to }) => pipeWith(andThen, [
   mapAsync(async filename => {
     const entry = await getEntryByFilename(filename);
     // const newEntry = ... some transform to entry given the type, from, and to
-    newEntry = {};
+    const newEntry = entry;
     await writeEntry(filename, newEntry)
   })
 ])();
