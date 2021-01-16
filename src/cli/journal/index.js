@@ -6,7 +6,8 @@ const {
   ascend,
   curry,
   last,
-  pick,
+  map,
+  pipe,
   pipeWith,
   propEq,
   reverse,
@@ -14,6 +15,7 @@ const {
   useWith
 } = R;
 import {
+  assocPathString,
   DATE_FORMAT,
   dateComparator,
   dateFromFilename,
@@ -22,6 +24,7 @@ import {
   getEntryFilenames,
   getJSONSchema,
   iterationFromFilename,
+  pathString,
   writeEntry
 } from '../../util';
 
@@ -29,13 +32,15 @@ import {
  * @todo Should iteration start from 1?
  * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
  * @todo Rework the handler to be more modular
- * @todo DEFAULT_FIELDS should be different for cupping.
  * Rework this and how entry/default fields are merged together.
  * @todo Sorting by date doesn't work correctly.
  * Change journal entry file format to YYYY-MM-DD-I.
  */
 
-const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
+const DEFAULT_FIELDS = {
+  cupping: ['water', 'equipment', 'recipe'],
+  pourover: ['coffee', 'water', 'equipment', 'recipe']
+}
 
 export const sortFilenamesByDate = sortWith([
   useWith(dateComparator, [dateFromFilename, dateFromFilename]),
@@ -91,7 +96,8 @@ export const handler = async ({ type, version = '1.0' }) => {
   ])();
 
   if (lastEntry) {
-    entry = { ...entry, ...pick(DEFAULT_FIELDS, lastEntry) };
+    const pathStringToTransform = field => assocPathString(field, pathString(field, lastEntry));
+    entry = pipe(...map(pathStringToTransform, DEFAULT_FIELDS[type]))(entry);
   }
 
   const filepath = await writeEntry(`${basename}.json`, entry);
