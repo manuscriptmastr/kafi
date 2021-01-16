@@ -13,7 +13,7 @@
       "description": "The type of journal entry."
     },
     "date": {
-      "allOf": [{ "$ref": "src/schema/date.json" }],
+      "allOf": [{ "$ref": "./date.json" }],
       "description": "The date you cupped this coffee, formatted as 'MM/DD/YYYY'."
     },
     "iteration": {
@@ -23,11 +23,11 @@
       "description": "The (n - 1) coffee today."
     },
     "coffee": {
-      "allOf": [{ "$ref": "src/schema/coffee.json" }],
+      "allOf": [{ "$ref": "./coffee.json" }],
       "description": "The coffee beans used in your cupping."
     },
     "water": {
-      "allOf": [{ "$ref": "src/schema/water.json" }],
+      "allOf": [{ "$ref": "./water.json" }],
       "description": "The water used in your cupping."
     },
     "equipment": {
@@ -49,7 +49,7 @@
           "type": "object",
           "properties": {
             "time": {
-              "allOf": [{ "$ref": "src/schema/time.json" }],
+              "allOf": [{ "$ref": "./time.json" }],
               "description": "The total time from your initial pour on dry grounds to breaking the crust."
             }
           },
@@ -66,23 +66,23 @@
       "required": ["steep", "notes"]
     },
     "aroma": {
-      "allOf": [{ "$ref": "src/schema/aspect.json" }],
+      "allOf": [{ "$ref": "./aspect.json" }],
       "description": "The smell (low to high), such as 'caramel', 'peach', or 'chocolate'."
     },
     "acidity": {
-      "allOf": [{ "$ref": "src/schema/aspect.json" }],
+      "allOf": [{ "$ref": "./aspect.json" }],
       "description": "The fruitiness (low to high), such as 'tart', 'crisp', or 'mellow'. Usually indicated by puckering/drying of the tongue or salivation."
     },
     "sweetness": {
-      "allOf": [{ "$ref": "src/schema/aspect.json" }],
+      "allOf": [{ "$ref": "./aspect.json" }],
       "description": "The sweetness (low to high), such as 'mild', 'deep', or 'rich'. Usually indicated by how 'rounded' the fruit quality is."
     },
     "body": {
-      "allOf": [{ "$ref": "src/schema/aspect.json" }],
+      "allOf": [{ "$ref": "./aspect.json" }],
       "description": "The texture or mouthfeel (light to heavy), such as 'watery', 'silky', 'syrupy', or 'creamy'."
     },
     "finish": {
-      "allOf": [{ "$ref": "src/schema/aspect.json" }],
+      "allOf": [{ "$ref": "./aspect.json" }],
       "description": "The aftertaste (short to long), such as 'quick', 'lingering', or 'clean'. Don't rush this aspect."
     },
     "notes": {

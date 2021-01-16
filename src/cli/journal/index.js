@@ -1,6 +1,5 @@
 import dayjs from 'dayjs';
 import JSONSchemaDefaults from 'json-schema-defaults';
-import $RefParser from 'json-schema-ref-parser';
 import R from 'ramda';
 const {
   andThen,
@@ -67,7 +66,6 @@ export const handler = async ({ type, version = '1.0' }) => {
   const today = dayjs();
   let basename = today.format(DATE_FORMAT);
   const defaults = await getJSONSchema(version, type)
-    .then($RefParser.dereference.bind($RefParser))
     .then(JSONSchemaDefaults);
   let entry = { ...defaults, date: today.format(FRIENDLY_DATE_FORMAT) };
 

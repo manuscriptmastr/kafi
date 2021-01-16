@@ -102,6 +102,16 @@ kafi stats pourover --sort coffee.roaster score coffee.grind
 kafi stats pourover --equipment.grinder="Baratza Encore" --coffee.grind=23
 ```
 
+## Developers
+
+To publish your own journal schema:
+1. Create a new JSON Schema file at `{rootDir}/src/schema/{method}.json`. Common subschemas such as `coffee.json` and `water.json` are provided.
+2. Run the `publish-schema` command:
+```shell
+# Example: npm run publish-schema --type=espresso --release=1.0
+npm run publish-schema --type={method} --release={version}
+```
+
 ## Methods
 
 ### Chemex
