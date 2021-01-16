@@ -31,6 +31,8 @@ import {
  * @todo Rework the handler to be more modular
  * @todo DEFAULT_FIELDS should be different for cupping.
  * Rework this and how entry/default fields are merged together.
+ * @todo Sorting by date doesn't work correctly.
+ * Change journal entry file format to YYYY-MM-DD-I.
  */
 
 const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
