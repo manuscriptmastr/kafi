@@ -4,7 +4,7 @@
   "description": "JSON coffee journal CLI",
   "main": "index.js",
   "scripts": {
-    "test": "ava --watch",
+    "test": "ava",
     "publish-schema": "json-dereference -s \"src/schema/${npm_config_type}.json\" -o \"schemas/${npm_config_type}_v${npm_config_release}.json\""
   },
   "bin": {
@@ -40,13 +40,13 @@
   },
   "homepage": "https://github.com/manuscriptmastr/kafi#readme",
   "dependencies": {
-    "dayjs": "^1.9.7",
+    "dayjs": "^1.10.3",
     "json-schema-defaults": "^0.4.0",
     "ramda": "^0.27.1",
     "yargs": "^16.2.0"
   },
   "devDependencies": {
-    "ava": "^3.14.0",
+    "ava": "^3.15.0",
     "json-dereference-cli": "^0.1.2"
   }
 }
