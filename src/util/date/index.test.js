@@ -45,5 +45,5 @@ test('parseDateTokenString(string, date) returns string as is if no tokens are f
 });
 
 test('parseDateTokenString(string, date) returns string with date tokens replaced', t => {
-  t.deepEqual(parseDateTokenString('path/{YYYY}/{MM}/{DD}', dayjs('02-03-2020', 'MM-DD-YYYY')), 'path/2020/02/03');
+  t.deepEqual(parseDateTokenString('path/{YYYY}/{MM}/{DD}', dayjs('02-03-2020')), 'path/2020/02/03');
 });

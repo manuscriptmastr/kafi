@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 import isToday from 'dayjs/plugin/isToday';
 import R from 'ramda';
 const {
@@ -13,7 +14,12 @@ const {
   replace
 } = R;
 
+dayjs.extend(customParseFormat);
 dayjs.extend(isToday);
+
+/**
+ * @todo dayjs should only ever be referenced in this file.
+ */
 
 export const DATE_FORMAT = 'MM-DD-YYYY';
 export const FRIENDLY_DATE_FORMAT = 'MM/DD/YYYY';

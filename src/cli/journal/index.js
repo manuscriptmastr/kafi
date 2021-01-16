@@ -1,6 +1,5 @@
 import dayjs from 'dayjs';
 import JSONSchemaDefaults from 'json-schema-defaults';
-import $RefParser from 'json-schema-ref-parser';
 import R from 'ramda';
 const {
   andThen,
@@ -32,7 +31,6 @@ import {
  * @todo Rework the handler to be more modular
  * @todo DEFAULT_FIELDS should be different for cupping.
  * Rework this and how entry/default fields are merged together.
- * @todo Standardize country/region/{grower => producer} and add fields for cultivar, variety, process, elevation, etc.
  */
 
 const DEFAULT_FIELDS = ['coffee', 'water', 'equipment', 'recipe'];
@@ -67,7 +65,6 @@ export const handler = async ({ type, version = '1.0' }) => {
   const today = dayjs();
   let basename = today.format(DATE_FORMAT);
   const defaults = await getJSONSchema(version, type)
-    .then($RefParser.dereference.bind($RefParser))
     .then(JSONSchemaDefaults);
   let entry = { ...defaults, date: today.format(FRIENDLY_DATE_FORMAT) };
 

@@ -20,7 +20,6 @@ const {
  * @todo Create migration from one folder structure to the other (because I need this!).
  * - "journal migrate --from --to" or have from/to as positional arguments
  * - Updates config after successful migration
- * @todo Create script to update all entries based on a schema change (e.g. adding keywords, which defaults to an empty array)
  */
 
 const __filename = fileURLToPath(import.meta.url);
