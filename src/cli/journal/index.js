@@ -38,7 +38,7 @@ import {
  */
 
 const DEFAULT_FIELDS = {
-  cupping: ['water', 'equipment', 'recipe'],
+  cupping: ['coffee.weight', 'coffee.grind', 'water', 'equipment', 'recipe'],
   pourover: ['coffee', 'water', 'equipment', 'recipe']
 }
 
