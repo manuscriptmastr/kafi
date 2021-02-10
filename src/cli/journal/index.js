@@ -68,7 +68,7 @@ export const builder = yargs => yargs
     choices: ['pourover', 'cupping'],
     required: true
   })
-export const handler = async ({ type, version = '1.0' }) => {
+export const handler = async ({ type, version = '1.1' }) => {
   const today = dayjs();
   let basename = today.format(DATE_FORMAT);
   const defaults = await getJSONSchema(version, type)
