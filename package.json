@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "publish-schema": "json-dereference -s \"src/schema/${npm_config_type}.json\" -o \"schemas/${npm_config_type}_v${npm_config_release}.json\""
+    "build-schema": "json-dereference -s \"src/schema/${npm_config_type}.json\" -o \"schemas/${npm_config_type}_v${npm_config_release}.json\""
   },
   "bin": {
     "kafi": "index.js"

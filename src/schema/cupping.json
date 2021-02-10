@@ -3,8 +3,8 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "const": "../schemas/cupping_v1.0.json",
-      "default": "../schemas/cupping_v1.0.json",
+      "const": "../schemas/cupping_v1.1.json",
+      "default": "../schemas/cupping_v1.1.json",
       "description": "The JSON schema to validate this journal entry against."
     },
     "type": {
