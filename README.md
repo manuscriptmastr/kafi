@@ -100,6 +100,8 @@ kafi stats pourover --fields coffee.origin.region coffee.grind time
 kafi stats pourover --sort coffee.roaster score coffee.grind
 # Filter results by properties
 kafi stats pourover --equipment.grinder="Baratza Encore" --coffee.grind=23
+# Merge entries on property (overrides --sort)
+kafi stats pourover --merge coffee.grind --fields score
 ```
 
 ## Developers

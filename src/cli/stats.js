@@ -44,7 +44,6 @@ const {
 /**
  * @todo takeLast() is more specific to sorting by date. Most times we want the first N entries.
  * How can we takeFirst() in other cases?
- * @todo average is buggy, need to think through use cases more.
  * @todo Print out a graph to visualize trends,
  * such as when sweetness.quantity hits its peak in Ethiopian coffees.
  * @todo Beautify CLI with Chalk
@@ -58,22 +57,22 @@ const isNumber = both(
   num => typeof num === 'number',
   num => !Number.isNaN(num)
 );
-
 const average = ifElse(isEmpty, () => 0, converge(divide, [sum, length]));
+const round = num => Number(Number(num).toFixed(1));
 
-const flattenEntriesByAverage = curry((sortField, entries) => pipe(
+const mergeEntriesOnKey = curry((sortField, entries) => pipe(
   groupWith(eqProps(sortField)),
   map(duplicates => {
     const emptyObject = map(always([]), duplicates[0]);
     const reduced = reduce(mergeWith((a, b) => a.concat([b])), emptyObject, duplicates);
-    return map(ifElse(all(isNumber), pipe(average, num => parseFloat(num).toFixed(1)), head), reduced);
+    return map(ifElse(all(isNumber), pipe(average, round), head), reduced);
   })
 )(entries));
 
 // Include only fields in entry
 const strainBy = curry((fields, entry) => fromPairs(map(field => [field, pathString(field, entry)], fields)));
 
-export const command = 'stats <type> [fn]';
+export const command = 'stats <type>';
 export const desc = 'Analyze journal entries';
 export const builder = yargs => yargs
   .positional('type', {
@@ -82,10 +81,10 @@ export const builder = yargs => yargs
     choices: ['pourover', 'cupping'],
     required: true
   })
-  .positional('fn', {
-    describe: 'Perform a function on the journal entries matching criteria',
+  .option('merge', {
+    describe: 'Merge entries by one field',
     type: 'string',
-    choices: ['average']
+    default: ''
   })
   .option('fields', {
     describe: 'Fields to include',
@@ -102,20 +101,23 @@ export const builder = yargs => yargs
     type: 'array',
     default: DEFAULT_SORT_FIELDS
   })
-export const handler = ({ ['$0']: pos, _, stats, fn, fields, limit, sort, ...filters }) => pipeWith(andThen, [
-  getEntryFilenames,
-  mapAsync(getEntryByFilename),
-  filter(partialEq(filters)),
-  sortWith([
-    ...map(
-      cond([
-        [equals('date'), () => useWith(dateComparator, [dateFromFriendlyDate, dateFromFriendlyDate])],
-        [() => true, compose(ascend, pathString)]
-      ])
-    , sort),
-  ]),
-  map(strainBy([...sort, ...fields])),
-  when(() => fn === 'average', flattenEntriesByAverage(sort[0])),
-  takeLast(limit),
-  tap(console.table),
-])();
+export const handler = ({ ['$0']: pos, _, stats, fn, fields, limit, merge, sort: _sort, ...filters }) => {
+  const sort = merge ? [merge] : _sort;
+  return pipeWith(andThen, [
+    getEntryFilenames,
+    mapAsync(getEntryByFilename),
+    filter(partialEq(filters)),
+    sortWith([
+      ...map(
+        cond([
+          [equals('date'), () => useWith(dateComparator, [dateFromFriendlyDate, dateFromFriendlyDate])],
+          [() => true, compose(ascend, pathString)]
+        ])
+      , sort),
+    ]),
+    map(strainBy([...sort, ...fields])),
+    when(() => !!merge, mergeEntriesOnKey(merge)),
+    takeLast(limit),
+    tap(console.table),
+  ])();
+};
