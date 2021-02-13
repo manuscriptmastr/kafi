@@ -1,26 +1,4 @@
-import R, { pipe } from 'ramda';
-const {
-  add,
-  andThen,
-  ascend,
-  compose,
-  cond,
-  curry,
-  eqProps,
-  equals,
-  filter,
-  fromPairs,
-  groupWith,
-  map,
-  mergeWith,
-  pipeWith,
-  reduce,
-  sortWith,
-  takeLast,
-  tap,
-  useWith,
-  when
-} = R;
+import R from 'ramda';
 import {
   dateComparator,
   dateFromFriendlyDate,
@@ -30,6 +8,38 @@ import {
   partialEq,
   pathString
 } from '../util';
+const {
+  andThen,
+  all,
+  always,
+  ascend,
+  both,
+  compose,
+  converge,
+  cond,
+  curry,
+  divide,
+  eqProps,
+  equals,
+  filter,
+  fromPairs,
+  groupWith,
+  head,
+  ifElse,
+  isEmpty,
+  length,
+  map,
+  mergeWith,
+  pipe,
+  pipeWith,
+  reduce,
+  sortWith,
+  sum,
+  takeLast,
+  tap,
+  useWith,
+  when
+} = R;
 
 /**
  * @todo takeLast() is more specific to sorting by date. Most times we want the first N entries.
@@ -44,12 +54,19 @@ import {
 const DEFAULT_SORT_FIELDS = ['date'];
 const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'score'];
 
+const isNumber = both(
+  num => typeof num === 'number',
+  num => !Number.isNaN(num)
+);
+
+const average = ifElse(isEmpty, () => 0, converge(divide, [sum, length]));
+
 const flattenEntriesByAverage = curry((sortField, entries) => pipe(
   groupWith(eqProps(sortField)),
   map(duplicates => {
-    const length = duplicates.length;
-    const reduced = reduce(mergeWith(add), {}, duplicates);
-    return map(value => parseFloat((value / length).toFixed(1)), reduced);
+    const emptyObject = map(always([]), duplicates[0]);
+    const reduced = reduce(mergeWith((a, b) => a.concat([b])), emptyObject, duplicates);
+    return map(ifElse(all(isNumber), pipe(average, num => parseFloat(num).toFixed(1)), head), reduced);
   })
 )(entries));
 
