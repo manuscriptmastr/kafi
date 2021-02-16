@@ -27,6 +27,7 @@ const {
   head,
   ifElse,
   isEmpty,
+  join,
   length,
   map,
   mergeWith,
@@ -118,6 +119,7 @@ export const handler = ({ ['$0']: pos, _, stats, fn, fields, limit, merge, sort:
     map(strainBy([...sort, ...fields])),
     when(() => !!merge, mergeEntriesOnKey(merge)),
     takeLast(limit),
+    map(map(when(Array.isArray, join(', ')))),
     tap(console.table),
   ])();
 };
