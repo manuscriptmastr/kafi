@@ -22,7 +22,7 @@ export const builder = yargs => yargs
   .positional('type', {
     describe: 'Type of journal entry',
     type: 'string',
-    choices: ['pourover', 'cupping'],
+    choices: ['cupping', 'hybrid', 'pourover'],
     required: true
   })
   .option('from', {

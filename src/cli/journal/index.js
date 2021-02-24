@@ -39,6 +39,7 @@ import {
 
 const DEFAULT_FIELDS = {
   cupping: ['coffee.weight', 'coffee.grind', 'water', 'equipment', 'recipe'],
+  hybrid: ['coffee', 'water', 'equipment', 'recipe'],
   pourover: ['coffee', 'water', 'equipment', 'recipe']
 }
 
@@ -65,7 +66,7 @@ export const builder = yargs => yargs
   .positional('type', {
     describe: 'Type of journal entry',
     type: 'string',
-    choices: ['pourover', 'cupping'],
+    choices: ['cupping', 'hybrid', 'pourover'],
     required: true
   })
 export const handler = async ({ type, version = '1.1' }) => {
