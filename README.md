@@ -41,7 +41,7 @@ npm link
 
 ```shell
 # create a new journal entry with sane defaults
-kafi journal <cupping|pourover>
+kafi journal <cupping|hybrid|pourover>
 ```
 
 4. Brew your coffee, then jot out your reactions to things like:
@@ -62,7 +62,7 @@ kafi journal <cupping|pourover>
 
 ```shell
 # Create a new journal entry
-kafi journal <cupping|pourover>
+kafi journal <cupping|hybrid|pourover>
 ```
 
 ### Stats
@@ -91,7 +91,7 @@ $ kafi stats pourover --coffee.origin.region="Pitalito"
 
 ```shell
 # Basic use
-kafi stats <cupping|pourover>
+kafi stats <cupping|hybrid|pourover>
 # Limit entries (defaults to last 30)
 kafi stats pourover --limit 10
 # Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, score)

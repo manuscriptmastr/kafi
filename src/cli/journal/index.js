@@ -29,6 +29,8 @@ import {
 } from '../../util';
 
 /**
+ * @todo Available journal entry types should be dynamically figured out from schemas folder, e.g. getSchemas().
+ * Use same function for update and stats commands.
  * @todo Should iteration start from 1?
  * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
  * @todo Rework the handler to be more modular
@@ -39,6 +41,7 @@ import {
 
 const DEFAULT_FIELDS = {
   cupping: ['coffee.weight', 'coffee.grind', 'water', 'equipment', 'recipe'],
+  hybrid: ['coffee', 'water', 'equipment', 'recipe'],
   pourover: ['coffee', 'water', 'equipment', 'recipe']
 }
 
@@ -65,7 +68,7 @@ export const builder = yargs => yargs
   .positional('type', {
     describe: 'Type of journal entry',
     type: 'string',
-    choices: ['pourover', 'cupping'],
+    choices: ['cupping', 'hybrid', 'pourover'],
     required: true
   })
 export const handler = async ({ type, version = '1.1' }) => {

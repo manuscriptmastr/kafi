@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "../schemas/hybrid_v1.1.json",
+      "default": "../schemas/hybrid_v1.1.json",
+      "description": "The JSON schema to validate this journal entry against."
+    },
+    "type": {
+      "const": "hybrid",
+      "default": "hybrid",
+      "description": "The type of journal entry."
+    },
+    "date": {
+      "allOf": [{ "$ref": "./date.json" }],
+      "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
+    },
+    "iteration": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "The (n - 1) coffee today."
+    },
+    "coffee": {
+      "allOf": [{ "$ref": "./coffee.json" }],
+      "description": "The coffee beans used in your brew."
+    },
+    "water": {
+      "allOf": [{ "$ref": "./water.json" }],
+      "description": "The water used in your brew."
+    },
+    "equipment": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "default": "",
+          "description": "The method used to brew your coffee, such as 'Chemex' or 'Hario V60'."
+        },
+        "grinder": {
+          "type": "string",
+          "default": "",
+          "description": "The grinder make and model you used, such as 'Hario Skerton' or 'Baratza Encore'."
+        }
+      },
+      "description": "The equipment used to make this brew.",
+      "required": ["method", "grinder"]
+    },
+    "recipe": {
+      "type": "object",
+      "properties": {
+        "steep": {
+          "type": "object",
+          "properties": {
+            "time": {
+              "allOf": [{ "$ref": "./time.json" }],
+              "description": "The total time from your initial pour on dry grounds to breaking the crust."
+            }
+          },
+          "description": "The steep settings you brewed with.",
+          "required": ["time"]
+        },
+        "notes": {
+          "type": "string",
+          "default": "",
+          "description": "Any notes on techniques used for your brew."
+        }
+      },
+      "description": "The techniques you used to brew.",
+      "required": ["steep", "notes"]
+    },
+    "time": {
+      "allOf": [{ "$ref": "./time.json" }],
+      "description": "The total time from beginning of bloom until a steady stream suddenly falters to separate drops, such as '2:54'."
+    },
+    "aroma": {
+      "allOf": [{ "$ref": "./aspect.json" }],
+      "description": "The smell (low to high), such as 'caramel', 'peach', or 'chocolate'."
+    },
+    "acidity": {
+      "allOf": [{ "$ref": "./aspect.json" }],
+      "description": "The fruitiness (low to high), such as 'tart', 'crisp', or 'mellow'. Usually indicated by puckering/drying of the tongue or salivation."
+    },
+    "sweetness": {
+      "allOf": [{ "$ref": "./aspect.json" }],
+      "description": "The sweetness (low to high), such as 'mild', 'deep', or 'rich'. Usually indicated by how 'rounded' the fruit quality is."
+    },
+    "body": {
+      "allOf": [{ "$ref": "./aspect.json" }],
+      "description": "The texture or mouthfeel (light to heavy), such as 'watery', 'silky', 'syrupy', or 'creamy'."
+    },
+    "finish": {
+      "allOf": [{ "$ref": "./aspect.json" }],
+      "description": "The aftertaste (short to long), such as 'quick', 'lingering', or 'clean'. Don't rush this aspect."
+    },
+    "notes": {
+      "type": "string",
+      "default": "",
+      "description": "Any notes about this brew, such as drawdown or overall flavor."
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "default": 0,
+      "description": "On a scale of 1 to 10, how much did you enjoy this brew?"
+    },
+    "actionItem": {
+      "type": "string",
+      "default": "",
+      "description": "Any variables to change on the next brew."
+    }
+  },
+  "required": [
+    "type",
+    "date",
+    "coffee",
+    "water",
+    "equipment",
+    "recipe",
+    "time",
+    "aroma",
+    "acidity",
+    "sweetness",
+    "body",
+    "finish",
+    "notes",
+    "score",
+    "actionItem"
+  ]
+}
