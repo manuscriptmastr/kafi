@@ -29,6 +29,8 @@ import {
 } from '../../util';
 
 /**
+ * @todo Available journal entry types should be dynamically figured out from schemas folder, e.g. getSchemas().
+ * Use same function for update and stats commands.
  * @todo Should iteration start from 1?
  * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
  * @todo Rework the handler to be more modular
