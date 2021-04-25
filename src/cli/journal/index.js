@@ -1,3 +1,4 @@
+import { exec as execCb } from 'child_process';
 import dayjs from 'dayjs';
 import JSONSchemaDefaults from 'json-schema-defaults';
 import R from 'ramda';
@@ -14,6 +15,7 @@ const {
   sortWith,
   useWith
 } = R;
+import { promisify } from 'util';
 import {
   assocPathString,
   DATE_FORMAT,
@@ -38,6 +40,8 @@ import {
  * @todo Sorting by date doesn't work correctly.
  * Change journal entry file format to YYYY-MM-DD-I.
  */
+
+const exec = promisify(execCb);
 
 const DEFAULT_FIELDS = {
   cupping: ['coffee.weight', 'coffee.grind', 'water', 'equipment', 'recipe'],
@@ -71,7 +75,12 @@ export const builder = yargs => yargs
     choices: ['cupping', 'hybrid', 'pourover'],
     required: true
   })
-export const handler = async ({ type, version = '1.1' }) => {
+  .option('open', {
+    describe: 'Open entry in VS Code',
+    type: 'boolean',
+    default: true
+  })
+export const handler = async ({ type, version = '1.1', open }) => {
   const today = dayjs();
   let basename = today.format(DATE_FORMAT);
   const defaults = await getJSONSchema(version, type)
@@ -105,4 +114,8 @@ export const handler = async ({ type, version = '1.1' }) => {
 
   const filepath = await writeEntry(`${basename}.json`, entry);
   console.log(`Wrote new entry: ${filepath}`);
+
+  if (open) {
+    await exec(`code ${filepath}`);
+  }
 };
