@@ -31,16 +31,17 @@ cd kafi
 2. Setup the `kafi` CLI.
 
 ```shell
-# install NPM dependencies
+# Install NPM dependencies
 npm install
-# add kafi command
+# Add kafi command
 npm link
 ```
 
 3. Create a new journal entry.
 
 ```shell
-# create a new journal entry with sane defaults
+# Create a new journal entry with sane defaults
+# Use the --no-open flag to prevent VS Code from opening entry
 kafi journal <cupping|hybrid|pourover>
 ```
 
@@ -61,7 +62,7 @@ kafi journal <cupping|hybrid|pourover>
 ### Journal
 
 ```shell
-# Create a new journal entry
+# Create and open a new journal entry
 kafi journal <cupping|hybrid|pourover>
 ```
 
@@ -135,51 +136,3 @@ npm run build-schema --type={method} --release={version}
 - [POUR OVER THEORY: How I brew](https://medium.com/@dngilb/pour-over-theory-how-i-brew-6c07aff69ca4)
 - [Some Observations on Hand Pours](https://www.scottrao.com/blog/2016/10/8/some-observations-on-hand-pours)
 - [Coffee Extraction and How to Taste It](https://www.baristahustle.com/blog/coffee-extraction-and-how-to-taste-it/)
-
-## How do I taste the difference between an underextracted and an overextracted brew?
-
-_Assuming an evenly extracted cup,_ one of the strongest indicators of extraction is whether the unpleasantness of the cup is due to sourness or bitterness. However, the common phenomenon of **sour-bitter confusion** makes it frustratingly difficult to identify which, and therefore decide an action item. Here, I've consolidated some tips from the internet and my own experience.
-
-Note: As an untrained hobbyist, I personally have not found **astringency** to be a helpful differentiator. Both under and overextracted cups can leave a dry, rubbing sensation in my mouth, so I use other indicators to diagnose the cup.
-
-### Training your palate
-
-- Brew two cups: one at a grind much too coarse (sour), and the other much too fine (bitter). Note the differences between the two.
-- In front of a mirror, eat the flesh of a lemon, then the pith (the white part of the rind). Note how your face distorts for each.
-- Roll a piece of aluminum foil into a small stick, place it and a metal spoon on your tongue, then touch the two edges together. This is similar to bitterness.
-
-### Tasting your coffee
-
-Look for multiple symptoms before diagnosing a cup as under or overextracted:
-
-- **Very underextracted — vegetal, smooth, green**
-  - Distinctly vegetal taste dominates the cup, like green beans, peas, or spinach
-  - Little to no sourness
-  - Little to no finish
-- **Underextracted — aggressive, sour, puckery, yellow**
-  - Strong green tea aftertaste
-  - Strong acidic aftertaste
-  - Acidity is clean but sour and lemon-like
-  - Overall cup tastes diluted, watery, clean, and 'fresh'
-  - Cup remains or becomes increasingly sour, lemon-like, and puckery as it cools
-  - Little to no sweetness
-  - Face distorts up and forward: mouth puckers, cheeks raise, eyes clench, lower jaw moves forward
-  - Sides of tongue feel strange when you rub it along your teeth. (I get this sensation after brushing my teeth with Colgate toothpaste.)
-  - You immediately reach for water after finishing the cup
-- **Well extracted — sparkling, ripe, deep, complex, gold**
-  - Sparkling, nuanced, juicy, syrupy, ripe, deep, easy to identify acidity
-  - Overall cup is (paradoxically) transparent, rich, mouth filling, complex, and satiating
-  - Taste of coffee changes over the course of a single sip
-  - Long finish, neutral or refreshing mouthfeel
-  - Qualities remain interesting and balanced as cup cools
-- **Overextracted — lifeless, tangy, bitter, blue**
-  - Slightly tangy or herbal 'other' quality colors the acidity when cup is hot. It will be noticeably different in taste than one grind coarser (thus what James Hoffmann calls "the wall of bitterness"). Often it may taste like stronger acidity or an herbal/floral note.
-  - Acidity is muddy or hard to identify
-  - Overall cup tastes thick, rich, muddy, and 'dull'
-  - Cup becomes increasingly coin-like, metallic, medicinal, and zinc-like as it cools
-  - Face distorts down and back: edges of lips pull down toward lower jaw, eyes and cheeks stay roughly the same
-  - Your throat (the part known as the trachea) feels tight and closed
-- **Highly overextracted — powdery, thick, bitter, brown**
-  - Texture is thick and noticeably powdery
-  - Overall flavor is indistinct and heavy like hotel coffee. (You may actually enjoy this!)
-  - Sharp, bluish, coin-like bitterness makes the cup undrinkable as it cools
