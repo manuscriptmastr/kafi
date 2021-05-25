@@ -52,7 +52,7 @@ const {
  */
 
 const DEFAULT_SORT_FIELDS = ['date'];
-const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'score'];
+const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'water.temperature', 'time', 'score'];
 
 const isNumber = both(
   num => typeof num === 'number',
