@@ -4,6 +4,7 @@ import {
   dateFromFriendlyDate,
   getEntryByFilename,
   getEntryFilenames,
+  getRelativeFilepathByEntryName,
   mapAsync,
   partialEq,
   pathString
@@ -52,7 +53,7 @@ const {
  */
 
 const DEFAULT_SORT_FIELDS = ['date'];
-const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'water.temperature', 'time', 'score'];
+const DEFAULT_FIELDS = ['coffee.roaster', 'coffee.origin.region', 'coffee.grind', 'water.temperature', 'time', 'score', 'filepath'];
 
 const isNumber = both(
   num => typeof num === 'number',
@@ -106,7 +107,9 @@ export const handler = ({ ['$0']: pos, _, stats, fn, fields, limit, merge, sort:
   const sort = merge ? [merge] : _sort;
   return pipeWith(andThen, [
     getEntryFilenames,
-    mapAsync(getEntryByFilename),
+    mapAsync(async filename => {
+      return { ...(await getEntryByFilename(filename)), filepath: await getRelativeFilepathByEntryName(filename) }
+    }),
     filter(partialEq(filters)),
     sortWith([
       ...map(

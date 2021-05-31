@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { dirname, resolve } from 'path';
+import { dirname, relative, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import R from 'ramda';
 const {
@@ -23,16 +23,18 @@ const {
  */
 
 const __filename = fileURLToPath(import.meta.url);
-const JOURNAL_ENTRIES_PATH = resolve(dirname(__filename), '../../../entries');
+const JOURNAL_ENTRIES_ABSOLUTE_PATH = resolve(dirname(__filename), '../../../entries');
+const JOURNAL_ENTRIES_RELATIVE_PATH = relative(process.cwd(), JOURNAL_ENTRIES_ABSOLUTE_PATH);
+console.log(process.cwd(), JOURNAL_ENTRIES_RELATIVE_PATH);
 const SCHEMA_PATH = resolve(dirname(__filename), '../../../schemas');
 
 export const getEntryFilenames = pipeWith(andThen, [
-  () => fs.readdir(JOURNAL_ENTRIES_PATH),
+  () => fs.readdir(JOURNAL_ENTRIES_ABSOLUTE_PATH),
   filter(endsWith('.json'))
 ]);
 
 export const getEntryByFilename = filename =>
-  import(`${JOURNAL_ENTRIES_PATH}/${filename}`)
+  import(`${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`)
     .then(prop('default'));
 
 export const getJSONSchema = curry(async(version, type) =>
@@ -40,8 +42,14 @@ export const getJSONSchema = curry(async(version, type) =>
     .then(prop('default'))
 );
 
+export const getRelativeFilepathByEntryName = async filename => {
+  const filepath = `${JOURNAL_ENTRIES_RELATIVE_PATH}/${filename}`;
+  await fs.access(filepath)
+  return filepath;
+}
+
 export const writeEntry = curry(async (filename, entry) => {
-  const filepath = `${JOURNAL_ENTRIES_PATH}/${filename}`;
+  const filepath = `${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`;
   await fs.writeFile(filepath, JSON.stringify(entry, null, 2));
   return filepath;
 });

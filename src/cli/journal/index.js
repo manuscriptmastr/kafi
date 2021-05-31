@@ -31,6 +31,7 @@ import {
 } from '../../util';
 
 /**
+ * @todo Add --clone {filepath} flag to specify a different entry to clone
  * @todo Available journal entry types should be dynamically figured out from schemas folder, e.g. getSchemas().
  * Use same function for update and stats commands.
  * @todo Should iteration start from 1?
