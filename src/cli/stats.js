@@ -11,8 +11,8 @@ import {
 } from '../util';
 const {
   all,
-  andThen,
   always,
+  andThen,
   ascend,
   both,
   compose,
