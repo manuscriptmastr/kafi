@@ -7,8 +7,11 @@ import {
   dateFromFriendlyDate,
   parseDateTokenString,
   pathString
-} from '../util'
+} from '../util';
 
+/**
+ * @todo When tokens are used in the `from` argument, dynamically generate a folder of all entries
+ */
 export const command = 'export <from> <to>';
 export const desc = 'Export journal entries';
 export const builder = yargs => yargs
