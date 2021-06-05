@@ -107,8 +107,6 @@ kafi stats pourover --merge coffee.grind --fields score
 
 ### Export
 
-Export a journal entry using a template.
-
 ```shell
 kafi export <from> <to> [template]
 # Basic use
