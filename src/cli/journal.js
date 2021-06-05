@@ -7,27 +7,14 @@ import R from 'ramda';
 import { promisify } from 'util';
 import {
   assocPathString,
-  dateComparator,
-  dateFromFilename,
   FRIENDLY_DATE_FORMAT,
-  getEntryByFilename,
-  getEntryFilenames,
+  getAllEntries,
   getJSONSchema,
   parseDateTokenString,
   pathString,
 } from '../util';
 
-const {
-  andThen,
-  curry,
-  map,
-  pipe,
-  pipeWith,
-  propEq,
-  reverse,
-  sortWith,
-  useWith,
-} = R;
+const { andThen, find, map, pipe, pipeWith, prop, propEq, reverse, sort } = R;
 
 /**
  * @todo Add --clone {filepath} flag to specify a different entry to clone
@@ -44,22 +31,6 @@ const DEFAULT_FIELDS = {
   hybrid: ['coffee', 'water', 'equipment', 'recipe'],
   pourover: ['coffee', 'water', 'equipment', 'recipe'],
 };
-
-export const sortFilenamesByDate = sortWith([
-  useWith(dateComparator, [dateFromFilename, dateFromFilename]),
-]);
-
-const findFirstEntryOfType = curry(async (type, filenames) => {
-  let entry;
-  for (const filename of filenames) {
-    const candidate = await getEntryByFilename(filename);
-    if (propEq('type', type, candidate)) {
-      entry = candidate;
-      break;
-    }
-  }
-  return entry;
-});
 
 export const command = 'journal <type>';
 export const desc = 'Create a new journal entry';
@@ -94,10 +65,10 @@ export const handler = async ({ type, release: version, open }) => {
   };
 
   const lastEntry = await pipeWith(andThen, [
-    getEntryFilenames,
-    sortFilenamesByDate,
+    getAllEntries,
+    sort(prop('timestamp')),
     reverse,
-    findFirstEntryOfType(type),
+    find(propEq('type', type)),
   ])();
 
   if (lastEntry) {

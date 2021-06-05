@@ -19,12 +19,6 @@ export const FRIENDLY_DATE_FORMAT = 'MM/DD/YYYY';
 const DATE_FROM_FILENAME = `^\\d+(?=.json$)`;
 const TOKEN = /{([a-zA-Z]+?)}/g;
 
-export const dateFromFilename = pipe(
-  match(new RegExp(DATE_FROM_FILENAME)),
-  head,
-  (str) => dayjs(str, DATE_FORMAT)
-);
-
 export const dateFromFriendlyDate = (str) => dayjs(str, FRIENDLY_DATE_FORMAT);
 
 export const dateComparator = cond([

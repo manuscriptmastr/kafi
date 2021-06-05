@@ -2,10 +2,7 @@ import R from 'ramda';
 import {
   dateComparator,
   dateFromFriendlyDate,
-  getEntryByFilename,
-  getEntryFilenames,
-  getRelativeFilepathByEntryName,
-  mapAsync,
+  getAllEntries,
   partialEq,
   pathString,
 } from '../util';
@@ -133,13 +130,7 @@ export const handler = ({
 }) => {
   const sort = merge ? [merge] : _sort;
   return pipeWith(andThen, [
-    getEntryFilenames,
-    mapAsync(async (filename) => {
-      return {
-        ...(await getEntryByFilename(filename)),
-        filepath: await getRelativeFilepathByEntryName(filename),
-      };
-    }),
+    getAllEntries,
     filter(partialEq(filters)),
     sortWith([
       ...map(
