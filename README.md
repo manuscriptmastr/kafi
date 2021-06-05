@@ -110,6 +110,8 @@ kafi stats pourover --merge coffee.grind --fields score
 ```shell
 kafi export <from> <to> [template]
 # Basic use
+kafi export ./entries/01-03-2021.json ~/Desktop/entries/01-03-2021.json
+# With template transform
 kafi export ./entries/01-03-2021.json ~/Desktop/entries/01-03-2021.md --template ~/Desktop/my-template.md
 # With date and iteration (i) tokens. Be sure to escape spaces!
 # See https://day.js.org/docs/en/display/format for accepted formats
