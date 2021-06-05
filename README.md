@@ -118,6 +118,7 @@ kafi export ./entries/01-03-2021.json ~/Desktop/entries/{YYYY}/{MMMM}/{dddd},\ {
 ```
 
 `~/Desktop/my-template.md`:
+
 ```md
 # {date}
 
@@ -142,6 +143,7 @@ kafi export ./entries/01-03-2021.json ~/Desktop/entries/{YYYY}/{MMMM}/{dddd},\ {
 ```
 
 `~/Desktop/01-03-2021.md`:
+
 ```md
 # 01/03/2021
 
@@ -168,8 +170,10 @@ kafi export ./entries/01-03-2021.json ~/Desktop/entries/{YYYY}/{MMMM}/{dddd},\ {
 ## Developers
 
 To build your own journal schema:
+
 1. Create a new JSON Schema file at `{rootDir}/src/schema/{method}.json`. Common subschemas such as `coffee.json` and `water.json` are provided.
 2. Run the `build-schema` command:
+
 ```shell
 # Example: npm run build-schema --type=espresso --release=1.1
 npm run build-schema --type={method} --release={version}
