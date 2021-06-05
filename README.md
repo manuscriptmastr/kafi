@@ -105,6 +105,68 @@ kafi stats pourover --equipment.grinder="Baratza Encore" --coffee.grind=23
 kafi stats pourover --merge coffee.grind --fields score
 ```
 
+### Export
+
+Export a journal entry using a template.
+
+```shell
+kafi export <from> <to> [template]
+# Basic use
+kafi export ./entries/01-03-2021.json ~/Desktop/entries/01-03-2021.md --template ~/Desktop/my-template.md
+# With date and iteration (i) tokens. Be sure to escape spaces!
+# See https://day.js.org/docs/en/display/format for accepted formats
+kafi export ./entries/01-03-2021.json ~/Desktop/entries/{YYYY}/{MMMM}/{dddd},\ {MMM}\ {D},\ {YYYY},\ {i}.md --template ~/Desktop/my-template.md
+# Writes exported file to ~/Desktop/entries/2021/January/Sunday,\ Jan 3,\ 2021,\ 0.md
+```
+
+`~/Desktop/my-template.md`:
+```md
+# {date}
+
+## Coffee
+
+- Producer: {coffee.origin.producer}
+- Location: {coffee.origin.region}, {coffee.origin.country}
+
+## Settings
+
+- Grind: {coffee.grind} ({equipment.grinder})
+- Temperature: {water.temperature}
+
+## Results
+
+- **Overall score: {score}/10**
+  - Acidity: {acidity.quality}/5
+  - Sweetness: {sweetness.quality}/5
+  - Body: {body.quality}/5
+  - Finish: {finish.quality}/5
+- **Drawdown time: {time}**
+```
+
+`~/Desktop/01-03-2021.md`:
+```md
+# 01/03/2021
+
+## Coffee
+
+- Producer: Hernan Giron
+- Location: San Vicente, Honduras
+
+## Settings
+
+- Grind: 24 (Comandante C40 MK3)
+- Temperature: 208ºF
+
+## Results
+
+- **Overall score: 9/10**
+  - Acidity: 4/5
+  - Sweetness: 4/5
+  - Body: 5/5
+  - Finish: 5/5
+- **Drawdown time: 3:38**
+```
+
 ## Developers
 
 To build your own journal schema:
