@@ -1,4 +1,4 @@
-import { promises as fs } from 'fs';
+import { access, readdir, writeFile } from 'fs/promises';
 import { dirname, relative, resolve } from 'path';
 import R from 'ramda';
 import { fileURLToPath } from 'url';
@@ -28,7 +28,7 @@ console.log(process.cwd(), JOURNAL_ENTRIES_RELATIVE_PATH);
 const SCHEMA_PATH = resolve(dirname(__filename), '../../../schemas');
 
 export const getEntryFilenames = pipeWith(andThen, [
-  () => fs.readdir(JOURNAL_ENTRIES_ABSOLUTE_PATH),
+  () => readdir(JOURNAL_ENTRIES_ABSOLUTE_PATH),
   filter(endsWith('.json')),
 ]);
 
@@ -41,12 +41,12 @@ export const getJSONSchema = curry(async (version, type) =>
 
 export const getRelativeFilepathByEntryName = async (filename) => {
   const filepath = `${JOURNAL_ENTRIES_RELATIVE_PATH}/${filename}`;
-  await fs.access(filepath);
+  await access(filepath);
   return filepath;
 };
 
 export const writeEntry = curry(async (filename, entry) => {
   const filepath = `${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`;
-  await fs.writeFile(filepath, JSON.stringify(entry, null, 2));
+  await writeFile(filepath, JSON.stringify(entry, null, 2));
   return filepath;
 });
