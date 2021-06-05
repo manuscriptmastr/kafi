@@ -6,14 +6,15 @@ import { promisify } from 'util';
 import {
   assocPathString,
   dateComparator,
-  dateFromFilename, DATE_FORMAT,
+  dateFromFilename,
+  DATE_FORMAT,
   FRIENDLY_DATE_FORMAT,
   getEntryByFilename,
   getEntryFilenames,
   getJSONSchema,
   iterationFromFilename,
   pathString,
-  writeEntry
+  writeEntry,
 } from '../../util';
 const {
   andThen,
@@ -26,7 +27,7 @@ const {
   propEq,
   reverse,
   sortWith,
-  useWith
+  useWith,
 } = R;
 
 /**
@@ -46,12 +47,12 @@ const exec = promisify(execCb);
 const DEFAULT_FIELDS = {
   cupping: ['coffee.weight', 'coffee.grind', 'water', 'equipment', 'recipe'],
   hybrid: ['coffee', 'water', 'equipment', 'recipe'],
-  pourover: ['coffee', 'water', 'equipment', 'recipe']
-}
+  pourover: ['coffee', 'water', 'equipment', 'recipe'],
+};
 
 export const sortFilenamesByDate = sortWith([
   useWith(dateComparator, [dateFromFilename, dateFromFilename]),
-  ascend(iterationFromFilename)
+  ascend(iterationFromFilename),
 ]);
 
 const findFirstEntryOfType = curry(async (type, filenames) => {
@@ -68,34 +69,36 @@ const findFirstEntryOfType = curry(async (type, filenames) => {
 
 export const command = 'journal <type>';
 export const desc = 'Create a new journal entry';
-export const builder = yargs => yargs
-  .positional('type', {
-    describe: 'Type of journal entry',
-    type: 'string',
-    choices: ['cupping', 'hybrid', 'pourover'],
-    required: true
-  })
-  .option('open', {
-    describe: 'Open entry in VS Code',
-    type: 'boolean',
-    default: true
-  })
+export const builder = (yargs) =>
+  yargs
+    .positional('type', {
+      describe: 'Type of journal entry',
+      type: 'string',
+      choices: ['cupping', 'hybrid', 'pourover'],
+      required: true,
+    })
+    .option('open', {
+      describe: 'Open entry in VS Code',
+      type: 'boolean',
+      default: true,
+    });
 export const handler = async ({ type, version = '1.1', open }) => {
   const today = dayjs();
   let basename = today.format(DATE_FORMAT);
-  const defaults = await getJSONSchema(version, type)
-    .then(JSONSchemaDefaults);
+  const defaults = await getJSONSchema(version, type).then(JSONSchemaDefaults);
   let entry = { ...defaults, date: today.format(FRIENDLY_DATE_FORMAT) };
 
   const lastFilename = await pipeWith(andThen, [
     getEntryFilenames,
     sortFilenamesByDate,
-    last
+    last,
   ])();
 
   if (lastFilename) {
     const date = dateFromFilename(lastFilename);
-    const iteration = date.isToday() ? iterationFromFilename(lastFilename) + 1 : 0;
+    const iteration = date.isToday()
+      ? iterationFromFilename(lastFilename) + 1
+      : 0;
     basename = `${basename}${iteration > 0 ? `-${iteration}` : ''}`;
     entry = { ...entry, iteration };
   }
@@ -104,11 +107,12 @@ export const handler = async ({ type, version = '1.1', open }) => {
     getEntryFilenames,
     sortFilenamesByDate,
     reverse,
-    findFirstEntryOfType(type)
+    findFirstEntryOfType(type),
   ])();
 
   if (lastEntry) {
-    const pathStringToTransform = field => assocPathString(field, pathString(field, lastEntry));
+    const pathStringToTransform = (field) =>
+      assocPathString(field, pathString(field, lastEntry));
     entry = pipe(...map(pathStringToTransform, DEFAULT_FIELDS[type]))(entry);
   }
 
