@@ -24,7 +24,7 @@ const JOURNAL_ENTRIES_RELATIVE_PATH = relative(
   process.cwd(),
   JOURNAL_ENTRIES_ABSOLUTE_PATH
 );
-console.log(process.cwd(), JOURNAL_ENTRIES_RELATIVE_PATH);
+
 const SCHEMA_PATH = resolve(dirname(__filename), '../../../schemas');
 
 export const getEntryFilenames = pipeWith(andThen, [
