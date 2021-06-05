@@ -13,7 +13,7 @@ const {
   match,
   nthArg,
   pipe,
-  replace
+  replace,
 } = R;
 
 dayjs.extend(customParseFormat);
@@ -33,16 +33,16 @@ const TOKEN = /{([a-zA-Z]+?)}/g;
 export const dateFromFilename = pipe(
   match(new RegExp(DATE_FROM_FILENAME)),
   head,
-  str => dayjs(str, DATE_FORMAT)
+  (str) => dayjs(str, DATE_FORMAT)
 );
 
-export const dateFromFriendlyDate = str => dayjs(str, FRIENDLY_DATE_FORMAT);
+export const dateFromFriendlyDate = (str) => dayjs(str, FRIENDLY_DATE_FORMAT);
 
 export const iterationFromFilename = pipe(
   match(new RegExp(ITERATION_FROM_FILENAME)),
   head,
   defaultTo('0'),
-  str => parseInt(str, 10)
+  (str) => parseInt(str, 10)
 );
 
 export const dateComparator = cond([
@@ -52,12 +52,12 @@ export const dateComparator = cond([
 ]);
 
 export const parseDateTokenString = curry((pattern, date, iteration) =>
-  replace(TOKEN, pipe(
-    nthArg(1),
-    ifElse(
-      equals('i'),
-      always(iteration),
-      match => date.format(match)
-    )
-  ), pattern)
+  replace(
+    TOKEN,
+    pipe(
+      nthArg(1),
+      ifElse(equals('i'), always(iteration), (match) => date.format(match))
+    ),
+    pattern
+  )
 );

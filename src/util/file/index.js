@@ -1,15 +1,8 @@
 import { promises as fs } from 'fs';
 import { dirname, relative, resolve } from 'path';
-import { fileURLToPath } from 'url';
 import R from 'ramda';
-const {
-  andThen,
-  curry,
-  filter,
-  endsWith,
-  pipeWith,
-  prop
-} = R;
+import { fileURLToPath } from 'url';
+const { andThen, curry, filter, endsWith, pipeWith, prop } = R;
 
 /**
  * @todo Filepath is passed in by user but has a sane default in codebase.
@@ -23,30 +16,34 @@ const {
  */
 
 const __filename = fileURLToPath(import.meta.url);
-const JOURNAL_ENTRIES_ABSOLUTE_PATH = resolve(dirname(__filename), '../../../entries');
-const JOURNAL_ENTRIES_RELATIVE_PATH = relative(process.cwd(), JOURNAL_ENTRIES_ABSOLUTE_PATH);
+const JOURNAL_ENTRIES_ABSOLUTE_PATH = resolve(
+  dirname(__filename),
+  '../../../entries'
+);
+const JOURNAL_ENTRIES_RELATIVE_PATH = relative(
+  process.cwd(),
+  JOURNAL_ENTRIES_ABSOLUTE_PATH
+);
 console.log(process.cwd(), JOURNAL_ENTRIES_RELATIVE_PATH);
 const SCHEMA_PATH = resolve(dirname(__filename), '../../../schemas');
 
 export const getEntryFilenames = pipeWith(andThen, [
   () => fs.readdir(JOURNAL_ENTRIES_ABSOLUTE_PATH),
-  filter(endsWith('.json'))
+  filter(endsWith('.json')),
 ]);
 
-export const getEntryByFilename = filename =>
-  import(`${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`)
-    .then(prop('default'));
+export const getEntryByFilename = (filename) =>
+  import(`${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`).then(prop('default'));
 
-export const getJSONSchema = curry(async(version, type) =>
-  import(`${SCHEMA_PATH}/${type}_v${version}.json`)
-    .then(prop('default'))
+export const getJSONSchema = curry(async (version, type) =>
+  import(`${SCHEMA_PATH}/${type}_v${version}.json`).then(prop('default'))
 );
 
-export const getRelativeFilepathByEntryName = async filename => {
+export const getRelativeFilepathByEntryName = async (filename) => {
   const filepath = `${JOURNAL_ENTRIES_RELATIVE_PATH}/${filename}`;
-  await fs.access(filepath)
+  await fs.access(filepath);
   return filepath;
-}
+};
 
 export const writeEntry = curry(async (filename, entry) => {
   const filepath = `${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`;
