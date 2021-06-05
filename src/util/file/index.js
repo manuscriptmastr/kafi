@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import { dirname, relative, resolve } from 'path';
-import { fileURLToPath } from 'url';
 import R from 'ramda';
+import { fileURLToPath } from 'url';
 const {
   andThen,
   curry,

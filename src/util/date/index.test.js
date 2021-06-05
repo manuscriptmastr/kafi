@@ -1,8 +1,8 @@
 import test from 'ava';
 import dayjs from 'dayjs';
 import {
-  DATE_FORMAT,
   dateFromFilename,
+  DATE_FORMAT,
   iterationFromFilename,
   parseDateTokenString
 } from '.';

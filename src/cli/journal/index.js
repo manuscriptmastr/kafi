@@ -2,6 +2,19 @@ import { exec as execCb } from 'child_process';
 import dayjs from 'dayjs';
 import JSONSchemaDefaults from 'json-schema-defaults';
 import R from 'ramda';
+import { promisify } from 'util';
+import {
+  assocPathString,
+  dateComparator,
+  dateFromFilename, DATE_FORMAT,
+  FRIENDLY_DATE_FORMAT,
+  getEntryByFilename,
+  getEntryFilenames,
+  getJSONSchema,
+  iterationFromFilename,
+  pathString,
+  writeEntry
+} from '../../util';
 const {
   andThen,
   ascend,
@@ -15,20 +28,6 @@ const {
   sortWith,
   useWith
 } = R;
-import { promisify } from 'util';
-import {
-  assocPathString,
-  DATE_FORMAT,
-  dateComparator,
-  dateFromFilename,
-  FRIENDLY_DATE_FORMAT,
-  getEntryByFilename,
-  getEntryFilenames,
-  getJSONSchema,
-  iterationFromFilename,
-  pathString,
-  writeEntry
-} from '../../util';
 
 /**
  * @todo Add --clone {filepath} flag to specify a different entry to clone

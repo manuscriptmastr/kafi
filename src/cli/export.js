@@ -1,13 +1,12 @@
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import { dirname, resolve } from 'path';
 import R from 'ramda';
-const { prop } = R;
-
 import {
   dateFromFriendlyDate,
   parseDateTokenString,
   pathString
 } from '../util';
+const { prop } = R;
 
 /**
  * @todo When tokens are used in the `from` argument, dynamically generate a folder of all entries

@@ -1,14 +1,14 @@
 import R from 'ramda';
-const {
-  andThen,
-  pipeWith
-} = R;
 import {
   getEntryByFilename,
   getEntryFilenames,
   mapAsync,
   writeEntry
 } from '../util';
+const {
+  andThen,
+  pipeWith
+} = R;
 
 /**
  * @todo Wire up update <type> command,
