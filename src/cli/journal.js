@@ -1,27 +1,25 @@
 import { exec as execCb } from 'child_process';
 import dayjs from 'dayjs';
+import { mkdir, writeFile } from 'fs/promises';
 import JSONSchemaDefaults from 'json-schema-defaults';
+import { dirname } from 'path';
 import R from 'ramda';
 import { promisify } from 'util';
 import {
   assocPathString,
   dateComparator,
   dateFromFilename,
-  DATE_FORMAT,
   FRIENDLY_DATE_FORMAT,
   getEntryByFilename,
   getEntryFilenames,
   getJSONSchema,
-  iterationFromFilename,
+  parseDateTokenString,
   pathString,
-  writeEntry,
-} from '../../util';
+} from '../util';
 
 const {
   andThen,
-  ascend,
   curry,
-  last,
   map,
   pipe,
   pipeWith,
@@ -35,12 +33,9 @@ const {
  * @todo Add --clone {filepath} flag to specify a different entry to clone
  * @todo Available journal entry types should be dynamically figured out from schemas folder, e.g. getSchemas().
  * Use same function for update and stats commands.
- * @todo Should iteration start from 1?
  * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
  * @todo Rework the handler to be more modular
  * Rework this and how entry/default fields are merged together.
- * @todo Sorting by date doesn't work correctly.
- * Change journal entry file format to YYYY-MM-DD-I.
  */
 
 const exec = promisify(execCb);
@@ -53,7 +48,6 @@ const DEFAULT_FIELDS = {
 
 export const sortFilenamesByDate = sortWith([
   useWith(dateComparator, [dateFromFilename, dateFromFilename]),
-  ascend(iterationFromFilename),
 ]);
 
 const findFirstEntryOfType = curry(async (type, filenames) => {
@@ -78,31 +72,27 @@ export const builder = (yargs) =>
       choices: ['cupping', 'hybrid', 'pourover'],
       required: true,
     })
+    .option('release', {
+      describe: 'Schema version of journal entry',
+      type: 'string',
+      choices: ['1.0', '1.1', '1.2'],
+      default: '1.2',
+    })
     .option('open', {
       describe: 'Open entry in VS Code',
       type: 'boolean',
       default: true,
     });
-export const handler = async ({ type, version = '1.1', open }) => {
+export const handler = async ({ type, release: version, open }) => {
   const today = dayjs();
-  let basename = today.format(DATE_FORMAT);
+  const timestamp = today.unix();
+  const filepath = parseDateTokenString(process.env.FILEPATH, today);
   const defaults = await getJSONSchema(version, type).then(JSONSchemaDefaults);
-  let entry = { ...defaults, date: today.format(FRIENDLY_DATE_FORMAT) };
-
-  const lastFilename = await pipeWith(andThen, [
-    getEntryFilenames,
-    sortFilenamesByDate,
-    last,
-  ])();
-
-  if (lastFilename) {
-    const date = dateFromFilename(lastFilename);
-    const iteration = date.isToday()
-      ? iterationFromFilename(lastFilename) + 1
-      : 0;
-    basename = `${basename}${iteration > 0 ? `-${iteration}` : ''}`;
-    entry = { ...entry, iteration };
-  }
+  let entry = {
+    ...defaults,
+    date: today.format(FRIENDLY_DATE_FORMAT),
+    timestamp,
+  };
 
   const lastEntry = await pipeWith(andThen, [
     getEntryFilenames,
@@ -117,7 +107,11 @@ export const handler = async ({ type, version = '1.1', open }) => {
     entry = pipe(...map(pathStringToTransform, DEFAULT_FIELDS[type]))(entry);
   }
 
-  const filepath = await writeEntry(`${basename}.json`, entry);
+  console.log(filepath);
+
+  const dirpath = dirname(filepath);
+  await mkdir(dirpath, { recursive: true });
+  await writeFile(filepath, JSON.stringify(entry, null, 2), 'utf-8');
   console.log(`Wrote new entry: ${filepath}`);
 
   if (open) {

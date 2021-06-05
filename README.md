@@ -113,10 +113,10 @@ kafi export <from> <to> [template]
 kafi export ./entries/01-03-2021.json ~/Desktop/entries/01-03-2021.json
 # With template transform
 kafi export ./entries/01-03-2021.json ~/Desktop/entries/01-03-2021.md --template ~/Desktop/my-template.md
-# With date and iteration (i) tokens. Be sure to escape spaces!
+# With date tokens. Be sure to escape spaces!
 # See https://day.js.org/docs/en/display/format for accepted formats
-kafi export ./entries/01-03-2021.json ~/Desktop/entries/{YYYY}/{MMMM}/{dddd},\ {MMM}\ {D},\ {YYYY},\ {i}.md --template ~/Desktop/my-template.md
-# Writes exported file to ~/Desktop/entries/2021/January/Sunday,\ Jan 3,\ 2021,\ 0.md
+kafi export ./entries/01-03-2021.json ~/Desktop/entries/{YYYY}/{MMMM}/{dddd},\ {MMM}\ {D},\ {YYYY}.md --template ~/Desktop/my-template.md
+# Writes exported file to ~/Desktop/entries/2021/January/Sunday,\ Jan 3,\ 2021.md
 ```
 
 `~/Desktop/my-template.md`:

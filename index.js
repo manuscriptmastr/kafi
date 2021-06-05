@@ -1,4 +1,5 @@
 #!/usr/bin/env -S node --experimental-specifier-resolution=node --no-warnings
+import 'dotenv/config';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import commands from './src/cli';

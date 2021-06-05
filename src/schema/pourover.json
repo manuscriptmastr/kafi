@@ -3,8 +3,8 @@
   "type": "object",
   "properties": {
     "$schema": {
-      "const": "../schemas/pourover_v1.1.json",
-      "default": "../schemas/pourover_v1.1.json",
+      "const": "../schemas/pourover_v1.2.json",
+      "default": "../schemas/pourover_v1.2.json",
       "description": "The JSON schema to validate this journal entry against."
     },
     "type": {
@@ -16,11 +16,11 @@
       "allOf": [{ "$ref": "./date.json" }],
       "description": "The date you brewed this coffee, formatted as 'MM/DD/YYYY'."
     },
-    "iteration": {
+    "timestamp": {
       "type": "integer",
       "minimum": 0,
       "default": 0,
-      "description": "The (n - 1) coffee today."
+      "description": "The time of this entry, as a Unix timestamp."
     },
     "coffee": {
       "allOf": [{ "$ref": "./coffee.json" }],

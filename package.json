@@ -41,6 +41,7 @@
   "homepage": "https://github.com/manuscriptmastr/kafi#readme",
   "dependencies": {
     "dayjs": "^1.10.5",
+    "dotenv": "^10.0.0",
     "json-schema-defaults": "^0.4.0",
     "ramda": "^0.27.1",
     "yargs": "^17.0.1"
