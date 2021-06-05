@@ -7,7 +7,9 @@ const {
   cond,
   curry,
   defaultTo,
+  equals,
   head,
+  ifElse,
   match,
   nthArg,
   pipe,
@@ -26,7 +28,7 @@ export const FRIENDLY_DATE_FORMAT = 'MM/DD/YYYY';
 
 const DATE_FROM_FILENAME = `^\\d{2}-\\d{2}-\\d{4}(?=(-\\d+)?.json$)`;
 const ITERATION_FROM_FILENAME = `(?<=^\\d{2}-\\d{2}-\\d{4}-)\\d+(?=.json$)`;
-const TOKEN = /\{([\w-]+)\}/g;
+const TOKEN = /{([a-zA-Z]+?)}/g;
 
 export const dateFromFilename = pipe(
   match(new RegExp(DATE_FROM_FILENAME)),
@@ -49,6 +51,13 @@ export const dateComparator = cond([
   [(a, b) => a.isAfter(b, 'day'), always(1)],
 ]);
 
-export const parseDateTokenString = curry((pattern, date) =>
-  replace(TOKEN, pipe(nthArg(1), match => date.format(match)), pattern)
+export const parseDateTokenString = curry((pattern, date, iteration) =>
+  replace(TOKEN, pipe(
+    nthArg(1),
+    ifElse(
+      equals('i'),
+      always(iteration),
+      match => date.format(match)
+    )
+  ), pattern)
 );
