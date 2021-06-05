@@ -28,7 +28,7 @@ export const builder = (yargs) =>
     .option('template', {
       describe: 'Path to template to transform journal entry',
       type: 'string',
-      required: true,
+      required: false,
     });
 export const handler = async ({ from, to: _to, template: _template }) => {
   const entry = await import(resolve(process.cwd(), from)).then(
@@ -39,13 +39,19 @@ export const handler = async ({ from, to: _to, template: _template }) => {
     dateFromFriendlyDate(entry.date),
     entry.iteration
   );
-  const template = await readFile(resolve(process.cwd(), _template), 'utf-8');
-  const transformedEntry = template.replaceAll(/{(.*?)}/g, (__, path) =>
-    pathString(path, entry)
-  );
+
+  let newEntry = JSON.stringify(entry, null, 2);
+
+  if (_template) {
+    const template = await readFile(resolve(process.cwd(), _template), 'utf-8');
+    newEntry = template.replaceAll(/{(.*?)}/g, (__, path) =>
+      pathString(path, entry)
+    );
+  }
+
   const filepath = resolve(process.cwd(), to);
   const dirpath = dirname(filepath);
   await mkdir(dirpath, { recursive: true });
-  await writeFile(filepath, transformedEntry);
+  await writeFile(filepath, newEntry);
   console.log(`Wrote exported entry: ${filepath}`);
 };
