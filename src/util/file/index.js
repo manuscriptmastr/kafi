@@ -1,4 +1,4 @@
-import { access, readdir, writeFile } from 'fs/promises';
+import { access, readdir } from 'fs/promises';
 import { dirname, relative, resolve } from 'path';
 import R from 'ramda';
 import { fileURLToPath } from 'url';
@@ -44,9 +44,3 @@ export const getRelativeFilepathByEntryName = async (filename) => {
   await access(filepath);
   return filepath;
 };
-
-export const writeEntry = curry(async (filename, entry) => {
-  const filepath = `${JOURNAL_ENTRIES_ABSOLUTE_PATH}/${filename}`;
-  await writeFile(filepath, JSON.stringify(entry, null, 2));
-  return filepath;
-});

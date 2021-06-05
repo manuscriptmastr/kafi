@@ -1,12 +1,3 @@
-import R from 'ramda';
-import {
-  getEntryByFilename,
-  getEntryFilenames,
-  mapAsync,
-  writeEntry,
-} from '../util';
-const { andThen, pipeWith } = R;
-
 /**
  * @todo Wire up update <type> command,
  * also combine schema transforms with defaults from JSON Schema when a transform returns undefined
@@ -33,13 +24,4 @@ export const builder = (yargs) =>
       type: 'string',
       required: true,
     });
-export const handler = ({ type, from, to }) =>
-  pipeWith(andThen, [
-    getEntryFilenames,
-    mapAsync(async (filename) => {
-      const entry = await getEntryByFilename(filename);
-      // const newEntry = ... some transform to entry given the type, from, and to
-      const newEntry = entry;
-      await writeEntry(filename, newEntry);
-    }),
-  ])();
+export const handler = ({ type, from, to }) => {};

@@ -3,7 +3,7 @@ import advancedFormat from 'dayjs/plugin/advancedFormat';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import isToday from 'dayjs/plugin/isToday';
 import R from 'ramda';
-const { tap, always, cond, curry, head, match, nthArg, pipe, replace } = R;
+const { always, cond, curry, head, match, nthArg, pipe, replace } = R;
 
 dayjs.extend(advancedFormat);
 dayjs.extend(customParseFormat);

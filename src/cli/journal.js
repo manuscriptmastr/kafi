@@ -33,7 +33,6 @@ const {
  * @todo Add --clone {filepath} flag to specify a different entry to clone
  * @todo Available journal entry types should be dynamically figured out from schemas folder, e.g. getSchemas().
  * Use same function for update and stats commands.
- * then rework logic for generating filename from entry (perhaps a function like writeEntry(date, iteration, entry))
  * @todo Rework the handler to be more modular
  * Rework this and how entry/default fields are merged together.
  */
