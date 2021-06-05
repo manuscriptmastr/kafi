@@ -1,4 +1,4 @@
-import { access, readdir } from 'fs/promises';
+import { readdir } from 'fs/promises';
 import { dirname, relative, resolve } from 'path';
 import R from 'ramda';
 import { fileURLToPath } from 'url';
@@ -39,9 +39,3 @@ export const getAllEntries = pipeWith(andThen, [
 export const getJSONSchema = curry(async (version, type) =>
   import(`${SCHEMA_PATH}/${type}_v${version}.json`).then(prop('default'))
 );
-
-export const getRelativeFilepathByEntryName = async (filename) => {
-  const filepath = `${JOURNAL_ENTRIES_RELATIVE_PATH}/${filename}`;
-  await access(filepath);
-  return filepath;
-};

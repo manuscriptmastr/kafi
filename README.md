@@ -28,7 +28,9 @@ git clone git@github.com:manuscriptmastr/kafi.git
 cd kafi
 ```
 
-2. Setup the `kafi` CLI.
+2. Create a `.env` file using `.env.example` for reference.
+
+3. Setup the `kafi` CLI.
 
 ```shell
 # Install NPM dependencies
@@ -37,7 +39,7 @@ npm install
 npm link
 ```
 
-3. Create a new journal entry.
+4. Create a new journal entry.
 
 ```shell
 # Create a new journal entry with sane defaults
@@ -45,7 +47,7 @@ npm link
 kafi journal <cupping|hybrid|pourover>
 ```
 
-4. Brew your coffee, then jot out your reactions to things like:
+5. Brew your coffee, then jot out your reactions to things like:
 
 - What does the smell remind you of?
 - What does that fruity note remind you of?
@@ -54,7 +56,7 @@ kafi journal <cupping|hybrid|pourover>
 - How does the coffee _feel_?
 - How does your mouth feel during and after a sip?
 
-5. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall brew time.
+6. Use the Coffee Compass to create an action step. For instance, a coffee with a soupy body and a lack of tasting notes suggests an over-extracted brew, so next time you would make your grind coarser or decrease the overall brew time.
    ![Coffee Compass](./coffee-compass.jpg)
 
 ## CLI
@@ -69,25 +71,23 @@ kafi journal <cupping|hybrid|pourover>
 ### Stats
 
 ```shell
-$ kafi stats pourover --coffee.origin.region="Pitalito"
-┌─────────┬──────────────┬─────────────────────────┬──────────────────────┬──────────────┬───────────────────┬────────┬───────┬───────────────────────────┐
-│ (index) │     date     │     coffee.roaster      │ coffee.origin.region │ coffee.grind │ water.temperature │  time  │ score │         filepath          │
-├─────────┼──────────────┼─────────────────────────┼──────────────────────┼──────────────┼───────────────────┼────────┼───────┼───────────────────────────┤
-│    0    │ '09/25/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │      '212ºF'      │ '2:41' │   7   │ 'entries/09-25-2020.json' │
-│    1    │ '09/26/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      23      │      '212ºF'      │ '2:50' │   2   │ 'entries/09-26-2020.json' │
-│    2    │ '09/27/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '3:06' │   3   │ 'entries/09-27-2020.json' │
-│    3    │ '09/28/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:40' │   8   │ 'entries/09-28-2020.json' │
-│    4    │ '09/29/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:40' │   9   │ 'entries/09-29-2020.json' │
-│    5    │ '09/30/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:35' │   5   │ 'entries/09-30-2020.json' │
-│    6    │ '10/01/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:46' │   8   │ 'entries/10-01-2020.json' │
-│    7    │ '10/02/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:48' │   7   │ 'entries/10-02-2020.json' │
-│    8    │ '10/03/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:44' │   8   │ 'entries/10-03-2020.json' │
-│    9    │ '10/04/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:51' │   5   │ 'entries/10-04-2020.json' │
-│   10    │ '10/05/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      25      │      '212ºF'      │ '2:52' │   7   │ 'entries/10-05-2020.json' │
-│   11    │ '10/06/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:47' │   7   │ 'entries/10-06-2020.json' │
-│   12    │ '10/07/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '2:31' │   7   │ 'entries/10-07-2020.json' │
-│   13    │ '10/08/2020' │ 'Madcap Coffee Company' │      'Pitalito'      │      24      │      '212ºF'      │ '3:03' │   8   │ 'entries/10-08-2020.json' │
-└─────────┴──────────────┴─────────────────────────┴──────────────────────┴──────────────┴───────────────────┴────────┴───────┴───────────────────────────┘
+$ kafi stats pourover --coffee.origin.producer Sumatra
+┌─────────┬──────────────┬─────────────────────────┬───────────────────────────┬──────────────┬───────────────────┬────────┬───────┐
+│ (index) │     date     │     coffee.roaster      │   coffee.origin.region    │ coffee.grind │ water.temperature │  time  │ score │
+├─────────┼──────────────┼─────────────────────────┼───────────────────────────┼──────────────┼───────────────────┼────────┼───────┤
+│    0    │ '05/19/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '212ºF'      │ '2:49' │   5   │
+│    1    │ '05/20/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      23      │      '212ºF'      │ '2:44' │   4   │
+│    2    │ '05/21/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '212ºF'      │ '2:36' │   7   │
+│    3    │ '05/22/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '212ºF'      │ '2:41' │   7   │
+│    4    │ '05/23/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      23      │      '210ºF'      │ '2:50' │   6   │
+│    5    │ '05/24/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '211ºF'      │ '2:44' │   7   │
+│    6    │ '05/25/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '212ºF'      │ '2:33' │   6   │
+│    7    │ '05/26/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │     24.5     │      '212ºF'      │ '2:43' │   7   │
+│    8    │ '05/27/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │     24.5     │      '212ºF'      │ '2:34' │   8   │
+│    9    │ '05/28/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '210ºF'      │ '2:48' │   9   │
+│   10    │ '05/29/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '210ºF'      │ '2:38' │   8   │
+│   11    │ '05/31/2021' │ 'Madcap Coffee Company' │ 'Mount Kerinci Highlands' │      24      │      '211ºF'      │ '2:31' │   6   │
+└─────────┴──────────────┴─────────────────────────┴───────────────────────────┴──────────────┴───────────────────┴────────┴───────┘
 ```
 
 ```shell
@@ -95,7 +95,7 @@ $ kafi stats pourover --coffee.origin.region="Pitalito"
 kafi stats <cupping|hybrid|pourover>
 # Limit entries (defaults to last 30)
 kafi stats pourover --limit 10
-# Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, score, filepath)
+# Display specific fields (defaults to coffee.roaster, coffee.origin.country, coffee.grind, score)
 kafi stats pourover --fields coffee.origin.region coffee.grind time
 # Sort by fields (defaults to date)
 kafi stats pourover --sort coffee.roaster score coffee.grind

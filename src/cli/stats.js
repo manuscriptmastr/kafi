@@ -57,7 +57,6 @@ const DEFAULT_FIELDS = [
   'water.temperature',
   'time',
   'score',
-  'filepath',
 ];
 
 const isNumber = both(
