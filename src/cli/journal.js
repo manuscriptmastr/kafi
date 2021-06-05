@@ -107,8 +107,6 @@ export const handler = async ({ type, release: version, open }) => {
     entry = pipe(...map(pathStringToTransform, DEFAULT_FIELDS[type]))(entry);
   }
 
-  console.log(filepath);
-
   const dirpath = dirname(filepath);
   await mkdir(dirpath, { recursive: true });
   await writeFile(filepath, JSON.stringify(entry, null, 2), 'utf-8');
