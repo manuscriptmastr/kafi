@@ -1,11 +1,8 @@
+import dayjs from 'dayjs';
 import { mkdir, readFile, writeFile } from 'fs/promises';
 import { dirname, resolve } from 'path';
 import R from 'ramda';
-import {
-  dateFromFriendlyDate,
-  parseDateTokenString,
-  pathString,
-} from '../util';
+import { parseDateTokenString, pathString } from '../util';
 const { prop } = R;
 
 /**
@@ -34,11 +31,7 @@ export const handler = async ({ from, to: _to, template: _template }) => {
   const entry = await import(resolve(process.cwd(), from)).then(
     prop('default')
   );
-  const to = parseDateTokenString(
-    _to,
-    dateFromFriendlyDate(entry.date),
-    entry.iteration
-  );
+  const to = parseDateTokenString(_to, dayjs(entry.timestamp, 'X'));
 
   let newEntry = JSON.stringify(entry, null, 2);
 
