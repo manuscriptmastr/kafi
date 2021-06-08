@@ -17,6 +17,8 @@ const { andThen, curry, filter, endsWith, pipeWith, prop } = R;
  */
 
 const __filename = fileURLToPath(import.meta.url);
+export const ROOT_DIR = resolve(dirname(__filename), '../../../');
+
 const JOURNAL_ENTRIES_ABSOLUTE_PATH = resolve(
   dirname(__filename),
   '../../../entries'

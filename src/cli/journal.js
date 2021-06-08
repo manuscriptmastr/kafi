@@ -54,6 +54,17 @@ export const builder = (yargs) =>
       default: true,
     });
 export const handler = async ({ type, release: version, open }) => {
+  if (!process.env.FILEPATH) {
+    console.log(
+      `
+No journal found. To create a new journal, run:
+
+    kafi init
+`
+    );
+    return;
+  }
+
   const today = dayjs();
   const timestamp = today.unix();
   const filepath = parseDateTokenString(process.env.FILEPATH, today);
