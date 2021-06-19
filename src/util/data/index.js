@@ -46,3 +46,9 @@ export const partialEq = curry((partial, object) =>
     object
   )
 );
+
+export const flattenObject = (object, prefixArr) => {
+  // Do a depth-first search for non-object properties,
+  // then save them to a new object with path string syntax
+  const isObject = (obj) => !Array.isArray(obj) && typeof obj === 'object';
+};

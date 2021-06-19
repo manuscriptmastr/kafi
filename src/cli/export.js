@@ -1,9 +1,12 @@
 import dayjs from 'dayjs';
 import { mkdir, readFile, writeFile } from 'fs/promises';
+import CSV from 'json2csv';
 import { dirname, resolve } from 'path';
 import R from 'ramda';
 import { parseDateTokenString, pathString } from '../util';
-const { prop } = R;
+const { prop, unary } = R;
+
+const csv = unary(CSV.parseAsync);
 
 /**
  * @todo When tokens are used in the `from` argument, dynamically generate a folder of all entries
