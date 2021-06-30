@@ -1,5 +1,41 @@
 import test from 'ava';
-import { partialEq, pathString } from '.';
+import { flatEntries, partialEq, pathString } from '.';
+
+test('flattenObject(object) returns original value when not an array or object', (t) => {
+  t.deepEqual(flatEntries(undefined), [[[], undefined]]);
+  t.deepEqual(flatEntries(null), [[[], null]]);
+  t.deepEqual(flatEntries(1), [[[], 1]]);
+  t.deepEqual(flatEntries('hello'), [[[], 'hello']]);
+});
+
+test('flattenObject(object) returns array with single path/value pair', (t) => {
+  t.deepEqual(flatEntries({ hello: 'world' }), [[['hello'], 'world']]);
+});
+
+test('flattenObject(object) returns array with more than one path/value pair', (t) => {
+  t.deepEqual(flatEntries({ hello: 'world', yo: 'yeet' }), [
+    [['hello'], 'world'],
+    [['yo'], 'yeet'],
+  ]);
+});
+
+test('flattenObject(object) allows single nested property', (t) => {
+  t.deepEqual(flatEntries({ hello: 'world', yo: { yada: 'yeet' } }), [
+    [['hello'], 'world'],
+    [['yo', 'yada'], 'yeet'],
+  ]);
+});
+
+test('flattenObject(object) allows multiple nested properties', (t) => {
+  t.deepEqual(
+    flatEntries({ hello: 'world', yo: { yada: 'yeet', yoda: 'yacht' } }),
+    [
+      [['hello'], 'world'],
+      [['yo', 'yada'], 'yeet'],
+      [['yo', 'yoda'], 'yacht'],
+    ]
+  );
+});
 
 test('pathString(string) returns undefined when passed an empty string', (t) => {
   t.deepEqual(pathString('', { a: 1 }), undefined);

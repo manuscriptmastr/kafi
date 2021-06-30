@@ -3,8 +3,8 @@ import { mkdir, readFile, writeFile } from 'fs/promises';
 import CSV from 'json2csv';
 import { dirname, resolve } from 'path';
 import R from 'ramda';
-import { parseDateTokenString, pathString } from '../util';
-const { prop, unary } = R;
+import { flatEntries, parseDateTokenString, pathString } from '../util';
+const { fromPairs, map, pipe, prop, unary } = R;
 
 const csv = unary(CSV.parseAsync);
 
@@ -29,8 +29,19 @@ export const builder = (yargs) =>
       describe: 'Path to template to transform journal entry',
       type: 'string',
       required: false,
+    })
+    .option('csv', {
+      describe: 'Export as CSV',
+      type: 'boolean',
+      required: false,
+      default: false,
     });
-export const handler = async ({ from, to: _to, template: _template }) => {
+export const handler = async ({
+  from,
+  to: _to,
+  csv: exportCSV,
+  template: _template,
+}) => {
   const entry = await import(resolve(process.cwd(), from)).then(
     prop('default')
   );
@@ -43,6 +54,18 @@ export const handler = async ({ from, to: _to, template: _template }) => {
     newEntry = template.replaceAll(/{(.*?)}/g, (__, path) =>
       pathString(path, entry)
     );
+  }
+
+  if (exportCSV) {
+    newEntry = await pipe(
+      unary(flatEntries),
+      map(([path, value]) => [
+        path.join('.'),
+        Array.isArray(value) ? value.join(', ') : value,
+      ]),
+      fromPairs,
+      csv
+    )(entry);
   }
 
   const filepath = resolve(process.cwd(), to);
