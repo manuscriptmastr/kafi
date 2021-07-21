@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { mkdir, readFile, writeFile } from 'fs/promises';
+import { mkdir, readFile, stat, writeFile } from 'fs/promises';
 import CSV from 'json2csv';
 import { dirname, resolve } from 'path';
 import R from 'ramda';
@@ -36,7 +36,7 @@ export const builder = (yargs) =>
       required: false,
       default: false,
     });
-export const handler = async ({
+const _handler = async ({
   from,
   to: _to,
   csv: exportCSV,
@@ -73,4 +73,11 @@ export const handler = async ({
   await mkdir(dirpath, { recursive: true });
   await writeFile(filepath, newEntry);
   console.log(`Wrote exported entry: ${filepath}`);
+};
+
+export const handler = async ({ from, ...rest }) => {
+  const fileOrDirPath = resolve(process.cwd(), from);
+  return (await stat(fileOrDirPath)).isDirectory()
+    ? console.log('Wut?')
+    : _handler({ from, ...rest });
 };
